@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: ik_ISoundStopEventReceiver.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_bdff311e6a51ceeebd2f20921314edd3.html">irrKlang</a></li><li class="navelem"><a class="el" href="dir_106950a5b36d4e98248f476d11963ac6.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">ik_ISoundStopEventReceiver.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (C) 2002-2018 Nikolaus Gebhardt</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// This file is part of the &quot;irrKlang&quot; library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// For conditions of distribution and use, see copyright notice in irrKlang.h</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef __I_IRRKLANG_SOUND_STOP_EVENT_RECEIVER_H_INCLUDED__</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define __I_IRRKLANG_SOUND_STOP_EVENT_RECEIVER_H_INCLUDED__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;ik_IRefCounted.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;ik_SAudioStreamFormat.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceirrklang.html">irrklang</a> {</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522">   13</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522">E_STOP_EVENT_CAUSE</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158">   15</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158">ESEC_SOUND_FINISHED_PLAYING</a> = 0,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45">   19</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45">ESEC_SOUND_STOPPED_BY_USER</a>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca">   24</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca">ESEC_SOUND_STOPPED_BY_SOURCE_REMOVAL</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31">ESEC_FORCE_32_BIT</a> = 0x7fffffff</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31">   29</a></span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_sound_stop_event_receiver.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classirrklang_1_1_i_sound_stop_event_receiver.html">ISoundStopEventReceiver</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_sound_stop_event_receiver.html#a26adc3eec345f11286e576e449e6647d">   42</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classirrklang_1_1_i_sound_stop_event_receiver.html#a26adc3eec345f11286e576e449e6647d">~ISoundStopEventReceiver</a>(){};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_sound_stop_event_receiver.html#a8e975104683b71cd45436ae5f8bfaf9f">   60</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classirrklang_1_1_i_sound_stop_event_receiver.html#a8e975104683b71cd45436ae5f8bfaf9f">OnSoundStopped</a>(<a class="code hl_class" href="classirrklang_1_1_i_sound.html">ISound</a> *sound, <a class="code hl_enumeration" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522">E_STOP_EVENT_CAUSE</a> reason,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                              <span class="keywordtype">void</span> *userData) = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// end namespace irrklang</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html"><div class="ttname"><a href="classirrklang_1_1_i_sound.html">irrklang::ISound</a></div><div class="ttdoc">Represents a sound which is currently played.</div><div class="ttdef"><b>定义</b> ik_ISound.h:22</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_stop_event_receiver_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_stop_event_receiver.html">irrklang::ISoundStopEventReceiver</a></div><div class="ttdoc">Interface to be implemented by the user, which recieves sound stop events.</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:39</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_stop_event_receiver_html_a26adc3eec345f11286e576e449e6647d"><div class="ttname"><a href="classirrklang_1_1_i_sound_stop_event_receiver.html#a26adc3eec345f11286e576e449e6647d">irrklang::ISoundStopEventReceiver::~ISoundStopEventReceiver</a></div><div class="ttdeci">virtual ~ISoundStopEventReceiver()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:42</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_stop_event_receiver_html_a8e975104683b71cd45436ae5f8bfaf9f"><div class="ttname"><a href="classirrklang_1_1_i_sound_stop_event_receiver.html#a8e975104683b71cd45436ae5f8bfaf9f">irrklang::ISoundStopEventReceiver::OnSoundStopped</a></div><div class="ttdeci">virtual void OnSoundStopped(ISound *sound, E_STOP_EVENT_CAUSE reason, void *userData)=0</div><div class="ttdoc">Called when a sound has stopped playing.</div></div>
+<div class="ttc" id="anamespaceirrklang_html"><div class="ttname"><a href="namespaceirrklang.html">irrklang</a></div><div class="ttdoc">Everything in the irrKlang Sound Engine can be found in this namespace.</div><div class="ttdef"><b>定义</b> ik_ESoundEngineOptions.h:8</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a17ebb006afe78ab6502a1e3d18083522"><div class="ttname"><a href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522">irrklang::E_STOP_EVENT_CAUSE</a></div><div class="ttdeci">E_STOP_EVENT_CAUSE</div><div class="ttdoc">An enumeration listing all reasons for a fired sound stop event</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:13</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca"><div class="ttname"><a href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca">irrklang::ESEC_SOUND_STOPPED_BY_SOURCE_REMOVAL</a></div><div class="ttdeci">@ ESEC_SOUND_STOPPED_BY_SOURCE_REMOVAL</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:24</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31"><div class="ttname"><a href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31">irrklang::ESEC_FORCE_32_BIT</a></div><div class="ttdeci">@ ESEC_FORCE_32_BIT</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:28</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45"><div class="ttname"><a href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45">irrklang::ESEC_SOUND_STOPPED_BY_USER</a></div><div class="ttdeci">@ ESEC_SOUND_STOPPED_BY_USER</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:19</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158"><div class="ttname"><a href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158">irrklang::ESEC_SOUND_FINISHED_PLAYING</a></div><div class="ttdeci">@ ESEC_SOUND_FINISHED_PLAYING</div><div class="ttdoc">The sound stop event was fired because the sound finished playing</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

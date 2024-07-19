@@ -1,0 +1,7 @@
+<map id="AsciiGL::AsciiBasicCanvas::load" name="AsciiGL::AsciiBasicCanvas::load">
+<area shape="rect" id="Node000001" title="以文件的形式（.asc2）加载画布" alt="" coords="5,35,185,77"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ac5e225ea5f49c81c6b5cea32ea17e013" title="AsciiBasicCanvas object constructor" alt="" coords="233,5,412,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,42,217,38,217,43,185,47"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a0920f3db5fddabfe968b0b77df71c812" title="获取文件数据" alt="" coords="252,72,393,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,65,237,72,236,77,185,70"/>
+</map>

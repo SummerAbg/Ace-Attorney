@@ -1,0 +1,5 @@
+<map id="AsciiGL::overlapCanvas" name="AsciiGL::overlapCanvas">
+<area shape="rect" id="Node000001" title="重叠两个画布" alt="" coords="223,13,380,40"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a69f60ba8efa27eb0150e9c15ab01f27e" title="获取多图层合并后生成的画布 (失败时抛出异常)" alt="" coords="5,5,175,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>

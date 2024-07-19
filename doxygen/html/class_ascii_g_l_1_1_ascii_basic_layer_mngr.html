@@ -1,0 +1,1042 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: AsciiGL::AsciiBasicLayerMngr类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_ascii_g_l.html">AsciiGL</a></li><li class="navelem"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiBasicLayerMngr</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">AsciiGL::AsciiBasicLayerMngr类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>基本字符串图层管理器类  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="agl___basic_layer_mngr_8h_source.html">agl_BasicLayerMngr.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:acd865c2fcb7f1dd3f3a74ab496b8eee1" id="r_acd865c2fcb7f1dd3f3a74ab496b8eee1"><td class="memItemLeft" align="right" valign="top"><a id="acd865c2fcb7f1dd3f3a74ab496b8eee1" name="acd865c2fcb7f1dd3f3a74ab496b8eee1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Layers</b> = std::vector&lt;<a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a>&gt;</td></tr>
+<tr class="separator:acd865c2fcb7f1dd3f3a74ab496b8eee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acc7082ff35ef5366a5965960043fb181" id="r_acc7082ff35ef5366a5965960043fb181"><td class="memItemLeft" align="right" valign="top"><a id="acc7082ff35ef5366a5965960043fb181" name="acc7082ff35ef5366a5965960043fb181"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AsciiBasicLayerMngr</b> ()=default</td></tr>
+<tr class="memdesc:acc7082ff35ef5366a5965960043fb181"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html" title="基本字符串图层管理器类">AsciiBasicLayerMngr</a> object constructor <br /></td></tr>
+<tr class="separator:acc7082ff35ef5366a5965960043fb181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c72f10710cb8ffa5e88356a711f39d" id="r_aa3c72f10710cb8ffa5e88356a711f39d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3c72f10710cb8ffa5e88356a711f39d">AsciiBasicLayerMngr</a> (const Layers &amp;layers)</td></tr>
+<tr class="memdesc:aa3c72f10710cb8ffa5e88356a711f39d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html" title="基本字符串图层管理器类">AsciiBasicLayerMngr</a> object constructor  <br /></td></tr>
+<tr class="separator:aa3c72f10710cb8ffa5e88356a711f39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43db9e03a915b6127086420465048dcc" id="r_a43db9e03a915b6127086420465048dcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43db9e03a915b6127086420465048dcc">AsciiBasicLayerMngr</a> (int length, int width, const <a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;str=TRPRSTR)</td></tr>
+<tr class="memdesc:a43db9e03a915b6127086420465048dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html" title="基本字符串图层管理器类">AsciiBasicLayerMngr</a> object constructor  <br /></td></tr>
+<tr class="separator:a43db9e03a915b6127086420465048dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52cdc75b56e82b07e2931c4117ed0fb7" id="r_a52cdc75b56e82b07e2931c4117ed0fb7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52cdc75b56e82b07e2931c4117ed0fb7">begin</a> () const</td></tr>
+<tr class="memdesc:a52cdc75b56e82b07e2931c4117ed0fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return iterator to beginning  <br /></td></tr>
+<tr class="separator:a52cdc75b56e82b07e2931c4117ed0fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bce907cfee41512eaf817b5f495fd6" id="r_a64bce907cfee41512eaf817b5f495fd6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bce907cfee41512eaf817b5f495fd6">end</a> () const</td></tr>
+<tr class="memdesc:a64bce907cfee41512eaf817b5f495fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return iterator to end  <br /></td></tr>
+<tr class="separator:a64bce907cfee41512eaf817b5f495fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4138d06e55c59ffa5f03d04f35f912" id="r_a0c4138d06e55c59ffa5f03d04f35f912"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4138d06e55c59ffa5f03d04f35f912">appendLayer</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer)</td></tr>
+<tr class="memdesc:a0c4138d06e55c59ffa5f03d04f35f912"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加指定图层  <br /></td></tr>
+<tr class="separator:a0c4138d06e55c59ffa5f03d04f35f912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91714caaafa8f2a7203fafeb5b5cedbf" id="r_a91714caaafa8f2a7203fafeb5b5cedbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91714caaafa8f2a7203fafeb5b5cedbf">appendLayer</a> (const Layers &amp;layers)</td></tr>
+<tr class="memdesc:a91714caaafa8f2a7203fafeb5b5cedbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加指定图层  <br /></td></tr>
+<tr class="separator:a91714caaafa8f2a7203fafeb5b5cedbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4520cd582144d3671d70e864ffac5927" id="r_a4520cd582144d3671d70e864ffac5927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4520cd582144d3671d70e864ffac5927">deleteLayer</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a4520cd582144d3671d70e864ffac5927"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定图层 (失败时抛出异常)  <br /></td></tr>
+<tr class="separator:a4520cd582144d3671d70e864ffac5927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1410bdb690d42e053530436b9d93f75c" id="r_a1410bdb690d42e053530436b9d93f75c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1410bdb690d42e053530436b9d93f75c">insertLayer</a> (int layerCnt, const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer)</td></tr>
+<tr class="memdesc:a1410bdb690d42e053530436b9d93f75c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置后插入指定图层 (失败时抛出异常)  <br /></td></tr>
+<tr class="separator:a1410bdb690d42e053530436b9d93f75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842c892ff0347ac722b505888eedb950" id="r_a842c892ff0347ac722b505888eedb950"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842c892ff0347ac722b505888eedb950">insertLayer</a> (int layerCnt, const Layers &amp;layers)</td></tr>
+<tr class="memdesc:a842c892ff0347ac722b505888eedb950"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定位置后插入指定图层容器 (失败时抛出异常)  <br /></td></tr>
+<tr class="separator:a842c892ff0347ac722b505888eedb950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f60ba8efa27eb0150e9c15ab01f27e" id="r_a69f60ba8efa27eb0150e9c15ab01f27e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69f60ba8efa27eb0150e9c15ab01f27e">getCanvas</a> () const</td></tr>
+<tr class="memdesc:a69f60ba8efa27eb0150e9c15ab01f27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取多图层合并后生成的画布 (失败时抛出异常)  <br /></td></tr>
+<tr class="separator:a69f60ba8efa27eb0150e9c15ab01f27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69358a49c8dfbd85cd95a7ec9bae12a4" id="r_a69358a49c8dfbd85cd95a7ec9bae12a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69358a49c8dfbd85cd95a7ec9bae12a4">getCanvas</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a69358a49c8dfbd85cd95a7ec9bae12a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定名称的画布 (失败时抛出异常)  <br /></td></tr>
+<tr class="separator:a69358a49c8dfbd85cd95a7ec9bae12a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9c65e7293896ca798d7af7c696aeda" id="r_abf9c65e7293896ca798d7af7c696aeda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9c65e7293896ca798d7af7c696aeda">operator[]</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:abf9c65e7293896ca798d7af7c696aeda"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取/修改指定名称的图层 （失败时创建并返回空图层）  <br /></td></tr>
+<tr class="separator:abf9c65e7293896ca798d7af7c696aeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9707e96661d78d027407d0b405f08ee2" id="r_a9707e96661d78d027407d0b405f08ee2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9707e96661d78d027407d0b405f08ee2">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a9707e96661d78d027407d0b405f08ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取/修改指定编号的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:a9707e96661d78d027407d0b405f08ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7f618a4ae4c7ea4d0ffc953891357f" id="r_adb7f618a4ae4c7ea4d0ffc953891357f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb7f618a4ae4c7ea4d0ffc953891357f">operator[]</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:adb7f618a4ae4c7ea4d0ffc953891357f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定名称的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:adb7f618a4ae4c7ea4d0ffc953891357f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8986a278ecef45dd5d41d5e67da076f8" id="r_a8986a278ecef45dd5d41d5e67da076f8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8986a278ecef45dd5d41d5e67da076f8">operator[]</a> (int index) const</td></tr>
+<tr class="memdesc:a8986a278ecef45dd5d41d5e67da076f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定图层的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:a8986a278ecef45dd5d41d5e67da076f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e283c049f0c309a97e9590d6c351cd" id="r_ac3e283c049f0c309a97e9590d6c351cd"><td class="memItemLeft" align="right" valign="top"><a id="ac3e283c049f0c309a97e9590d6c351cd" name="ac3e283c049f0c309a97e9590d6c351cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiBasicLayerMngr</a> &amp;mngr) const</td></tr>
+<tr class="separator:ac3e283c049f0c309a97e9590d6c351cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ebd672c8d20fc25508f50c4fd77e6c" id="r_af2ebd672c8d20fc25508f50c4fd77e6c"><td class="memItemLeft" align="right" valign="top"><a id="af2ebd672c8d20fc25508f50c4fd77e6c" name="af2ebd672c8d20fc25508f50c4fd77e6c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiBasicLayerMngr</a> &amp;mngr) const</td></tr>
+<tr class="separator:af2ebd672c8d20fc25508f50c4fd77e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a362358dfe5da8cd86520577c5793465d" id="r_a362358dfe5da8cd86520577c5793465d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a362358dfe5da8cd86520577c5793465d">getLayer</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a362358dfe5da8cd86520577c5793465d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定名称的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:a362358dfe5da8cd86520577c5793465d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed8e92999eb2316f9122da9250340f7c" id="r_aed8e92999eb2316f9122da9250340f7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed8e92999eb2316f9122da9250340f7c">getLayer</a> (int index) const</td></tr>
+<tr class="memdesc:aed8e92999eb2316f9122da9250340f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定编号的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:aed8e92999eb2316f9122da9250340f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6acbf1adeb5a27908d33b78d34a60f" id="r_a8e6acbf1adeb5a27908d33b78d34a60f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e6acbf1adeb5a27908d33b78d34a60f">setLayer</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a8e6acbf1adeb5a27908d33b78d34a60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置指定名称的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:a8e6acbf1adeb5a27908d33b78d34a60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ee7233e9eb723e42ffa926d17745dc" id="r_a15ee7233e9eb723e42ffa926d17745dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15ee7233e9eb723e42ffa926d17745dc">setLayer</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer, int index)</td></tr>
+<tr class="memdesc:a15ee7233e9eb723e42ffa926d17745dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置指定编号的图层 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:a15ee7233e9eb723e42ffa926d17745dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4988047cf3ab3fb522c3ecf93bfdafb" id="r_ad4988047cf3ab3fb522c3ecf93bfdafb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4988047cf3ab3fb522c3ecf93bfdafb">size</a> () const</td></tr>
+<tr class="memdesc:ad4988047cf3ab3fb522c3ecf93bfdafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取管理器图层数  <br /></td></tr>
+<tr class="separator:ad4988047cf3ab3fb522c3ecf93bfdafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8965eb6976c89950c42659cea88cda1a" id="r_a8965eb6976c89950c42659cea88cda1a"><td class="memItemLeft" align="right" valign="top">Layers&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8965eb6976c89950c42659cea88cda1a">getLayers</a> () const</td></tr>
+<tr class="memdesc:a8965eb6976c89950c42659cea88cda1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取管理器图层容器  <br /></td></tr>
+<tr class="separator:a8965eb6976c89950c42659cea88cda1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0d2ba105cee81947aa48b1d7a5f742" id="r_a4a0d2ba105cee81947aa48b1d7a5f742"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a0d2ba105cee81947aa48b1d7a5f742">isExistLayer</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a4a0d2ba105cee81947aa48b1d7a5f742"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否存在指定名称的图层  <br /></td></tr>
+<tr class="separator:a4a0d2ba105cee81947aa48b1d7a5f742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757389bd853b9226174bff767daac97a" id="r_a757389bd853b9226174bff767daac97a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a757389bd853b9226174bff767daac97a">getLayerCount</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a757389bd853b9226174bff767daac97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定图层所在层数 （失败时抛出异常）  <br /></td></tr>
+<tr class="separator:a757389bd853b9226174bff767daac97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>基本字符串图层管理器类 </p>
+<p>~实现了包括管理图层、操作图层以及获取管理器信息的功能 </p><dl class="section date"><dt>日期</dt><dd>19.07.2024 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aa3c72f10710cb8ffa5e88356a711f39d" name="aa3c72f10710cb8ffa5e88356a711f39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c72f10710cb8ffa5e88356a711f39d">&#9670;&#160;</a></span>AsciiBasicLayerMngr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsciiGL::AsciiBasicLayerMngr::AsciiBasicLayerMngr </td>
+          <td>(</td>
+          <td class="paramtype">const Layers &amp;</td>          <td class="paramname"><span class="paramname"><em>layers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html" title="基本字符串图层管理器类">AsciiBasicLayerMngr</a> object constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layers</td><td>- 指定图层容器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a43db9e03a915b6127086420465048dcc" name="a43db9e03a915b6127086420465048dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43db9e03a915b6127086420465048dcc">&#9670;&#160;</a></span>AsciiBasicLayerMngr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsciiGL::AsciiBasicLayerMngr::AsciiBasicLayerMngr </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span><span class="paramdefsep"> = </span><span class="paramdefval">TRPRSTR</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html" title="基本字符串图层管理器类">AsciiBasicLayerMngr</a> object constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">length</td><td>- 管理器合成画布的长度 </td></tr>
+    <tr><td class="paramname">width</td><td>- 管理器合成画布的宽度 </td></tr>
+    <tr><td class="paramname">str</td><td>- 默认填充字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0c4138d06e55c59ffa5f03d04f35f912" name="a0c4138d06e55c59ffa5f03d04f35f912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4138d06e55c59ffa5f03d04f35f912">&#9670;&#160;</a></span>appendLayer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::appendLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>layer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加指定图层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>- 指定图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a0c4138d06e55c59ffa5f03d04f35f912_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a0c4138d06e55c59ffa5f03d04f35f912_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a0c4138d06e55c59ffa5f03d04f35f912_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a0c4138d06e55c59ffa5f03d04f35f912_icgraph">
+<area shape="rect" title="添加指定图层" alt="" coords="223,72,392,115"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda" title="获取/修改指定名称的图层 （失败时创建并返回空图层）" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="221,70,161,51,163,46,222,65"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a9707e96661d78d027407d0b405f08ee2" title="获取/修改指定编号的图层 （失败时抛出异常）" alt="" coords="5,72,175,115"/>
+<area shape="poly" title=" " alt="" coords="207,96,175,96,175,91,207,91"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a36de7186d9d2601ff30313c6915ec001" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="31,139,149,165"/>
+<area shape="poly" title=" " alt="" coords="212,122,143,141,141,136,211,117"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91714caaafa8f2a7203fafeb5b5cedbf" name="a91714caaafa8f2a7203fafeb5b5cedbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91714caaafa8f2a7203fafeb5b5cedbf">&#9670;&#160;</a></span>appendLayer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::appendLayer </td>
+          <td>(</td>
+          <td class="paramtype">const Layers &amp;</td>          <td class="paramname"><span class="paramname"><em>layers</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加指定图层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layers</td><td>- 图层容器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a52cdc75b56e82b07e2931c4117ed0fb7" name="a52cdc75b56e82b07e2931c4117ed0fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52cdc75b56e82b07e2931c4117ed0fb7">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto AsciiGL::AsciiBasicLayerMngr::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return iterator to beginning </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>iterator to beginning </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4520cd582144d3671d70e864ffac5927" name="a4520cd582144d3671d70e864ffac5927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4520cd582144d3671d70e864ffac5927">&#9670;&#160;</a></span>deleteLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::deleteLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除指定图层 (失败时抛出异常) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a4520cd582144d3671d70e864ffac5927_cgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a4520cd582144d3671d70e864ffac5927_cgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a4520cd582144d3671d70e864ffac5927_cgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a4520cd582144d3671d70e864ffac5927_cgraph">
+<area shape="rect" title="删除指定图层 (失败时抛出异常)" alt="" coords="5,39,175,81"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a757389bd853b9226174bff767daac97a" title="获取指定图层所在层数 （失败时抛出异常）" alt="" coords="223,5,392,48"/>
+<area shape="poly" title=" " alt="" coords="175,44,207,39,208,45,175,50"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4a0d2ba105cee81947aa48b1d7a5f742" title="判断是否存在指定名称的图层" alt="" coords="223,72,392,115"/>
+<area shape="poly" title=" " alt="" coords="175,70,208,75,207,81,175,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a64bce907cfee41512eaf817b5f495fd6" name="a64bce907cfee41512eaf817b5f495fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bce907cfee41512eaf817b5f495fd6">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto AsciiGL::AsciiBasicLayerMngr::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return iterator to end </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>iterator to end </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a69f60ba8efa27eb0150e9c15ab01f27e" name="a69f60ba8efa27eb0150e9c15ab01f27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f60ba8efa27eb0150e9c15ab01f27e">&#9670;&#160;</a></span>getCanvas() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> AsciiGL::AsciiBasicLayerMngr::getCanvas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取多图层合并后生成的画布 (失败时抛出异常) </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>合成后的基本字符串画布 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a69f60ba8efa27eb0150e9c15ab01f27e_cgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a69f60ba8efa27eb0150e9c15ab01f27e_cgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a69f60ba8efa27eb0150e9c15ab01f27e_cgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a69f60ba8efa27eb0150e9c15ab01f27e_cgraph">
+<area shape="rect" title="获取多图层合并后生成的画布 (失败时抛出异常)" alt="" coords="5,60,175,103"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a45f172f5ef9cbf677e8c547627b1b985" title="重叠两个画布" alt="" coords="223,68,380,95"/>
+<area shape="poly" title=" " alt="" coords="175,79,207,79,207,84,175,84"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="883,60,1062,103"/>
+<area shape="poly" title=" " alt="" coords="343,65,432,40,555,15,623,7,694,3,766,6,835,16,881,31,923,50,921,55,879,36,834,21,765,11,694,8,624,12,555,20,433,45,344,70"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a2c0731f8568d48bd113ede16abfd3051" title="比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）" alt="" coords="434,97,601,124"/>
+<area shape="poly" title=" " alt="" coords="381,89,419,95,418,100,380,95"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a0443523e4190ea0d4793965d6c6742b1" title="获取指定坐标的画布数据(失败时抛出异常)" alt="" coords="655,31,835,73"/>
+<area shape="poly" title=" " alt="" coords="380,73,640,56,640,62,381,79"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="428,211,607,253"/>
+<area shape="poly" title=" " alt="" coords="324,93,475,199,472,204,321,97"/>
+<area shape="poly" title=" " alt="" coords="602,103,867,85,867,91,602,108"/>
+<area shape="poly" title=" " alt="" coords="572,94,644,75,646,80,573,99"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#adb1c835773ca233cd80dc9802990b4f5" title="获取画布长度" alt="" coords="655,148,835,191"/>
+<area shape="poly" title=" " alt="" coords="573,122,646,141,644,146,572,127"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a3dc98005a3f1d66c740e978945bf1aaf" title="获取画布宽度" alt="" coords="655,215,835,257"/>
+<area shape="poly" title=" " alt="" coords="538,122,590,160,657,200,668,206,665,210,654,205,587,164,535,127"/>
+<area shape="poly" title=" " alt="" coords="835,61,867,65,867,70,835,66"/>
+<area shape="poly" title=" " alt="" coords="568,251,625,271,693,285,729,288,765,286,800,280,833,267,856,253,876,236,910,196,936,154,955,116,960,118,941,156,914,200,879,240,859,258,836,272,802,285,766,292,729,293,693,290,624,276,567,256"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a69358a49c8dfbd85cd95a7ec9bae12a4" name="a69358a49c8dfbd85cd95a7ec9bae12a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69358a49c8dfbd85cd95a7ec9bae12a4">&#9670;&#160;</a></span>getCanvas() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> AsciiGL::AsciiBasicLayerMngr::getCanvas </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定名称的画布 (失败时抛出异常) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定名称的画布 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a362358dfe5da8cd86520577c5793465d" name="a362358dfe5da8cd86520577c5793465d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362358dfe5da8cd86520577c5793465d">&#9670;&#160;</a></span>getLayer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> AsciiGL::AsciiBasicLayerMngr::getLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定名称的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定名称的图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed8e92999eb2316f9122da9250340f7c" name="aed8e92999eb2316f9122da9250340f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed8e92999eb2316f9122da9250340f7c">&#9670;&#160;</a></span>getLayer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> AsciiGL::AsciiBasicLayerMngr::getLayer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定编号的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>- 指定编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定编号的图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a757389bd853b9226174bff767daac97a" name="a757389bd853b9226174bff767daac97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a757389bd853b9226174bff767daac97a">&#9670;&#160;</a></span>getLayerCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AsciiGL::AsciiBasicLayerMngr::getLayerCount </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定图层所在层数 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定名称的图层所在层数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a757389bd853b9226174bff767daac97a_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a757389bd853b9226174bff767daac97a_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a757389bd853b9226174bff767daac97a_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a757389bd853b9226174bff767daac97a_icgraph">
+<area shape="rect" title="获取指定图层所在层数 （失败时抛出异常）" alt="" coords="223,5,392,48"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4520cd582144d3671d70e864ffac5927" title="删除指定图层 (失败时抛出异常)" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8965eb6976c89950c42659cea88cda1a" name="a8965eb6976c89950c42659cea88cda1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8965eb6976c89950c42659cea88cda1a">&#9670;&#160;</a></span>getLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Layers AsciiGL::AsciiBasicLayerMngr::getLayers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取管理器图层容器 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>包括着所有图层的图层容器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1410bdb690d42e053530436b9d93f75c" name="a1410bdb690d42e053530436b9d93f75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1410bdb690d42e053530436b9d93f75c">&#9670;&#160;</a></span>insertLayer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::insertLayer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>layerCnt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置后插入指定图层 (失败时抛出异常) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerCnt</td><td>- 指定位置 </td></tr>
+    <tr><td class="paramname">layer</td><td>- 指定图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a842c892ff0347ac722b505888eedb950" name="a842c892ff0347ac722b505888eedb950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842c892ff0347ac722b505888eedb950">&#9670;&#160;</a></span>insertLayer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::insertLayer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>layerCnt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Layers &amp;</td>          <td class="paramname"><span class="paramname"><em>layers</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定位置后插入指定图层容器 (失败时抛出异常) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layerCnt</td><td>- 指定位置 </td></tr>
+    <tr><td class="paramname">layers</td><td>- 指定图层容器 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a0d2ba105cee81947aa48b1d7a5f742" name="a4a0d2ba105cee81947aa48b1d7a5f742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0d2ba105cee81947aa48b1d7a5f742">&#9670;&#160;</a></span>isExistLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AsciiGL::AsciiBasicLayerMngr::isExistLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断是否存在指定名称的图层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>是否存在指定名称图层的布尔值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a4a0d2ba105cee81947aa48b1d7a5f742_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a4a0d2ba105cee81947aa48b1d7a5f742_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a4a0d2ba105cee81947aa48b1d7a5f742_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a4a0d2ba105cee81947aa48b1d7a5f742_icgraph">
+<area shape="rect" title="判断是否存在指定名称的图层" alt="" coords="223,35,392,77"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4520cd582144d3671d70e864ffac5927" title="删除指定图层 (失败时抛出异常)" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,45,175,41,175,35,208,40"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a36de7186d9d2601ff30313c6915ec001" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="31,72,149,99"/>
+<area shape="poly" title=" " alt="" coords="208,72,150,80,149,75,207,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf9c65e7293896ca798d7af7c696aeda" name="abf9c65e7293896ca798d7af7c696aeda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9c65e7293896ca798d7af7c696aeda">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp; AsciiGL::AsciiBasicLayerMngr::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取/修改指定名称的图层 （失败时创建并返回空图层） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定图层的引用 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_abf9c65e7293896ca798d7af7c696aeda_cgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_abf9c65e7293896ca798d7af7c696aeda_cgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_abf9c65e7293896ca798d7af7c696aeda_cgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_abf9c65e7293896ca798d7af7c696aeda_cgraph">
+<area shape="rect" title="获取/修改指定名称的图层 （失败时创建并返回空图层）" alt="" coords="5,39,175,81"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912" title="添加指定图层" alt="" coords="223,5,392,48"/>
+<area shape="poly" title=" " alt="" coords="175,44,207,39,208,45,175,50"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#ad4988047cf3ab3fb522c3ecf93bfdafb" title="获取管理器图层数" alt="" coords="223,72,392,115"/>
+<area shape="poly" title=" " alt="" coords="175,70,208,75,207,81,175,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb7f618a4ae4c7ea4d0ffc953891357f" name="adb7f618a4ae4c7ea4d0ffc953891357f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7f618a4ae4c7ea4d0ffc953891357f">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp; AsciiGL::AsciiBasicLayerMngr::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定名称的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定名称的图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9707e96661d78d027407d0b405f08ee2" name="a9707e96661d78d027407d0b405f08ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707e96661d78d027407d0b405f08ee2">&#9670;&#160;</a></span>operator[]() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp; AsciiGL::AsciiBasicLayerMngr::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取/修改指定编号的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>- 指定编号 （若编号大于等于管理器图层数，则创建并返回新的空图层） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定编号的图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a9707e96661d78d027407d0b405f08ee2_cgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a9707e96661d78d027407d0b405f08ee2_cgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a9707e96661d78d027407d0b405f08ee2_cgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a9707e96661d78d027407d0b405f08ee2_cgraph">
+<area shape="rect" title="获取/修改指定编号的图层 （失败时抛出异常）" alt="" coords="5,5,175,48"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912" title="添加指定图层" alt="" coords="223,5,392,48"/>
+<area shape="poly" title=" " alt="" coords="175,24,207,24,207,29,175,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8986a278ecef45dd5d41d5e67da076f8" name="a8986a278ecef45dd5d41d5e67da076f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8986a278ecef45dd5d41d5e67da076f8">&#9670;&#160;</a></span>operator[]() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp; AsciiGL::AsciiBasicLayerMngr::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定图层的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>- 指定编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>指定编号的图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e6acbf1adeb5a27908d33b78d34a60f" name="a8e6acbf1adeb5a27908d33b78d34a60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6acbf1adeb5a27908d33b78d34a60f">&#9670;&#160;</a></span>setLayer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::setLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置指定名称的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>- 指定图层 </td></tr>
+    <tr><td class="paramname">name</td><td>- 指定图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_a8e6acbf1adeb5a27908d33b78d34a60f_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a8e6acbf1adeb5a27908d33b78d34a60f_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a8e6acbf1adeb5a27908d33b78d34a60f_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_a8e6acbf1adeb5a27908d33b78d34a60f_icgraph">
+<area shape="rect" title="设置指定名称的图层 （失败时抛出异常）" alt="" coords="172,5,341,48"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a36de7186d9d2601ff30313c6915ec001" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="5,13,124,40"/>
+<area shape="poly" title=" " alt="" coords="156,29,124,29,124,24,156,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15ee7233e9eb723e42ffa926d17745dc" name="a15ee7233e9eb723e42ffa926d17745dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ee7233e9eb723e42ffa926d17745dc">&#9670;&#160;</a></span>setLayer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayerMngr::setLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置指定编号的图层 （失败时抛出异常） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>- 指定编号 </td></tr>
+    <tr><td class="paramname">name</td><td>- 指定编号名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4988047cf3ab3fb522c3ecf93bfdafb" name="ad4988047cf3ab3fb522c3ecf93bfdafb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4988047cf3ab3fb522c3ecf93bfdafb">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AsciiGL::AsciiBasicLayerMngr::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取管理器图层数 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>图层数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_mngr_ad4988047cf3ab3fb522c3ecf93bfdafb_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_ad4988047cf3ab3fb522c3ecf93bfdafb_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_ad4988047cf3ab3fb522c3ecf93bfdafb_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_ad4988047cf3ab3fb522c3ecf93bfdafb_icgraph">
+<area shape="rect" title="获取管理器图层数" alt="" coords="223,5,392,48"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda" title="获取/修改指定名称的图层 （失败时创建并返回空图层）" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="agl___basic_layer_mngr_8h_source.html">agl_BasicLayerMngr.h</a></li>
+<li><b>agl_BasicLayerMngr.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: irrKlang 1.6.0 API documentation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">irrKlang 1.6.0 API documentation </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div align="center"><img src="logobig.png" alt="" class="inline"/></div><h1><a class="anchor" id="contents"></a>
+Contents</h1>
+<p>General:<br  />
+ <a class="el" href="#intro">Introduction</a> <br  />
+ <a class="el" href="#features">Features of irrKlang</a> <br  />
+ <a class="el" href="#links">Links into the API documentation</a> <br  />
+ <a class="el" href="#tipsandtricks">Tips and Tricks</a> <br  />
+ <br  />
+ Programming irrKlang:<br  />
+ <a class="el" href="#concept">Starting up the Engine</a> <br  />
+ <a class="el" href="#playingSounds">Playing Sounds</a> <br  />
+ <a class="el" href="#changingSounds">Influencing Sounds during Playback</a> <br  />
+ <a class="el" href="#soundSources">Using Sound Sources</a> <br  />
+ <a class="el" href="#sound3d">3D Sound</a> <br  />
+ <a class="el" href="#removingSounds">Removing Sounds</a> <br  />
+ <a class="el" href="#events">Using Sound Events</a> <br  />
+ <a class="el" href="#memoryPlayback">Memory Playback</a> <br  />
+ <a class="el" href="#effects">Sound Effects</a> <br  />
+ <a class="el" href="#fileOverriding">Overriding File Access</a> <br  />
+ <a class="el" href="#audioDecoders">Adding Audio Decoders</a> <br  />
+ <a class="el" href="#plugins">Creating irrKlang Plugins</a> <br  />
+ <a class="el" href="#staticLib">Using irrKlang as static Lib</a> <br  />
+ <a class="el" href="#enumeratingDevices">Enumerating sound devices</a> <br  />
+ <a class="el" href="#recordingAudio">Recording Audio</a> <br  />
+ <a class="el" href="#unicode">Unicode support</a> <br  />
+ <br  />
+ Short full examples:<br  />
+ <a class="el" href="#quickstartexample">Quick Start Example</a> <br  />
+ <a class="el" href="#quickstartexample2">Quick Start Example 2</a> <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="intro"></a>
+Introduction</h1>
+<p>Welcome to the irrKlang API documentation. This page should give you a short overview over irrKlang, the high level audio library. In this documentation files you'll find any information you'll need to develop applications with irrKlang using C++. If you are looking for a tutorial on how to start, you'll find some on the homepage of irrKlang at <a href="http://www.ambiera.com/irrklang">http://www.ambiera.com/irrklang</a> or inside the SDK in the directory \examples.</p>
+<p>The irrKlang library is intended to be an easy-to-use 3d and 2d sound engine, so this documentation is an important part of it. If you have any questions or suggestions, please take a look into the ambiera.com forum or just send a mail.</p>
+<p><br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="features"></a>
+Features of irrKlang</h1>
+<p>irrKlang is a high level 2D and 3D cross platform sound engine and audio library. It has a very simply object orientated interface and was designed to be used in games, scientific simulations, architectural visualizations and similar. irrKlang plays several file formats such as </p><ul>
+<li>
+RIFF WAVE (*.wav) </li>
+<li>
+Ogg Vorbis (*.ogg) </li>
+<li>
+MPEG-1 Audio Layer 3 (*.mp3) </li>
+<li>
+Free Lossless Audio Codec (*.flac) </li>
+<li>
+Amiga Modules (*.mod) </li>
+<li>
+Impulse Tracker (*.it) </li>
+<li>
+Scream Tracker 3 (*.s3d) </li>
+<li>
+Fast Tracker 2 (*.xm) </li>
+</ul>
+<p>It is also able to run on different operating systems and use several output drivers: </p><ul>
+<li>
+Windows 98, ME, NT 4, 2000, XP, Vista, Windows 7, Windows 8 <ul>
+<li>
+DirectSound </li>
+<li>
+DirectSound8 </li>
+<li>
+WinMM </li>
+</ul>
+</li>
+<li>
+Linux / *nix <ul>
+<li>
+ALSA </li>
+</ul>
+</li>
+<li>
+MacOSX (x86 and PPC) <ul>
+<li>
+CoreAudio </li>
+</ul>
+</li>
+</ul>
+<p><br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="links"></a>
+Links into the API documentation</h1>
+<p><a class="el" href="classirrklang_1_1_i_sound_engine.html" title="Interface to the sound engine, for playing 3d and 2d sound and music.">irrklang::ISoundEngine</a>: The main class of irrKlang.<br  />
+ <a href="annotated.html">Class list</a>: List of all classes with descriptions.<br  />
+ <a href="functions.html">Class members</a>: Good place to find forgotten features.<br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="tipsandtricks"></a>
+Tips and Tricks</h1>
+<p>This section lists a few tips you might consider when implementing the sound part of your application using irrKlang:</p>
+<ul>
+<li>
+If you can choose which audio file format is the primary one for your application, * use .OGG files, instead of for example .MP3 files. irrKlang uses a lot less memory and CPU power when playing .OGGs. </li>
+<li>
+To keep your application simple, each time you play a sound, you can use for example play2D("filename.mp3") and let irrKlang handle the rest. There is no need to implement a preloading/caching/file management system for the audio playback. irrKlang will handle all this by itself and will never load a file twice.  </li>
+<li>
+irrKlang is crashing in your application? This should not happen, irrKlang is pretty stable, and in most cases, this is a problem in your code: In a lot of cases the reason is simply a wrong call to <a class="el" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">irrklang::IRefCounted::drop()</a>. Be sure you are doing it correctly. (If you are unsure, tempoarily remove all calls to <a class="el" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">irrklang::IRefCounted::drop()</a> and see if this helps.) </li>
+</ul>
+<p><br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="concept"></a>
+Starting up the Engine</h1>
+<p>irrKlang is designed so that it is very easy to achieve everything, its interface should be very simple to use. The <a class="el" href="#quickstartexample">Quick Start Example</a> shows how to play and mp3 file, and there is another example, <a class="el" href="#quickstartexample2">Quick Start Example 2</a>, showing some few more details.<br  />
+ To start up the sound engine, you simply need to call createIrrKlangDevice(). To shut it down, call IRefCounted::drop():</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="irr_klang_8h.html">irrKlang.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// start up the engine</span></div>
+<div class="line"><a class="code hl_class" href="classirrklang_1_1_i_sound_engine.html">irrklang::ISoundEngine</a>* engine = <a class="code hl_function" href="namespaceirrklang.html#a3dbcf94d41d38e2048f8319843db1d70">irrklang::createIrrKlangDevice</a>();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// after finished,</span></div>
+<div class="line"><span class="comment">// close the engine again, similar as calling &#39;delete&#39;</span></div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">drop</a>();</div>
+<div class="ttc" id="aclassirrklang_1_1_i_ref_counted_html_a869fe3adc6e49e8da105e95837a565b1"><div class="ttname"><a href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">irrklang::IRefCounted::drop</a></div><div class="ttdeci">bool drop()</div><div class="ttdef"><b>定义</b> ik_IRefCounted.h:91</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html">irrklang::ISoundEngine</a></div><div class="ttdoc">Interface to the sound engine, for playing 3d and 2d sound and music.</div><div class="ttdef"><b>定义</b> ik_ISoundEngine.h:24</div></div>
+<div class="ttc" id="airr_klang_8h_html"><div class="ttname"><a href="irr_klang_8h.html">irrKlang.h</a></div><div class="ttdoc">Main header file of the irrKlang sound library, the only file needed to include.</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a3dbcf94d41d38e2048f8319843db1d70"><div class="ttname"><a href="namespaceirrklang.html#a3dbcf94d41d38e2048f8319843db1d70">irrklang::createIrrKlangDevice</a></div><div class="ttdeci">IRRKLANG_API ISoundEngine *IRRKLANGCALLCONV createIrrKlangDevice(E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, int options=ESEO_DEFAULT_OPTIONS, const char *deviceID=0, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</div></div>
+</div><!-- fragment --><p>The createIrrKlangDevice() function also accepts several parameters, so that you can specify which sound driver should be used, if plugins should be used, if irrKlang should run in multithreaded mode, and similar. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="playingSounds"></a>
+Playing Sounds</h1>
+<p>Once you have irrKlang running (like in <a class="el" href="#concept">Starting up the Engine</a>), you can start playing sounds:</p>
+<div class="fragment"><div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;someSoundFile.wav&quot;</span>);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a6e3d1ea132c444a06b1054df20dcb9c5"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">irrklang::ISoundEngine::play2D</a></div><div class="ttdeci">virtual ISound * play2D(const char *soundFileName, bool playLooped=false, bool startPaused=false, bool track=false, E_STREAM_MODE streamMode=ESM_AUTO_DETECT, bool enableSoundEffects=false)=0</div><div class="ttdoc">loads a sound source (if not loaded already) from a file and plays it.</div></div>
+</div><!-- fragment --><p>This works with all supported file types. You can replace "someSoundFile.wav" with "someSoundFile.mp3", or "someSoundFile.ogg", for example.<br  />
+ To play a sound looped, set the second parameter to 'true':</p>
+<div class="fragment"><div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;myMusic.mp3&quot;</span>, <span class="keyword">true</span>);</div>
+</div><!-- fragment --><p>To stop this looping sound again, use engine-&gt;<a class="el" href="classirrklang_1_1_i_sound_engine.html#a38dbc2f1d49e3127fc4a81a9c1a2f82d">stopAllSounds()</a> to stop all sounds, or <a class="el" href="classirrklang_1_1_i_sound.html#a108485fe64658441cecd70917782961f" title="Will stop the sound and free its resources.">irrklang::ISound::stop()</a> if you only want to stop that single sound. <a class="el" href="#changingSounds">Influencing Sounds during Playback</a> shows how to get to that ISound interface. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="changingSounds"></a>
+Influencing Sounds during Playback</h1>
+<p>To influence parameters of the sound such as pan, volume or playback speed during runtime, to get the play position or stop playback of single playing sounds, you can use the <a class="el" href="classirrklang_1_1_i_sound.html" title="Represents a sound which is currently played.">irrklang::ISound</a> interface. <a class="el" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5" title="loads a sound source (if not loaded already) from a file and plays it.">irrklang::ISoundEngine::play2D</a> (but also play3D) returns a pointer to this interface when its third ('startPaused') or fourth ('track') parameter was set to true:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound.html">irrklang::ISound</a>* snd = engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;myMusic.mp3&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (snd)</div>
+<div class="line">      snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a4c91357775f1d15e2c276ced09a40599">setVolume</a>(someNewValue);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (snd)</div>
+<div class="line">  {</div>
+<div class="line">      snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_virtual_ref_counted.html#a6602c3d110f23410c5bca8a08b709aa4">drop</a>(); <span class="comment">// don&#39;t forget to release the pointer once it is no longer</span></div>
+<div class="line">needed by you</div>
+<div class="line">      snd = 0;</div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html"><div class="ttname"><a href="classirrklang_1_1_i_sound.html">irrklang::ISound</a></div><div class="ttdoc">Represents a sound which is currently played.</div><div class="ttdef"><b>定义</b> ik_ISound.h:22</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html_a4c91357775f1d15e2c276ced09a40599"><div class="ttname"><a href="classirrklang_1_1_i_sound.html#a4c91357775f1d15e2c276ced09a40599">irrklang::ISound::setVolume</a></div><div class="ttdeci">virtual void setVolume(ik_f32 volume)=0</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_virtual_ref_counted_html_a6602c3d110f23410c5bca8a08b709aa4"><div class="ttname"><a href="classirrklang_1_1_i_virtual_ref_counted.html#a6602c3d110f23410c5bca8a08b709aa4">irrklang::IVirtualRefCounted::drop</a></div><div class="ttdeci">virtual bool drop()=0</div><div class="ttdoc">Drops the object. Decrements the reference counter by one.</div></div>
+</div><!-- fragment --><p>The <a class="el" href="classirrklang_1_1_i_sound.html" title="Represents a sound which is currently played.">irrklang::ISound</a> interface can also be used to test if the sound has been finished, set event receivers, pause and unpause sounds and similar. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="soundSources"></a>
+Using Sound Sources</h1>
+<p>To be more flexible playing back sounds, irrKlang uses the concept of sound sources. A sound source can be simply the name of a sound file, such as "sound.wav". It is possible to add "sound.wav" as sound source to irrKlang, and play it using the sound source pointer:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a>* shootSound =</div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a2a328b04c0d43f8aa2f13472eecd43cf">addSoundSourceFromFile</a>(<span class="stringliteral">&quot;shoot.wav&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(shootSound);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// note: you don&#39;t need to drop() the shootSound if you don&#39;t use it anymore</span></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a2a328b04c0d43f8aa2f13472eecd43cf"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a2a328b04c0d43f8aa2f13472eecd43cf">irrklang::ISoundEngine::addSoundSourceFromFile</a></div><div class="ttdeci">virtual ISoundSource * addSoundSourceFromFile(const ik_c8 *fileName, E_STREAM_MODE mode=ESM_AUTO_DETECT, bool preload=false)=0</div><div class="ttdoc">Adds sound source into the sound engine as file.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_source_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a></div><div class="ttdef"><b>定义</b> ik_ISoundSource.h:19</div></div>
+</div><!-- fragment --><p>The advantage of using <a class="el" href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a> is that it is possible to set default values for this source, such as volume or distances if it should be used as 3D sound:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a>* shootSound =</div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a2a328b04c0d43f8aa2f13472eecd43cf">addSoundSourceFromFile</a>(<span class="stringliteral">&quot;shoot.wav&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  shootSound-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_source.html#a52accb16b3a554558f12f99d16f57a7d">setDefaultVolume</a>(0.5f);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// shootSound will now be played with half its sound volume by default:</span></div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(shootSound);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_source_html_a52accb16b3a554558f12f99d16f57a7d"><div class="ttname"><a href="classirrklang_1_1_i_sound_source.html#a52accb16b3a554558f12f99d16f57a7d">irrklang::ISoundSource::setDefaultVolume</a></div><div class="ttdeci">virtual void setDefaultVolume(ik_f32 volume=1.0f)=0</div><div class="ttdoc">Sets the default volume for a sound played from this source.</div></div>
+</div><!-- fragment --><p>It is also possible to have multiple settings for the same sound file:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a>* shootSound =</div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a2a328b04c0d43f8aa2f13472eecd43cf">addSoundSourceFromFile</a>(<span class="stringliteral">&quot;shoot.wav&quot;</span>);</div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a>* shootSound2 = engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a75738c961ed14e8fc6c3ecea62cd6b9c">addSoundSourceAlias</a>(shootSound,</div>
+<div class="line"><span class="stringliteral">&quot;silentShoot&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  shootSound2-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_source.html#a52accb16b3a554558f12f99d16f57a7d">setDefaultVolume</a>(0.1f);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// shootSound will now be played with 100% of its sound volume by default,</span></div>
+<div class="line">  <span class="comment">// shootSound2 will now be played 10% of its sound volume by default. It is</span></div>
+<div class="line">  <span class="comment">//  also possible to play it using engine-&gt;play(&quot;silentShoot&quot;), now.</span></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a75738c961ed14e8fc6c3ecea62cd6b9c"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a75738c961ed14e8fc6c3ecea62cd6b9c">irrklang::ISoundEngine::addSoundSourceAlias</a></div><div class="ttdeci">virtual ISoundSource * addSoundSourceAlias(ISoundSource *baseSource, const ik_c8 *soundName)=0</div></div>
+</div><!-- fragment --><p>Using addSoundSourceFromMemory(), it is also possible to play sounds back directly from memory, without files. Of course, it is not necessary to use sound sources. Using <a class="el" href="classirrklang_1_1_i_sound.html" title="Represents a sound which is currently played.">irrklang::ISound</a>, it is possible to change the settings of all sounds, too. But using sound sources, it is not necessary to do this every time a sound is played. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="sound3d"></a>
+3D Sound</h1>
+<p>There is nothing difficult in playing sounds in 3D using irrKlang: Instead of using <a class="el" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5" title="loads a sound source (if not loaded already) from a file and plays it.">irrklang::ISoundEngine::play2D()</a>, just use <a class="el" href="classirrklang_1_1_i_sound_engine.html#aa0046e9959e4e9be569bdf2dc3382753">irrklang::ISoundEngine::play3D()</a>, which takes a 3D position as additional parameter:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classirrklang_1_1vec3d.html">irrklang::vec3df</a> position(23,70,90);</div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#aa0046e9959e4e9be569bdf2dc3382753">play3D</a>(<span class="stringliteral">&quot;yourSound.wav&quot;</span>, position);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_aa0046e9959e4e9be569bdf2dc3382753"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#aa0046e9959e4e9be569bdf2dc3382753">irrklang::ISoundEngine::play3D</a></div><div class="ttdeci">virtual ISound * play3D(const char *soundFileName, vec3df pos, bool playLooped=false, bool startPaused=false, bool track=false, E_STREAM_MODE streamMode=ESM_AUTO_DETECT, bool enableSoundEffects=false)=0</div></div>
+<div class="ttc" id="aclassirrklang_1_1vec3d_html"><div class="ttname"><a href="classirrklang_1_1vec3d.html">irrklang::vec3d</a></div><div class="ttdoc">a 3d vector template class for representing vectors and points in 3d</div><div class="ttdef"><b>定义</b> ik_vec3d.h:13</div></div>
+</div><!-- fragment --><p>But to make it sound realistic, you need to set a minimal sound distance: If your sound is caused by a bee, it will usually have a smaller sound radius than for example a jet engine. You can set default values using sound sources (see <a class="el" href="#soundSources">Using Sound Sources</a>) or set these values after you have started the sound paused:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1vec3d.html">irrklang::vec3df</a> position(23,70,90);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// start the sound paused:</span></div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound.html">irrklang::ISound</a>* snd = engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#aa0046e9959e4e9be569bdf2dc3382753">play3D</a>(<span class="stringliteral">&quot;yourSound.wav&quot;</span>, position, <span class="keyword">false</span>,</div>
+<div class="line"><span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (snd)</div>
+<div class="line">  {</div>
+<div class="line">     snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a318bcb0ec6c44078cdee3c9b080b6f41">setMinDistance</a>(30.0f); <span class="comment">// a loud sound</span></div>
+<div class="line">     snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a399fef60d1c48e2dffdf76d83173a15a">setIsPaused</a>(<span class="keyword">false</span>); <span class="comment">// unpause the sound</span></div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html_a318bcb0ec6c44078cdee3c9b080b6f41"><div class="ttname"><a href="classirrklang_1_1_i_sound.html#a318bcb0ec6c44078cdee3c9b080b6f41">irrklang::ISound::setMinDistance</a></div><div class="ttdeci">virtual void setMinDistance(ik_f32 min)=0</div><div class="ttdoc">Sets the minimal distance if this is a 3D sound.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html_a399fef60d1c48e2dffdf76d83173a15a"><div class="ttname"><a href="classirrklang_1_1_i_sound.html#a399fef60d1c48e2dffdf76d83173a15a">irrklang::ISound::setIsPaused</a></div><div class="ttdeci">virtual void setIsPaused(bool paused=true)=0</div><div class="ttdoc">returns if the sound is paused</div></div>
+</div><!-- fragment --><p>There is also the possibility to change the maxDistance, but it is only necessary to change this in very rare cicumstances. If the sound moves, it is also a good idea to update its position from time to time:</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (snd)</div>
+<div class="line">   snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a994b98c059e8aee6adb82bb12d866338">setPosition</a>(newPosition);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html_a994b98c059e8aee6adb82bb12d866338"><div class="ttname"><a href="classirrklang_1_1_i_sound.html#a994b98c059e8aee6adb82bb12d866338">irrklang::ISound::setPosition</a></div><div class="ttdeci">virtual void setPosition(vec3df position)=0</div><div class="ttdoc">sets the position of the sound in 3d space</div></div>
+</div><!-- fragment --><p>And don't forget to drop() the sound after you don't need it anymore. If you do, it's nothing severe because irrKlang will still clean up the sounds resources after it has finished, but you still would waste some few bytes of memory:</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (snd)</div>
+<div class="line">{</div>
+<div class="line">   snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_virtual_ref_counted.html#a6602c3d110f23410c5bca8a08b709aa4">drop</a>();</div>
+<div class="line">   snd = 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To update the position of yourself, the listener of the 3D sounds, use this from time to time:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1vec3d.html">irrklang::vec3df</a> position(0,0,0);        <span class="comment">// position of the listener</span></div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1vec3d.html">irrklang::vec3df</a> lookDirection(10,0,10); <span class="comment">// the direction the listener looks</span></div>
+<div class="line">into</div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1vec3d.html">irrklang::vec3df</a> velPerSecond(0,0,0);    <span class="comment">// only relevant for doppler effects</span></div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1vec3d.html">irrklang::vec3df</a> upVector(0,1,0);        <span class="comment">// where &#39;up&#39; is in your 3D scene</span></div>
+<div class="line"> </div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#af3e6223435969159ef3b22d0c83d2b84">setListenerPosition</a>(position, lookDirection, velPerSecond, upVector);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_af3e6223435969159ef3b22d0c83d2b84"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#af3e6223435969159ef3b22d0c83d2b84">irrklang::ISoundEngine::setListenerPosition</a></div><div class="ttdeci">virtual void setListenerPosition(const vec3df &amp;pos, const vec3df &amp;lookdir, const vec3df &amp;velPerSecond=vec3df(0, 0, 0), const vec3df &amp;upVector=vec3df(0, 1, 0))=0</div><div class="ttdoc">Sets the current listener 3d position.</div></div>
+</div><!-- fragment --><p><br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="removingSounds"></a>
+Removing Sounds</h1>
+<p>irrKlang manages the memory usage of sounds by itself, so usually, you don't have to care about memory management. But if you know you need to reduce the amount of used memory at a certain point in your program, you can do this:</p>
+<div class="fragment"><div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a1d37141994f73595fc96d5893844925c">removeAllSoundSources</a>();</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a1d37141994f73595fc96d5893844925c"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a1d37141994f73595fc96d5893844925c">irrklang::ISoundEngine::removeAllSoundSources</a></div><div class="ttdeci">virtual void removeAllSoundSources()=0</div><div class="ttdoc">Removes all sound sources from the engine</div></div>
+</div><!-- fragment --><p>This will remove all sounds and also cause all sounds to be stopped. To remove single sounds from the engine, use:</p>
+<div class="fragment"><div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a82e712f7816f933145690983dbd8be9e">removeSoundSource</a>(pointerToSomeSoundSource);</div>
+<div class="line"><span class="comment">// or:</span></div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a82e712f7816f933145690983dbd8be9e">removeSoundSource</a>(<span class="stringliteral">&quot;nameOfASoundFile.wav&quot;</span>);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a82e712f7816f933145690983dbd8be9e"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a82e712f7816f933145690983dbd8be9e">irrklang::ISoundEngine::removeSoundSource</a></div><div class="ttdeci">virtual void removeSoundSource(ISoundSource *source)=0</div><div class="ttdoc">Removes a sound source from the engine, freeing the memory it occupies.</div></div>
+</div><!-- fragment --><p>Note: Only removing buffered sounds will reduce the amount of memory used by irrKlang, streamed sounds don't occupy a lot of memory when they are not played. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="events"></a>
+Using Sound Events</h1>
+<p>In order to wait for a sound to be finished, it is simply possible to poll <a class="el" href="classirrklang_1_1_i_sound.html#a9d9e758f8500b194580de339c7f96768" title="returns if the sound has finished playing.">irrklang::ISound::isFinished()</a>. Another way would be to constantly use <a class="el" href="classirrklang_1_1_i_sound_engine.html#a1084577f9f43cb12e86cea43c323b12c" title="Returns if a sound with the specified name is currently playing.">irrklang::ISoundEngine::isCurrentlyPlaying</a> to test wether a sound with that name or source is currently playing. But of course, an event based approach is a lot nicer. That's why irrKlang supports sound events.<br  />
+ The key to sound events is the method <a class="el" href="classirrklang_1_1_i_sound.html#a50dc71426d0abec7af56fa68a5bb87b5">setSoundStopEventReceiver </a> of the <a class="el" href="classirrklang_1_1_i_sound.html" title="Represents a sound which is currently played.">irrklang::ISound</a> interface (See <a class="el" href="#changingSounds">Influencing Sounds during Playback</a> on how to get the ISound interface):</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classirrklang_1_1_i_sound.html">irrklang::ISound</a>* snd = engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;speech.mp3&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="keywordflow">if</span> (snd)</div>
+<div class="line">   snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a50dc71426d0abec7af56fa68a5bb87b5">setSoundStopEventReceiver</a>(yourEventReceiver, 0);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html_a50dc71426d0abec7af56fa68a5bb87b5"><div class="ttname"><a href="classirrklang_1_1_i_sound.html#a50dc71426d0abec7af56fa68a5bb87b5">irrklang::ISound::setSoundStopEventReceiver</a></div><div class="ttdeci">virtual void setSoundStopEventReceiver(ISoundStopEventReceiver *reciever, void *userData=0)=0</div></div>
+</div><!-- fragment --><p>The optional second parameter of setSoundStopEventReceiver is a user pointer, set it to whatever you like. 'yourEventReceiver' must be an implementation of the <a class="el" href="classirrklang_1_1_i_sound_stop_event_receiver.html" title="Interface to be implemented by the user, which recieves sound stop events.">irrklang::ISoundStopEventReceiver</a> interface.<br  />
+ A whole implementation could look like this:</p>
+<div class="fragment"><div class="line">  <span class="keyword">class </span>MySoundEndReceiver : <span class="keyword">public</span> <a class="code hl_class" href="classirrklang_1_1_i_sound_stop_event_receiver.html">irrklang::ISoundStopEventReceiver</a></div>
+<div class="line">  {</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line">      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classirrklang_1_1_i_sound_stop_event_receiver.html#a8e975104683b71cd45436ae5f8bfaf9f">OnSoundStopped</a> (<a class="code hl_class" href="classirrklang_1_1_i_sound.html">irrklang::ISound</a>* sound,</div>
+<div class="line"><a class="code hl_enumeration" href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522">irrklang::E_STOP_EVENT_CAUSE</a> reason, <span class="keywordtype">void</span>* userData)</div>
+<div class="line">      {</div>
+<div class="line">         <span class="comment">// called when the sound has ended playing</span></div>
+<div class="line">         printf(<span class="stringliteral">&quot;sound has ended&quot;</span>);</div>
+<div class="line">      }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">  MySoundEndReceiver* myReceiver = <span class="keyword">new</span> MySoundEndReceiver();</div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound.html">irrklang::ISound</a>* snd = engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;speech.mp3&quot;</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (snd)</div>
+<div class="line">     snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a50dc71426d0abec7af56fa68a5bb87b5">setSoundStopEventReceiver</a>(myReceiver);</div>
+<div class="line"> </div>
+<div class="line">  myReceiver-&gt;drop(); <span class="comment">// similar to delete</span></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_stop_event_receiver_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_stop_event_receiver.html">irrklang::ISoundStopEventReceiver</a></div><div class="ttdoc">Interface to be implemented by the user, which recieves sound stop events.</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:39</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_stop_event_receiver_html_a8e975104683b71cd45436ae5f8bfaf9f"><div class="ttname"><a href="classirrklang_1_1_i_sound_stop_event_receiver.html#a8e975104683b71cd45436ae5f8bfaf9f">irrklang::ISoundStopEventReceiver::OnSoundStopped</a></div><div class="ttdeci">virtual void OnSoundStopped(ISound *sound, E_STOP_EVENT_CAUSE reason, void *userData)=0</div><div class="ttdoc">Called when a sound has stopped playing.</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a17ebb006afe78ab6502a1e3d18083522"><div class="ttname"><a href="namespaceirrklang.html#a17ebb006afe78ab6502a1e3d18083522">irrklang::E_STOP_EVENT_CAUSE</a></div><div class="ttdeci">E_STOP_EVENT_CAUSE</div><div class="ttdoc">An enumeration listing all reasons for a fired sound stop event</div><div class="ttdef"><b>定义</b> ik_ISoundStopEventReceiver.h:13</div></div>
+</div><!-- fragment --><p>The <a class="el" href="classirrklang_1_1_i_sound_stop_event_receiver.html#a8e975104683b71cd45436ae5f8bfaf9f" title="Called when a sound has stopped playing.">irrklang::ISoundStopEventReceiver::OnSoundStopped()</a> method is guaranteed to be called when a sound or sound stream has stopped, either because the sound reached its playback end, its sound source was removed, ISoundEngine::stopAllSounds() has been called or the whole engine was deleted. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="memoryPlayback"></a>
+Memory Playback</h1>
+<p>Using irrKlang, it is easily possible to play sounds directly from memory instead out of files. There is an example project showing this: In the SDK, in /examples/03.MemoryPlayback. But in short, it simply works by adding the memory as sound source (See <a class="el" href="#soundSources">Using Sound Sources</a> for details about sound sources):</p>
+<div class="fragment"><div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a53af169b1569192dee8b1ffab86c3e13">addSoundSourceFromMemory</a>(pointerToMemory, memorySize,</div>
+<div class="line"><span class="stringliteral">&quot;nameforthesound.wav&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// play sound now</span></div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;nameforthesound.wav&quot;</span>);</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a53af169b1569192dee8b1ffab86c3e13"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a53af169b1569192dee8b1ffab86c3e13">irrklang::ISoundEngine::addSoundSourceFromMemory</a></div><div class="ttdeci">virtual ISoundSource * addSoundSourceFromMemory(void *memory, ik_s32 sizeInBytes, const ik_c8 *soundName, bool copyMemory=true)=0</div><div class="ttdoc">Adds a sound source into the sound engine as memory source.</div></div>
+</div><!-- fragment --><p>Or using a sound source pointer:</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a>* snd =</div>
+<div class="line">    engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a53af169b1569192dee8b1ffab86c3e13">addSoundSourceFromMemory</a>(pointerToMemory, memorySize,</div>
+<div class="line"><span class="stringliteral">&quot;nameforthesound.wav&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// play sound now</span></div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(snd);</div>
+</div><!-- fragment --><p>Note: It is also possible to overwrite the file access directly, don't use this Memory Playback feature for this. See <a class="el" href="#fileOverriding">Overriding File Access</a> for details. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="effects"></a>
+Sound Effects</h1>
+<p>irrKlang supports the effects Chorus, Compressor, Distortion, Echo, Flanger Gargle, 3DL2Reverb, ParamEq and WavesReverb, when using the sound driver <a class="el" href="namespaceirrklang.html#a77f31ac02a7d33fe94807be709f72afea6fcd5ec6152066313ef04d97ea5582ee" title="DirectSound8 sound output driver, windows only.">irrklang::ESOD_DIRECT_SOUND_8</a>, which selected by default when using Windows.<br  />
+</p>
+<p>Using the <a class="el" href="classirrklang_1_1_i_sound.html" title="Represents a sound which is currently played.">irrklang::ISound</a> interface, you can optain the <a class="el" href="classirrklang_1_1_i_sound_effect_control.html">irrklang::ISoundEffectControl</a> interface if the sound device supports sound effects and the last parameter ('enableSoundEffects') was set to true when calling play2D():</p>
+<div class="fragment"><div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound.html">irrklang::ISound</a>* snd = engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;sound.wav&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">true</span>,</div>
+<div class="line">ESM_AUTO_DETECT, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (snd)</div>
+<div class="line">  {</div>
+<div class="line">     <a class="code hl_class" href="classirrklang_1_1_i_sound_effect_control.html">irrklang::ISoundEffectControl</a>* fx = snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound.html#a6c1cba23a576c1bbb30faa560e1db02c">getSoundEffectControl</a>();</div>
+<div class="line">     <span class="keywordflow">if</span> (fx)</div>
+<div class="line">     {</div>
+<div class="line">         <span class="comment">// enable the echo sound effect for this sound</span></div>
+<div class="line">         fx-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_effect_control.html#a5f2e867d41eb16b6e5418c1c2c92e501">enableEchoSoundEffect</a>();</div>
+<div class="line">     }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  snd-&gt;<a class="code hl_function" href="classirrklang_1_1_i_virtual_ref_counted.html#a6602c3d110f23410c5bca8a08b709aa4">drop</a>();</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_effect_control_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_effect_control.html">irrklang::ISoundEffectControl</a></div><div class="ttdef"><b>定义</b> ik_ISoundEffectControl.h:25</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_effect_control_html_a5f2e867d41eb16b6e5418c1c2c92e501"><div class="ttname"><a href="classirrklang_1_1_i_sound_effect_control.html#a5f2e867d41eb16b6e5418c1c2c92e501">irrklang::ISoundEffectControl::enableEchoSoundEffect</a></div><div class="ttdeci">virtual bool enableEchoSoundEffect(ik_f32 fWetDryMix=50, ik_f32 fFeedback=50, ik_f32 fLeftDelay=500, ik_f32 fRightDelay=500, ik_s32 lPanDelay=0)=0</div><div class="ttdoc">Enables the Echo sound effect or adjusts its values.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_html_a6c1cba23a576c1bbb30faa560e1db02c"><div class="ttname"><a href="classirrklang_1_1_i_sound.html#a6c1cba23a576c1bbb30faa560e1db02c">irrklang::ISound::getSoundEffectControl</a></div><div class="ttdeci">virtual ISoundEffectControl * getSoundEffectControl()=0</div><div class="ttdoc">Returns the sound effect control interface for this sound.</div></div>
+</div><!-- fragment --><p>This enabled the echo sound effect for this sound. The method also supports a lot of parameters, and can be called multiple times to change those parameters over time if wished. There are a lot of other sound effects, see <a class="el" href="classirrklang_1_1_i_sound_effect_control.html">irrklang::ISoundEffectControl</a> for details. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="fileOverriding"></a>
+Overriding File Access</h1>
+<p>It is possible to let irrKlang use your own file access functions. This is useful if you want to read sounds from other sources than just files, for example from custom internet streams or an own encypted archive format. There is an example in the SDK in examples/04.OverrideFileAccess which shows this as well.<br  />
+</p>
+<p>The only thing to do for this is to implement your own <a class="el" href="classirrklang_1_1_i_file_factory.html" title="Interface to overwrite file access in irrKlang.">irrklang::IFileFactory</a>, and set it in irrKlang using <a class="el" href="classirrklang_1_1_i_sound_engine.html#ad7c48f9d7ccc6f60adb1b3f024f9b189">irrklang::ISoundEngine::addFileFactory()</a>:</p>
+<div class="fragment"><div class="line">  <span class="comment">// a class implementing the IFileFactory interface to override irrklang file</span></div>
+<div class="line">access</div>
+<div class="line">  <span class="keyword">class </span>CMyFileFactory : <span class="keyword">public</span> <a class="code hl_class" href="classirrklang_1_1_i_file_factory.html">irrklang::IFileFactory</a></div>
+<div class="line">  {</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Opens a file for read access. Simply return 0 if file not found.</span></div>
+<div class="line">    <span class="keyword">virtual</span> <a class="code hl_class" href="classirrklang_1_1_i_file_reader.html">irrklang::IFileReader</a>* <a class="code hl_function" href="classirrklang_1_1_i_file_factory.html#ae7c3c339baf595dac66cd693db3ea3b2">createFileReader</a>(<span class="keyword">const</span> ik_c8* filename)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="comment">// return your own irrklang::IFileReader implementation here, for example</span></div>
+<div class="line">like that:</div>
+<div class="line">      <span class="keywordflow">return</span> <span class="keyword">new</span> CMyReadFile(filename);</div>
+<div class="line">    }</div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">  CMyFileFactory* myFactory = <span class="keyword">new</span> CMyFileFactory();</div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#ad7c48f9d7ccc6f60adb1b3f024f9b189">addFileFactory</a>(myFactory);</div>
+<div class="line">  myFactory-&gt;drop();</div>
+<div class="ttc" id="aclassirrklang_1_1_i_file_factory_html"><div class="ttname"><a href="classirrklang_1_1_i_file_factory.html">irrklang::IFileFactory</a></div><div class="ttdoc">Interface to overwrite file access in irrKlang.</div><div class="ttdef"><b>定义</b> ik_IFileFactory.h:20</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_file_factory_html_ae7c3c339baf595dac66cd693db3ea3b2"><div class="ttname"><a href="classirrklang_1_1_i_file_factory.html#ae7c3c339baf595dac66cd693db3ea3b2">irrklang::IFileFactory::createFileReader</a></div><div class="ttdeci">virtual IFileReader * createFileReader(const ik_c8 *filename)=0</div><div class="ttdoc">Opens a file for read access.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_file_reader_html"><div class="ttname"><a href="classirrklang_1_1_i_file_reader.html">irrklang::IFileReader</a></div><div class="ttdoc">Interface providing read acess to a file.</div><div class="ttdef"><b>定义</b> ik_IFileReader.h:12</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_ad7c48f9d7ccc6f60adb1b3f024f9b189"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#ad7c48f9d7ccc6f60adb1b3f024f9b189">irrklang::ISoundEngine::addFileFactory</a></div><div class="ttdeci">virtual void addFileFactory(IFileFactory *fileFactory)=0</div></div>
+</div><!-- fragment --><p>For a full example implementation, just take a look into the SDK in examples/04.OverrideFileAccess. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="audioDecoders"></a>
+Adding Audio Decoders</h1>
+<p>To add support for new file formats, it is possible to add new audio decoders to irrKlang. The only thing to do for this is to implement your own <a class="el" href="classirrklang_1_1_i_audio_stream_loader.html" title="Class which is able to create an audio file stream from a file.">irrklang::IAudioStreamLoader</a>, and <a class="el" href="classirrklang_1_1_i_audio_stream.html">irrklang::IAudioStream</a>, and set it in irrKlang using <a class="el" href="classirrklang_1_1_i_sound_engine.html#a6cb64f878a5355454c7197276127a7c9" title="Registers a new audio stream loader in the sound engine.">irrklang::ISoundEngine::registerAudioStreamLoader()</a>:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>NewAudioStreamLoader : <span class="keyword">public</span> <a class="code hl_class" href="classirrklang_1_1_i_audio_stream_loader.html">irrklang::IAudioStreamLoader</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// ... returns NewAudioDecoder and the used file name suffices.</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>NewAudioDecoder : <span class="keyword">public</span> <a class="code hl_class" href="classirrklang_1_1_i_audio_stream.html">irrklang::IAudioStream</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    <span class="comment">// ... decodes the new file format</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"> </div>
+<div class="line">NewAudioDecoder* loader = <span class="keyword">new</span> NewAudioDecoder();</div>
+<div class="line">engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6cb64f878a5355454c7197276127a7c9">registerAudioStreamLoader</a>(loader);</div>
+<div class="line">loader-&gt;drop();</div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_stream_html"><div class="ttname"><a href="classirrklang_1_1_i_audio_stream.html">irrklang::IAudioStream</a></div><div class="ttdef"><b>定义</b> ik_IAudioStream.h:14</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_stream_loader_html"><div class="ttname"><a href="classirrklang_1_1_i_audio_stream_loader.html">irrklang::IAudioStreamLoader</a></div><div class="ttdoc">Class which is able to create an audio file stream from a file.</div><div class="ttdef"><b>定义</b> ik_IAudioStreamLoader.h:15</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_engine_html_a6cb64f878a5355454c7197276127a7c9"><div class="ttname"><a href="classirrklang_1_1_i_sound_engine.html#a6cb64f878a5355454c7197276127a7c9">irrklang::ISoundEngine::registerAudioStreamLoader</a></div><div class="ttdeci">virtual void registerAudioStreamLoader(IAudioStreamLoader *loader)=0</div><div class="ttdoc">Registers a new audio stream loader in the sound engine.</div></div>
+</div><!-- fragment --><p>There is an example audio decoder and loader with full source in plugins/ikpMP3, which adds MP3 audio decoding capabilities to irrKlang. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="plugins"></a>
+Creating irrKlang Plugins</h1>
+<p>irrKlang plugins are ikp*.dll (Windows), ikp*.so (Unix) or ikp*.dylib (MacOS) files which are loaded by irrKlang at startup when the <a class="el" href="namespaceirrklang.html#ac9155ff55b347df6e905462100762d7fafda608a17564b562a9a43b7934a387e8" title="Automaticly loads external plugins when starting up.">irrklang::ESEO_LOAD_PLUGINS</a> was set (which is default) or <a class="el" href="classirrklang_1_1_i_sound_engine.html#abcb159bed86265a22fe3435ce2541ea6" title="Loads irrKlang plugins from a custom path.">irrklang::ISoundEngine::loadPlugins()</a> was called. <br  />
+</p>
+<p>The plugin only needs to contain the following function which will be called by irrKlang:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">  #ifdef WIN32</span></div>
+<div class="line">  <span class="comment">// Windows version</span></div>
+<div class="line">  __declspec(dllexport) <span class="keywordtype">void</span> __stdcall irrKlangPluginInit(ISoundEngine* engine,</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* version)</div>
+<div class="line">  <span class="preprocessor">#else</span></div>
+<div class="line">  <span class="comment">// Linux and Mac OS version</span></div>
+<div class="line">  <span class="keywordtype">void</span> irrKlangPluginInit(ISoundEngine* engine, <span class="keyword">const</span> <span class="keywordtype">char</span>* version)</div>
+<div class="line">  <span class="preprocessor">#endif</span></div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">// your implementation here</span></div>
+<div class="line">  }</div>
+</div><!-- fragment --><p>In there, it is for example possible to extend irrKlang with new audio decoders, see <a class="el" href="#audioDecoders">Adding Audio Decoders</a> for details. <br  />
+</p>
+<p>There is an example plugin with full source in plugins/ikpMP3, which adds MP3 audio decoding capabilities to irrKlang. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="staticLib"></a>
+Using irrKlang as static Lib</h1>
+<p>If you don't want to use the irrKlang.DLL file and link irrKlang statically, you can do this by simply linking to the irrKlang.lib in the bin/win32-visualstudio_lib folder. This folder will only available in the pro versions of irrKlang, which you get when purchasing an irrKlang license.</p>
+<p>To use irrKlang in this way, just define IRRKLANG_STATIC before including <a class="el" href="irr_klang_8h.html" title="Main header file of the irrKlang sound library, the only file needed to include.">irrklang.h</a>, like this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#define IRRKLANG_STATIC</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="irr_klang_8h.html">irrKlang.h</a>&gt;</span></div>
+</div><!-- fragment --><p>Of course, IRRKLANG_STATIC can also simply be defined in the project/compiler settings instead of in the source file. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="enumeratingDevices"></a>
+Enumerating sound devices</h1>
+<p>irrKlang uses the default sound device when playing sound when started without parameters. But if you want irrKlang to playback sound on one specific sound device, you may want to enumerate the available sound devices on your system and select one of them. Use <a class="el" href="namespaceirrklang.html#a62cd110fa05da7f8bc32ee3db16a1549" title="Creates a list of available sound devices for the driver type.">irrklang::createSoundDeviceList()</a> for this. This example code shows how to print a list of all available sound devices on the current system and lets the user choose one of them:</p>
+<div class="fragment"><div class="line">  <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">// enumerate devices</span></div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="classirrklang_1_1_i_sound_device_list.html">irrklang::ISoundDeviceList</a>* deviceList = createSoundDeviceList();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// ask user for a sound device</span></div>
+<div class="line"> </div>
+<div class="line">    printf(<span class="stringliteral">&quot;Devices available:\n\n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_device_list.html#a546d93bf5e70b5b168c430329194f2e4">getDeviceCount</a>(); ++i)</div>
+<div class="line">        printf(<span class="stringliteral">&quot;%d: %s\n&quot;</span>, i, deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_device_list.html#ad44d1d082d626221accce41ff5efa38f">getDeviceDescription</a>(i));</div>
+<div class="line"> </div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nselect a device using the number (or press any key to use</span></div>
+<div class="line"><span class="stringliteral">default):\n\n&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">int</span> deviceNumber = getch() - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// create device with the selected driver</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* deviceID = deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_device_list.html#a784ef34e767c31b0251e7d153a97b48b">getDeviceID</a>(deviceNumber);</div>
+<div class="line"> </div>
+<div class="line">    ISoundEngine* engine = createIrrKlangDevice(<a class="code hl_enumvalue" href="namespaceirrklang.html#a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec">irrklang::ESOD_AUTO_DETECT</a>,</div>
+<div class="line">  <a class="code hl_enumvalue" href="namespaceirrklang.html#ac9155ff55b347df6e905462100762d7facca58ad3ee7e3c2e874bc4015f36f2a9">irrklang::ESEO_DEFAULT_OPTIONS</a>,</div>
+<div class="line">                                                deviceID);</div>
+<div class="line"> </div>
+<div class="line">    deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">drop</a>(); <span class="comment">// delete device list</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// ... use engine now</span></div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_device_list_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_device_list.html">irrklang::ISoundDeviceList</a></div><div class="ttdef"><b>定义</b> ik_ISoundDeviceList.h:19</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_device_list_html_a546d93bf5e70b5b168c430329194f2e4"><div class="ttname"><a href="classirrklang_1_1_i_sound_device_list.html#a546d93bf5e70b5b168c430329194f2e4">irrklang::ISoundDeviceList::getDeviceCount</a></div><div class="ttdeci">virtual ik_s32 getDeviceCount()=0</div><div class="ttdoc">Returns amount of enumerated devices in the list.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_device_list_html_a784ef34e767c31b0251e7d153a97b48b"><div class="ttname"><a href="classirrklang_1_1_i_sound_device_list.html#a784ef34e767c31b0251e7d153a97b48b">irrklang::ISoundDeviceList::getDeviceID</a></div><div class="ttdeci">virtual const char * getDeviceID(ik_s32 index)=0</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_device_list_html_ad44d1d082d626221accce41ff5efa38f"><div class="ttname"><a href="classirrklang_1_1_i_sound_device_list.html#ad44d1d082d626221accce41ff5efa38f">irrklang::ISoundDeviceList::getDeviceDescription</a></div><div class="ttdeci">virtual const char * getDeviceDescription(ik_s32 index)=0</div><div class="ttdoc">Returns description of the device.</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec"><div class="ttname"><a href="namespaceirrklang.html#a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec">irrklang::ESOD_AUTO_DETECT</a></div><div class="ttdeci">@ ESOD_AUTO_DETECT</div><div class="ttdoc">Autodetects the best sound driver for the system</div><div class="ttdef"><b>定义</b> ik_ESoundOutputDrivers.h:14</div></div>
+<div class="ttc" id="anamespaceirrklang_html_ac9155ff55b347df6e905462100762d7facca58ad3ee7e3c2e874bc4015f36f2a9"><div class="ttname"><a href="namespaceirrklang.html#ac9155ff55b347df6e905462100762d7facca58ad3ee7e3c2e874bc4015f36f2a9">irrklang::ESEO_DEFAULT_OPTIONS</a></div><div class="ttdeci">@ ESEO_DEFAULT_OPTIONS</div><div class="ttdoc">Default parameters when starting up the engine.</div><div class="ttdef"><b>定义</b> ik_ESoundEngineOptions.h:73</div></div>
+</div><!-- fragment --><p>In this way, it is also possible to play back sound using two devices at the same time: Simply create two irrKlang devices with each a different deviceID.<br  />
+ Note: createSoundDeviceList() takes a driver type parameter (such as irrklang::ESOD_DIRECT_SOUND8), which you have to set to the same value as the first parameter you want to use with createIrrKlangDevice(), if it is other than <a class="el" href="namespaceirrklang.html#a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" title="Autodetects the best sound driver for the system">irrklang::ESOD_AUTO_DETECT</a>. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="recordingAudio"></a>
+Recording Audio</h1>
+<p>irrKlang is able to record audio from sound capturing devices such as microphones (currently only supported in windows). Use the <a class="el" href="classirrklang_1_1_i_audio_recorder.html">irrklang::IAudioRecorder</a> interface to do this. The following example shows how to record some audio and play it back again using the engine:</p>
+<div class="fragment"><div class="line">  <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code hl_class" href="classirrklang_1_1_i_sound_engine.html">irrklang::ISoundEngine</a>* engine = <a class="code hl_function" href="namespaceirrklang.html#a3dbcf94d41d38e2048f8319843db1d70">irrklang::createIrrKlangDevice</a>();</div>
+<div class="line">    <a class="code hl_class" href="classirrklang_1_1_i_audio_recorder.html">irrklang::IAudioRecorder</a>* recorder =</div>
+<div class="line"><a class="code hl_function" href="namespaceirrklang.html#a899b6fae48281aa00122d389ef4eadb9">irrklang::createIrrKlangAudioRecorder</a>(engine);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (!engine || !recorder)</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Could not create audio engine or audio recoder\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nPress any key to start recording audio...\n&quot;</span>);</div>
+<div class="line">    getch();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// record some audio</span></div>
+<div class="line"> </div>
+<div class="line">    recorder-&gt;<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ad02c63bf445c6f916e43271c428a05f4">startRecordingBufferedAudio</a>();</div>
+<div class="line"> </div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nRECORDING. Press any key to stop...\n&quot;</span>);</div>
+<div class="line">    getch();</div>
+<div class="line"> </div>
+<div class="line">    recorder-&gt;<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#aa00ecf279dfad147e313acac7a04024b">stopRecordingAudio</a>();</div>
+<div class="line"> </div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nRecording done, recorded %dms of audio.\n&quot;</span>,</div>
+<div class="line">        recorder-&gt;<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ac6f664694d15960dff90d9288850c472">getAudioFormat</a>().<a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#ab4f3d1b9df4e1adf53b128c0f14af313">FrameCount</a> * 1000 /</div>
+<div class="line">recorder-&gt;<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ac6f664694d15960dff90d9288850c472">getAudioFormat</a>().<a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756">SampleRate</a> ); *  printf(<span class="stringliteral">&quot;Press any key to play</span></div>
+<div class="line"><span class="stringliteral">back recorded audio...\n&quot;</span>); *   getch();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// play the recorded audio</span></div>
+<div class="line">    recorder-&gt;<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ab083d7bd622b0bf556357ac927d2dd7f">addSoundSourceFromRecordedAudio</a>(<span class="stringliteral">&quot;myRecordedVoice&quot;</span>);</div>
+<div class="line">    engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;myRecordedVoice&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// wait until user presses a key</span></div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nPress any key to quit...&quot;</span>);</div>
+<div class="line">    getch();</div>
+<div class="line"> </div>
+<div class="line">    recorder-&gt;<a class="code hl_function" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">drop</a>();</div>
+<div class="line">    engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">drop</a>(); <span class="comment">// delete engine</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">  }</div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html">irrklang::IAudioRecorder</a></div><div class="ttdef"><b>定义</b> ik_IAudioRecorder.h:18</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_aa00ecf279dfad147e313acac7a04024b"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#aa00ecf279dfad147e313acac7a04024b">irrklang::IAudioRecorder::stopRecordingAudio</a></div><div class="ttdeci">virtual void stopRecordingAudio()=0</div><div class="ttdoc">Stops recording audio.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ab083d7bd622b0bf556357ac927d2dd7f"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ab083d7bd622b0bf556357ac927d2dd7f">irrklang::IAudioRecorder::addSoundSourceFromRecordedAudio</a></div><div class="ttdeci">virtual ISoundSource * addSoundSourceFromRecordedAudio(const char *soundName)=0</div><div class="ttdoc">Creates a sound source for the recorded audio data.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ac6f664694d15960dff90d9288850c472"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ac6f664694d15960dff90d9288850c472">irrklang::IAudioRecorder::getAudioFormat</a></div><div class="ttdeci">virtual SAudioStreamFormat getAudioFormat()=0</div><div class="ttdoc">Returns the audio format of the recorded audio data.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ad02c63bf445c6f916e43271c428a05f4"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ad02c63bf445c6f916e43271c428a05f4">irrklang::IAudioRecorder::startRecordingBufferedAudio</a></div><div class="ttdeci">virtual bool startRecordingBufferedAudio(ik_s32 sampleRate=22000, ESampleFormat sampleFormat=ESF_S16, ik_s32 channelCount=1)=0</div><div class="ttdoc">Starts recording audio.</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a899b6fae48281aa00122d389ef4eadb9"><div class="ttname"><a href="namespaceirrklang.html#a899b6fae48281aa00122d389ef4eadb9">irrklang::createIrrKlangAudioRecorder</a></div><div class="ttdeci">IRRKLANG_API IAudioRecorder *IRRKLANGCALLCONV createIrrKlangAudioRecorder(ISoundEngine *irrKlangDeviceForPlayback, E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, const char *deviceID=0, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_ab4f3d1b9df4e1adf53b128c0f14af313"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#ab4f3d1b9df4e1adf53b128c0f14af313">irrklang::SAudioStreamFormat::FrameCount</a></div><div class="ttdeci">ik_s32 FrameCount</div><div class="ttdoc">amount of frames in the sample data or stream.</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:27</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_adffd0aaf1d5e09b2832f6ad9b2589756"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756">irrklang::SAudioStreamFormat::SampleRate</a></div><div class="ttdeci">ik_s32 SampleRate</div><div class="ttdoc">samples per second</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:30</div></div>
+</div><!-- fragment --><p>In order to select a specific audio capturing device for recording, it is necessary to enumerate the available devices. Simply replace the first to lines of code of the example above with code like this to list all devices and select one:</p>
+<div class="fragment"><div class="line">   <span class="comment">// enumerate recording devices and ask user to select one</span></div>
+<div class="line"> </div>
+<div class="line">   <a class="code hl_class" href="classirrklang_1_1_i_sound_device_list.html">irrklang::ISoundDeviceList</a>* deviceList =</div>
+<div class="line"><a class="code hl_function" href="namespaceirrklang.html#a4673e594a8fa52defe1938c55ac89ff9">irrklang::createAudioRecorderDeviceList</a>();</div>
+<div class="line"> </div>
+<div class="line">   printf(<span class="stringliteral">&quot;Devices available:\n\n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_device_list.html#a546d93bf5e70b5b168c430329194f2e4">getDeviceCount</a>(); ++i)</div>
+<div class="line">            printf(<span class="stringliteral">&quot;%d: %s\n&quot;</span>, i, deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_device_list.html#ad44d1d082d626221accce41ff5efa38f">getDeviceDescription</a>(i));</div>
+<div class="line"> </div>
+<div class="line">   printf(<span class="stringliteral">&quot;\nselect a device using the number (or press any key to use</span></div>
+<div class="line"><span class="stringliteral">default):\n\n&quot;</span>);</div>
+<div class="line">   <span class="keywordtype">int</span> deviceNumber = getch() - <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line"> </div>
+<div class="line">   <span class="comment">// create recording device with the selected driver</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="keyword">const</span> <span class="keywordtype">char</span>* deviceID = deviceList-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_device_list.html#a784ef34e767c31b0251e7d153a97b48b">getDeviceID</a>(deviceNumber);</div>
+<div class="line">   <a class="code hl_class" href="classirrklang_1_1_i_sound_engine.html">irrklang::ISoundEngine</a>* engine = <a class="code hl_function" href="namespaceirrklang.html#a3dbcf94d41d38e2048f8319843db1d70">irrklang::createIrrKlangDevice</a>();</div>
+<div class="line">   <a class="code hl_class" href="classirrklang_1_1_i_audio_recorder.html">irrklang::IAudioRecorder</a>* recorder =</div>
+<div class="line">      <a class="code hl_function" href="namespaceirrklang.html#a899b6fae48281aa00122d389ef4eadb9">irrklang::createIrrKlangAudioRecorder</a>(engine, <a class="code hl_enumvalue" href="namespaceirrklang.html#a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec">irrklang::ESOD_AUTO_DETECT</a>,</div>
+<div class="line">deviceID);</div>
+<div class="ttc" id="anamespaceirrklang_html_a4673e594a8fa52defe1938c55ac89ff9"><div class="ttname"><a href="namespaceirrklang.html#a4673e594a8fa52defe1938c55ac89ff9">irrklang::createAudioRecorderDeviceList</a></div><div class="ttdeci">IRRKLANG_API ISoundDeviceList *IRRKLANGCALLCONV createAudioRecorderDeviceList(E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</div><div class="ttdoc">Creates a list of available recording devices for the driver type.</div></div>
+</div><!-- fragment --><p><br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="unicode"></a>
+Unicode support</h1>
+<p>irrKlang supports unicode on all operating systems. Internally, it uses UTF8, and all functions accepting strings and file names take UTF8 strings. If you are running irrKlang on Windows, and are using the UNICODE define or using wchar_t* strings directly, you can do this as well. Use the irrKlang provided function makeUTF8fromUTF16string() to convert your wchar_t* string to a char* string.</p>
+<p>This example shows how:</p>
+<div class="fragment"><div class="line">  <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* yourFilename = L<span class="stringliteral">&quot;SomeUnicodeFilename.wav&quot;</span>; <span class="comment">// assuming this is</span></div>
+<div class="line">the file name you get from some of your functions</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> nBufferSize = 2048; <span class="comment">// large enough, but best would be</span></div>
+<div class="line">wcslen(yourFilename)*3.</div>
+<div class="line">  <span class="keywordtype">char</span> strBuffer[nBufferSize];</div>
+<div class="line">  <a class="code hl_function" href="namespaceirrklang.html#a2552f41aac247b77e0f1287c28744cd7">irrklang::makeUTF8fromUTF16string</a>(yourFilename, strBuffer, nBufferSize);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// now the converted file name is in strBuffer. We can play it for example</span></div>
+<div class="line">now:</div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(strBuffer);</div>
+<div class="ttc" id="anamespaceirrklang_html_a2552f41aac247b77e0f1287c28744cd7"><div class="ttname"><a href="namespaceirrklang.html#a2552f41aac247b77e0f1287c28744cd7">irrklang::makeUTF8fromUTF16string</a></div><div class="ttdeci">IRRKLANG_API bool IRRKLANGCALLCONV makeUTF8fromUTF16string(const wchar_t *pInputString, char *pOutputBuffer, int outputBufferSize)</div></div>
+</div><!-- fragment --><p>Of course, you can use any other unicode converion function for this. makeUTF8fromUTF16string() is only provided for convenience. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="quickstartexample"></a>
+Quick Start Example</h1>
+<p>To simply start the engine and play a mp3 file, use code like this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="irr_klang_8h.html">irrKlang.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#pragma comment(lib, &quot;irrKlang.lib&quot;) </span><span class="comment">// link with irrKlang.dll</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code hl_class" href="classirrklang_1_1_i_sound_engine.html">irrklang::ISoundEngine</a>* engine = <a class="code hl_function" href="namespaceirrklang.html#a3dbcf94d41d38e2048f8319843db1d70">irrklang::createIrrKlangDevice</a>();</div>
+<div class="line">  <span class="keywordflow">if</span> (!engine) <span class="keywordflow">return</span> 1; <span class="comment">// could not start engine</span></div>
+<div class="line"> </div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;someMusic.mp3&quot;</span>, <span class="keyword">true</span>); <span class="comment">// play some mp3 file, looped</span></div>
+<div class="line"> </div>
+<div class="line">  std::cin.get(); <span class="comment">// wait until user presses a key</span></div>
+<div class="line"> </div>
+<div class="line">  engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">drop</a>(); <span class="comment">// delete engine</span></div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>A mp3 file is being played until the user presses enter in this example. As you can see, irrKlang uses <a href="namespaces.html">namespaces</a>, all of the classes are located in the namespace irrklang. If you don't want to write this in front of every class and function you are using, simply write</p>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceirrklang.html">irrklang</a>;</div>
+<div class="ttc" id="anamespaceirrklang_html"><div class="ttname"><a href="namespaceirrklang.html">irrklang</a></div><div class="ttdoc">Everything in the irrKlang Sound Engine can be found in this namespace.</div><div class="ttdef"><b>定义</b> ik_ESoundEngineOptions.h:8</div></div>
+</div><!-- fragment --><p> in front of your code, as also shown in the next example. <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h1><a class="anchor" id="quickstartexample2"></a>
+Quick Start Example 2</h1>
+<p>The following is a simple interactive application, starting up the sound engine and playing some streaming .ogg music file and a .wav sound effect every time the user presses a key.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">  #include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">  #include &lt;<a class="code" href="irr_klang_8h.html">irrKlang.h</a>&gt;</span></div>
+<div class="line">  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceirrklang.html">irrklang</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">  #pragma comment(lib, &quot;irrKlang.lib&quot;) </span><span class="comment">// link with irrKlang.dll</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>** argv)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">// start the sound engine with default parameters</span></div>
+<div class="line">    <a class="code hl_class" href="classirrklang_1_1_i_sound_engine.html">ISoundEngine</a>* engine = createIrrKlangDevice();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (!engine)</div>
+<div class="line">        <span class="keywordflow">return</span> 0; <span class="comment">// error starting up the engine</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// play some sound stream, looped</span></div>
+<div class="line">    engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;../../media/helltroopers.ogg&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\nHello World!\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> i = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span>(i != <span class="charliteral">&#39;q&#39;</span>)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Press any key to play some sound, press &#39;q&#39; to</span></div>
+<div class="line"><span class="stringliteral">quit.\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// play a single sound</span></div>
+<div class="line">        engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5">play2D</a>(<span class="stringliteral">&quot;../../media/bell.wav&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        std::cin &gt;&gt; i; <span class="comment">// wait for user to press some key</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    engine-&gt;<a class="code hl_function" href="classirrklang_1_1_i_ref_counted.html#a869fe3adc6e49e8da105e95837a565b1">drop</a>(); <span class="comment">// delete engine</span></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">  }</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

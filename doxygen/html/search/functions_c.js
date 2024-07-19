@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['play2d_0',['play2D',['../classirrklang_1_1_i_sound_engine.html#a6e3d1ea132c444a06b1054df20dcb9c5',1,'irrklang::ISoundEngine::play2D(const char *soundFileName, bool playLooped=false, bool startPaused=false, bool track=false, E_STREAM_MODE streamMode=ESM_AUTO_DETECT, bool enableSoundEffects=false)=0'],['../classirrklang_1_1_i_sound_engine.html#a84d30f11df763d0937983f1acc84558d',1,'irrklang::ISoundEngine::play2D(ISoundSource *source, bool playLooped=false, bool startPaused=false, bool track=false, bool enableSoundEffects=false)=0']]],
+  ['play3d_1',['play3D',['../classirrklang_1_1_i_sound_engine.html#aa0046e9959e4e9be569bdf2dc3382753',1,'irrklang::ISoundEngine::play3D(const char *soundFileName, vec3df pos, bool playLooped=false, bool startPaused=false, bool track=false, E_STREAM_MODE streamMode=ESM_AUTO_DETECT, bool enableSoundEffects=false)=0'],['../classirrklang_1_1_i_sound_engine.html#a7d862115a243f005edf05fa2669ff28d',1,'irrklang::ISoundEngine::play3D(ISoundSource *source, vec3df pos, bool playLooped=false, bool startPaused=false, bool track=false, bool enableSoundEffects=false)=0']]]
+];

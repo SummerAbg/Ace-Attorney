@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: agl_Basic.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_67ab33cf501127eff0577214bc245c93.html">AsciiGL</a></li><li class="navelem"><a class="el" href="dir_f3681dd7d1f4e13f33a4b57ca8069e04.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">agl_Basic.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="agl___basic_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;at_Tools.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#if defined(_WIN64) || defined(_WIN32)</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">using namespace </span>AsciiTools;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ascii_g_l.html">AsciiGL</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">double</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a3af01664c58d532712ace140bd504b14">getY</a>(<a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coordA, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coordB, <span class="keywordtype">double</span> x);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">int</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a9323930539e382b18b720a9793e28dcc">getIndex</a>(<span class="keyword">const</span> std::vector&lt;T&gt; &amp;vec, <span class="keyword">const</span> T &amp;element);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a28765dd90ef3a163d06e95b2067492d7">isExist</a>(<span class="keyword">const</span> std::vector&lt;T&gt; &amp;vec, <span class="keyword">const</span> T &amp;element);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>std::string <a class="code hl_function" href="namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c">makeName</a>(<span class="keyword">const</span> std::string &amp;prefix);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespace_ascii_g_l.html#ae72168967580405314f1fc398776720b">getBlockNumber</a>(<span class="keywordtype">size_t</span> strSize, <span class="keywordtype">size_t</span> blockLength);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>std::string <a class="code hl_function" href="namespace_ascii_g_l.html#a0920f3db5fddabfe968b0b77df71c812">getFileData</a>(<span class="keyword">const</span> std::string &amp;path);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="namespace_ascii_g_l.html#a9323930539e382b18b720a9793e28dcc">   83</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a9323930539e382b18b720a9793e28dcc">getIndex</a>(<span class="keyword">const</span> std::vector&lt;T&gt; &amp;vec, <span class="keyword">const</span> T &amp;element) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; vec.size(); i++) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span> (vec[i] == element)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordflow">return</span> i;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="namespace_ascii_g_l.html#a28765dd90ef3a163d06e95b2067492d7">   92</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a28765dd90ef3a163d06e95b2067492d7">isExist</a>(<span class="keyword">const</span> std::vector&lt;T&gt; &amp;vec, <span class="keyword">const</span> T &amp;element) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;index : vec) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">if</span> (index == element)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// namespace AsciiGL</span></div>
+<div class="ttc" id="anamespace_ascii_g_l_html"><div class="ttname"><a href="namespace_ascii_g_l.html">AsciiGL</a></div><div class="ttdoc">AsciiGL命名空间，包括AsciiGL的基本声明和实现</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a0920f3db5fddabfe968b0b77df71c812"><div class="ttname"><a href="namespace_ascii_g_l.html#a0920f3db5fddabfe968b0b77df71c812">AsciiGL::getFileData</a></div><div class="ttdeci">std::string getFileData(const std::string &amp;path)</div><div class="ttdoc">获取文件数据</div><div class="ttdef"><b>定义</b> agl_Basic.cpp:54</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a28765dd90ef3a163d06e95b2067492d7"><div class="ttname"><a href="namespace_ascii_g_l.html#a28765dd90ef3a163d06e95b2067492d7">AsciiGL::isExist</a></div><div class="ttdeci">bool isExist(const std::vector&lt; T &gt; &amp;vec, const T &amp;element)</div><div class="ttdoc">判断容器是否存在指定元素</div><div class="ttdef"><b>定义</b> agl_Basic.h:92</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a3af01664c58d532712ace140bd504b14"><div class="ttname"><a href="namespace_ascii_g_l.html#a3af01664c58d532712ace140bd504b14">AsciiGL::getY</a></div><div class="ttdeci">double getY(Coord2d coordA, Coord2d coordB, double x)</div><div class="ttdoc">根据两个坐标的斜率获得一次函数的值</div><div class="ttdef"><b>定义</b> agl_Basic.cpp:5</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a8d159963df2247502cb5bffb9306fe3c"><div class="ttname"><a href="namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c">AsciiGL::makeName</a></div><div class="ttdeci">std::string makeName(const std::string &amp;prefix)</div><div class="ttdoc">获取名字/取名器(随着名字重复而添加编号)</div><div class="ttdef"><b>定义</b> agl_Basic.cpp:19</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a9323930539e382b18b720a9793e28dcc"><div class="ttname"><a href="namespace_ascii_g_l.html#a9323930539e382b18b720a9793e28dcc">AsciiGL::getIndex</a></div><div class="ttdeci">int getIndex(const std::vector&lt; T &gt; &amp;vec, const T &amp;element)</div><div class="ttdoc">获取容器指定元素的下标(成功了返回元素下标，失败了返回0)</div><div class="ttdef"><b>定义</b> agl_Basic.h:83</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_ae72168967580405314f1fc398776720b"><div class="ttname"><a href="namespace_ascii_g_l.html#ae72168967580405314f1fc398776720b">AsciiGL::getBlockNumber</a></div><div class="ttdeci">int getBlockNumber(size_t strSize, size_t blockLength)</div><div class="ttdoc">将字符串长度等价转换为Block（块）的个数</div><div class="ttdef"><b>定义</b> agl_Basic.cpp:43</div></div>
+<div class="ttc" id="astruct_ascii_tools_1_1_coordinate2d_html"><div class="ttname"><a href="struct_ascii_tools_1_1_coordinate2d.html">AsciiTools::Coordinate2d</a></div><div class="ttdef"><b>定义</b> at_Coordinate2d.h:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

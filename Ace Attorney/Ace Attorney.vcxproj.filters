@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiGL\src\agl_Basic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiGL\src\agl_BasicCanvas.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_BasicChar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiGL\src\graphics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiGL\src\agl_BasicLayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiGL\src\agl_BasicLayerMngr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_BasicObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_BasicString.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_Tools.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AceAttorneyGame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AceAttorneyBasic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AceAttorneyCharacter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalyzeCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TheadPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_Exception.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_TextColor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_Debug.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_Basic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AsciiGL\include\agl_Basic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiGL\include\agl_BasicCanvas.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_BasicChar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiGL\include\graphics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiGL\include\agl_BasicLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiGL\include\agl_BasicLayerMngr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_BasicObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_BasicString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Tools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Debug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ESoundEngineOptions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ESoundOutputDrivers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_EStreamModes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IAudioRecorder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IAudioStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IAudioStreamLoader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IFileFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IFileReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IRefCounted.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_irrKlangTypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISound.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISoundDeviceList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISoundEffectControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISoundEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISoundMixedOutputReceiver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISoundSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_ISoundStopEventReceiver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_IVirtualRefCounted.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_SAudioStreamFormat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\ik_vec3d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="irrKlang\include\irrKlang.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AceAttorneyGame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AceAttorneyBasic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AceAttorneyCharacter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalyzeCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TheadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_TextColor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Basic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Coordinate2d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Exception.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Matrix2d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

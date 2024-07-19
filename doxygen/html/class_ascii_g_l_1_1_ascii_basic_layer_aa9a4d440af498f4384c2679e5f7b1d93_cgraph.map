@@ -1,0 +1,11 @@
+<map id="AsciiGL::AsciiBasicLayer::AsciiBasicLayer" name="AsciiGL::AsciiBasicLayer::AsciiBasicLayer">
+<area shape="rect" id="Node000001" title="AsciiBasicLayer object constructor" alt="" coords="5,105,175,148"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#a6a257207b3391ce00d448ac6a9901730" title="获取图层中画布的中心坐标" alt="" coords="223,5,392,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,102,222,58,234,52,236,57,224,62,133,107"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#aca7e09308480d2f5553c70502a739f52" title="获取图层中画布的坐标" alt="" coords="223,72,392,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,111,207,106,208,111,175,116"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#a18673e90be1f2271a05d1e8917f06448" title="获取图层名称" alt="" coords="223,139,392,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,137,208,142,207,147,175,142"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#ac894801bb781961bf44b98ba5e85e3d2" title="获取图层的显示状态" alt="" coords="223,205,392,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="133,146,224,191,236,196,234,201,222,196,131,151"/>
+</map>

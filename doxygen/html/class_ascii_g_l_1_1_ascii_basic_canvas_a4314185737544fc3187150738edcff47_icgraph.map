@@ -1,0 +1,11 @@
+<map id="AsciiGL::AsciiBasicCanvas::getBlockLength" name="AsciiGL::AsciiBasicCanvas::getBlockLength">
+<area shape="rect" id="Node000001" title="获取块长度" alt="" coords="399,35,578,77"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a08f4637470bf70ebc9556b4fd5bb6d7c" title="AsciiBasicCanvas object constructor" alt="" coords="172,5,351,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="383,45,351,41,352,36,384,40"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c" title="在指定画布下的指定坐标设置文本 （不添加图层,在原有画布进行修改）" alt="" coords="202,72,320,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="384,72,322,80,321,75,383,67"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a67e1c6adea7f7a2a81d6835554b7d54e" title="在指定图层下的指定坐标设置文本 （不添加图层,在原有图层进行修改）" alt="" coords="5,47,124,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="187,78,124,70,124,65,187,73"/>
+<area shape="rect" id="Node000005" href="$namespace_ascii_g_l.html#a36de7186d9d2601ff30313c6915ec001" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="5,97,124,124"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="187,98,124,106,124,100,187,92"/>
+</map>

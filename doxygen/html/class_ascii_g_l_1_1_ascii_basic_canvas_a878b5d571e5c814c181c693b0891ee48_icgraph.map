@@ -1,0 +1,7 @@
+<map id="AsciiGL::AsciiBasicCanvas::getAsciiBasicString" name="AsciiGL::AsciiBasicCanvas::getAsciiBasicString">
+<area shape="rect" id="Node000001" title="获取画布组成的AsciiBasicString字符串" alt="" coords="233,39,412,81"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#aef282ce474c5964bafdb50c416972588" title="展示画布" alt="" coords="5,5,185,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,47,185,42,186,37,218,42"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a83c087805266821f373f11c7099cab0d" title="获取画布组成的字符串" alt="" coords="5,72,185,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,78,186,83,185,78,217,73"/>
+</map>

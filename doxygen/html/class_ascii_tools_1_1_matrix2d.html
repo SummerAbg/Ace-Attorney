@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: AsciiTools::Matrix2d&lt; Element &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>AsciiTools</b></li><li class="navelem"><a class="el" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_ascii_tools_1_1_matrix2d-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">AsciiTools::Matrix2d&lt; Element &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a892d7e016ce515e2460ae8307b45d553" id="r_a892d7e016ce515e2460ae8307b45d553"><td class="memItemLeft" align="right" valign="top"><a id="a892d7e016ce515e2460ae8307b45d553" name="a892d7e016ce515e2460ae8307b45d553"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>pElements</b> = std::shared_ptr&lt;std::vector&lt;Element&gt;&gt;</td></tr>
+<tr class="separator:a892d7e016ce515e2460ae8307b45d553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ba8dad1e80c28495bac301b6b90116" id="r_ae6ba8dad1e80c28495bac301b6b90116"><td class="memItemLeft" align="right" valign="top"><a id="ae6ba8dad1e80c28495bac301b6b90116" name="ae6ba8dad1e80c28495bac301b6b90116"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Elements</b> = std::vector&lt;Element&gt;</td></tr>
+<tr class="separator:ae6ba8dad1e80c28495bac301b6b90116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7739a85cf1b57a2ecdaae0bce63e7e41" id="r_a7739a85cf1b57a2ecdaae0bce63e7e41"><td class="memItemLeft" align="right" valign="top"><a id="a7739a85cf1b57a2ecdaae0bce63e7e41" name="a7739a85cf1b57a2ecdaae0bce63e7e41"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix2d</b> (int length, int width, const Element &amp;element)</td></tr>
+<tr class="separator:a7739a85cf1b57a2ecdaae0bce63e7e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f8e63f12b83dbc9b0ead16596c0c08" id="r_a10f8e63f12b83dbc9b0ead16596c0c08"><td class="memItemLeft" align="right" valign="top"><a id="a10f8e63f12b83dbc9b0ead16596c0c08" name="a10f8e63f12b83dbc9b0ead16596c0c08"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix2d</b> (const <a class="el" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a>&lt; Element &gt; &amp;matrix)</td></tr>
+<tr class="separator:a10f8e63f12b83dbc9b0ead16596c0c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471f38eb2198900c1ef0385bafab4295" id="r_a471f38eb2198900c1ef0385bafab4295"><td class="memItemLeft" align="right" valign="top"><a id="a471f38eb2198900c1ef0385bafab4295" name="a471f38eb2198900c1ef0385bafab4295"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
+<tr class="separator:a471f38eb2198900c1ef0385bafab4295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5190eda5f77128c4756cea1d0a2f4de5" id="r_a5190eda5f77128c4756cea1d0a2f4de5"><td class="memItemLeft" align="right" valign="top"><a id="a5190eda5f77128c4756cea1d0a2f4de5" name="a5190eda5f77128c4756cea1d0a2f4de5"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="separator:a5190eda5f77128c4756cea1d0a2f4de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae194006ad7f2d55aeca2dd489bdb81f6" id="r_ae194006ad7f2d55aeca2dd489bdb81f6"><td class="memItemLeft" align="right" valign="top"><a id="ae194006ad7f2d55aeca2dd489bdb81f6" name="ae194006ad7f2d55aeca2dd489bdb81f6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b> () const</td></tr>
+<tr class="separator:ae194006ad7f2d55aeca2dd489bdb81f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75f07025f6fe2285e51d33dc30d0a8f" id="r_af75f07025f6fe2285e51d33dc30d0a8f"><td class="memItemLeft" align="right" valign="top"><a id="af75f07025f6fe2285e51d33dc30d0a8f" name="af75f07025f6fe2285e51d33dc30d0a8f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const</td></tr>
+<tr class="separator:af75f07025f6fe2285e51d33dc30d0a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749f8609de2adf81e90ff33b08770f41" id="r_a749f8609de2adf81e90ff33b08770f41"><td class="memItemLeft" align="right" valign="top"><a id="a749f8609de2adf81e90ff33b08770f41" name="a749f8609de2adf81e90ff33b08770f41"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLength</b> (int length)</td></tr>
+<tr class="separator:a749f8609de2adf81e90ff33b08770f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce39d9d847168b254d69fd3db1b5c88" id="r_a6ce39d9d847168b254d69fd3db1b5c88"><td class="memItemLeft" align="right" valign="top"><a id="a6ce39d9d847168b254d69fd3db1b5c88" name="a6ce39d9d847168b254d69fd3db1b5c88"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (int width)</td></tr>
+<tr class="separator:a6ce39d9d847168b254d69fd3db1b5c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3303bf28609d1651b7ba1e8e20f04699" id="r_a3303bf28609d1651b7ba1e8e20f04699"><td class="memItemLeft" align="right" valign="top"><a id="a3303bf28609d1651b7ba1e8e20f04699" name="a3303bf28609d1651b7ba1e8e20f04699"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="separator:a3303bf28609d1651b7ba1e8e20f04699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32de7867ce898a9880e29ce5a1d89d22" id="r_a32de7867ce898a9880e29ce5a1d89d22"><td class="memItemLeft" align="right" valign="top"><a id="a32de7867ce898a9880e29ce5a1d89d22" name="a32de7867ce898a9880e29ce5a1d89d22"></a>
+Element &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord)</td></tr>
+<tr class="separator:a32de7867ce898a9880e29ce5a1d89d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f1bde3264923581507769b167f3d23" id="r_ad9f1bde3264923581507769b167f3d23"><td class="memItemLeft" align="right" valign="top"><a id="ad9f1bde3264923581507769b167f3d23" name="ad9f1bde3264923581507769b167f3d23"></a>
+Element &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int x, int y)</td></tr>
+<tr class="separator:ad9f1bde3264923581507769b167f3d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f385d7aad40c2bea73c6f76f6ec7d13" id="r_a8f385d7aad40c2bea73c6f76f6ec7d13"><td class="memItemLeft" align="right" valign="top"><a id="a8f385d7aad40c2bea73c6f76f6ec7d13" name="a8f385d7aad40c2bea73c6f76f6ec7d13"></a>
+const Element &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord) const</td></tr>
+<tr class="separator:a8f385d7aad40c2bea73c6f76f6ec7d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a2d3a48e4c40265861e2666f11eeb0" id="r_ac4a2d3a48e4c40265861e2666f11eeb0"><td class="memItemLeft" align="right" valign="top"><a id="ac4a2d3a48e4c40265861e2666f11eeb0" name="ac4a2d3a48e4c40265861e2666f11eeb0"></a>
+const Element &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int x, int y) const</td></tr>
+<tr class="separator:ac4a2d3a48e4c40265861e2666f11eeb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3acfc39888f8f64ab1983ef229105f1" id="r_af3acfc39888f8f64ab1983ef229105f1"><td class="memItemLeft" align="right" valign="top"><a id="af3acfc39888f8f64ab1983ef229105f1" name="af3acfc39888f8f64ab1983ef229105f1"></a>
+Elements&#160;</td><td class="memItemRight" valign="bottom"><b>getElements</b> () const</td></tr>
+<tr class="separator:af3acfc39888f8f64ab1983ef229105f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf58e3cdd56597fc369af84a7a1cbfa2" id="r_abf58e3cdd56597fc369af84a7a1cbfa2"><td class="memItemLeft" align="right" valign="top"><a id="abf58e3cdd56597fc369af84a7a1cbfa2" name="abf58e3cdd56597fc369af84a7a1cbfa2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>append</b> (const Element &amp;element)</td></tr>
+<tr class="separator:abf58e3cdd56597fc369af84a7a1cbfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca685f6416079e909dc3fa8870137aa" id="r_a7ca685f6416079e909dc3fa8870137aa"><td class="memItemLeft" align="right" valign="top"><a id="a7ca685f6416079e909dc3fa8870137aa" name="a7ca685f6416079e909dc3fa8870137aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a>&lt; Element &gt; &amp;matrix)</td></tr>
+<tr class="separator:a7ca685f6416079e909dc3fa8870137aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc9485e1f1bf133bf375d1c2d37bffa" id="r_a6cc9485e1f1bf133bf375d1c2d37bffa"><td class="memItemLeft" align="right" valign="top"><a id="a6cc9485e1f1bf133bf375d1c2d37bffa" name="a6cc9485e1f1bf133bf375d1c2d37bffa"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a>&lt; Element &gt; &amp;matrix) const</td></tr>
+<tr class="separator:a6cc9485e1f1bf133bf375d1c2d37bffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac532209883cb096f28eef4640e9a3ff7" id="r_ac532209883cb096f28eef4640e9a3ff7"><td class="memItemLeft" align="right" valign="top"><a id="ac532209883cb096f28eef4640e9a3ff7" name="ac532209883cb096f28eef4640e9a3ff7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a>&lt; Element &gt; &amp;matrix) const</td></tr>
+<tr class="separator:ac532209883cb096f28eef4640e9a3ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066138230b88a3f34ad2367016bcfa9d" id="r_a066138230b88a3f34ad2367016bcfa9d"><td class="memItemLeft" align="right" valign="top"><a id="a066138230b88a3f34ad2367016bcfa9d" name="a066138230b88a3f34ad2367016bcfa9d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkCoordinate</b> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord) const</td></tr>
+<tr class="separator:a066138230b88a3f34ad2367016bcfa9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="at___matrix2d_8h_source.html">at_Matrix2d.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

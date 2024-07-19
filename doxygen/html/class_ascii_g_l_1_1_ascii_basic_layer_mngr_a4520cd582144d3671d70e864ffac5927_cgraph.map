@@ -1,0 +1,7 @@
+<map id="AsciiGL::AsciiBasicLayerMngr::deleteLayer" name="AsciiGL::AsciiBasicLayerMngr::deleteLayer">
+<area shape="rect" id="Node000001" title="删除指定图层 (失败时抛出异常)" alt="" coords="5,39,175,81"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a757389bd853b9226174bff767daac97a" title="获取指定图层所在层数 （失败时抛出异常）" alt="" coords="223,5,392,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,44,207,39,208,45,175,50"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4a0d2ba105cee81947aa48b1d7a5f742" title="判断是否存在指定名称的图层" alt="" coords="223,72,392,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,70,208,75,207,81,175,76"/>
+</map>

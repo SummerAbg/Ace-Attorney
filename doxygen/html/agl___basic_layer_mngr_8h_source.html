@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: agl_BasicLayerMngr.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_67ab33cf501127eff0577214bc245c93.html">AsciiGL</a></li><li class="navelem"><a class="el" href="dir_f3681dd7d1f4e13f33a4b57ca8069e04.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">agl_BasicLayerMngr.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="agl___basic_layer_mngr_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="agl___basic_layer_8h.html">agl_BasicLayer.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ascii_g_l.html">AsciiGL</a> {</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiBasicLayerMngr</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">using </span>Layers = std::vector&lt;AsciiBasicLayer&gt;;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#acc7082ff35ef5366a5965960043fb181">   31</a></span>  <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#acc7082ff35ef5366a5965960043fb181">AsciiBasicLayerMngr</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#aa3c72f10710cb8ffa5e88356a711f39d">   37</a></span>  <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#aa3c72f10710cb8ffa5e88356a711f39d">AsciiBasicLayerMngr</a>(<span class="keyword">const</span> Layers &amp;layers) { this-&gt;layers = layers; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#acc7082ff35ef5366a5965960043fb181">AsciiBasicLayerMngr</a>(<span class="keywordtype">int</span> length, <span class="keywordtype">int</span> width,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                      <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;str = TRPRSTR);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a52cdc75b56e82b07e2931c4117ed0fb7">   52</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a52cdc75b56e82b07e2931c4117ed0fb7">begin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> layers.begin(); }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a64bce907cfee41512eaf817b5f495fd6">   58</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a64bce907cfee41512eaf817b5f495fd6">end</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> layers.end(); }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912">   64</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912">appendLayer</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer) { layers.emplace_back(layer); }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912">appendLayer</a>(<span class="keyword">const</span> Layers &amp;layers);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4520cd582144d3671d70e864ffac5927">deleteLayer</a>(<span class="keyword">const</span> std::string &amp;name);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a1410bdb690d42e053530436b9d93f75c">insertLayer</a>(<span class="keywordtype">int</span> layerCnt, <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a1410bdb690d42e053530436b9d93f75c">insertLayer</a>(<span class="keywordtype">int</span> layerCnt, <span class="keyword">const</span> Layers &amp;layers);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a69f60ba8efa27eb0150e9c15ab01f27e">getCanvas</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a69f60ba8efa27eb0150e9c15ab01f27e">getCanvas</a>(<span class="keyword">const</span> std::string &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;<a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda">operator[]</a>(<span class="keyword">const</span> std::string &amp;name);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;<a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda">operator[]</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;<a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda">operator[]</a>(<span class="keyword">const</span> std::string &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;<a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda">operator[]</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiBasicLayerMngr</a> &amp;mngr) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiBasicLayerMngr</a> &amp;mngr) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a362358dfe5da8cd86520577c5793465d">getLayer</a>(<span class="keyword">const</span> std::string &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#aed8e92999eb2316f9122da9250340f7c">  149</a></span>  <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#aed8e92999eb2316f9122da9250340f7c">getLayer</a>(<span class="keywordtype">int</span> index)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> layers[index]; }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8e6acbf1adeb5a27908d33b78d34a60f">setLayer</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer, <span class="keyword">const</span> std::string &amp;name);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8e6acbf1adeb5a27908d33b78d34a60f">setLayer</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#ad4988047cf3ab3fb522c3ecf93bfdafb">  169</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#ad4988047cf3ab3fb522c3ecf93bfdafb">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(layers.size()); }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8965eb6976c89950c42659cea88cda1a">  175</a></span>  Layers <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8965eb6976c89950c42659cea88cda1a">getLayers</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> layers; }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4a0d2ba105cee81947aa48b1d7a5f742">isExistLayer</a>(<span class="keyword">const</span> std::string &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a757389bd853b9226174bff767daac97a">getLayerCount</a>(<span class="keyword">const</span> std::string &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  Layers layers;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>};</div>
+</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>} <span class="comment">// namespace AsciiGL</span></div>
+<div class="ttc" id="aagl___basic_layer_8h_html"><div class="ttname"><a href="agl___basic_layer_8h.html">agl_BasicLayer.h</a></div><div class="ttdoc">包括基本字符串图层的实现</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_canvas_html"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiGL::AsciiBasicCanvas</a></div><div class="ttdoc">基本字符串画布类</div><div class="ttdef"><b>定义</b> agl_BasicCanvas.h:27</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_html"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiGL::AsciiBasicLayer</a></div><div class="ttdoc">基本字符串图层</div><div class="ttdef"><b>定义</b> agl_BasicLayer.h:25</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html">AsciiGL::AsciiBasicLayerMngr</a></div><div class="ttdoc">基本字符串图层管理器类</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:24</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a0c4138d06e55c59ffa5f03d04f35f912"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912">AsciiGL::AsciiBasicLayerMngr::appendLayer</a></div><div class="ttdeci">void appendLayer(const AsciiBasicLayer &amp;layer)</div><div class="ttdoc">添加指定图层</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:64</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a1410bdb690d42e053530436b9d93f75c"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a1410bdb690d42e053530436b9d93f75c">AsciiGL::AsciiBasicLayerMngr::insertLayer</a></div><div class="ttdeci">void insertLayer(int layerCnt, const AsciiBasicLayer &amp;layer)</div><div class="ttdoc">在指定位置后插入指定图层 (失败时抛出异常)</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:26</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a362358dfe5da8cd86520577c5793465d"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a362358dfe5da8cd86520577c5793465d">AsciiGL::AsciiBasicLayerMngr::getLayer</a></div><div class="ttdeci">AsciiBasicLayer getLayer(const std::string &amp;name) const</div><div class="ttdoc">获取指定名称的图层 （失败时抛出异常）</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:123</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a4520cd582144d3671d70e864ffac5927"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4520cd582144d3671d70e864ffac5927">AsciiGL::AsciiBasicLayerMngr::deleteLayer</a></div><div class="ttdeci">void deleteLayer(const std::string &amp;name)</div><div class="ttdoc">删除指定图层 (失败时抛出异常)</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:18</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a4a0d2ba105cee81947aa48b1d7a5f742"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4a0d2ba105cee81947aa48b1d7a5f742">AsciiGL::AsciiBasicLayerMngr::isExistLayer</a></div><div class="ttdeci">bool isExistLayer(const std::string &amp;name) const</div><div class="ttdoc">判断是否存在指定名称的图层</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:136</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a52cdc75b56e82b07e2931c4117ed0fb7"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a52cdc75b56e82b07e2931c4117ed0fb7">AsciiGL::AsciiBasicLayerMngr::begin</a></div><div class="ttdeci">auto begin() const</div><div class="ttdoc">Return iterator to beginning</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:52</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a64bce907cfee41512eaf817b5f495fd6"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a64bce907cfee41512eaf817b5f495fd6">AsciiGL::AsciiBasicLayerMngr::end</a></div><div class="ttdeci">auto end() const</div><div class="ttdoc">Return iterator to end</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:58</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a69f60ba8efa27eb0150e9c15ab01f27e"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a69f60ba8efa27eb0150e9c15ab01f27e">AsciiGL::AsciiBasicLayerMngr::getCanvas</a></div><div class="ttdeci">AsciiBasicCanvas getCanvas() const</div><div class="ttdoc">获取多图层合并后生成的画布 (失败时抛出异常)</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:44</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a757389bd853b9226174bff767daac97a"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a757389bd853b9226174bff767daac97a">AsciiGL::AsciiBasicLayerMngr::getLayerCount</a></div><div class="ttdeci">int getLayerCount(const std::string &amp;name) const</div><div class="ttdoc">获取指定图层所在层数 （失败时抛出异常）</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:144</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a8965eb6976c89950c42659cea88cda1a"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8965eb6976c89950c42659cea88cda1a">AsciiGL::AsciiBasicLayerMngr::getLayers</a></div><div class="ttdeci">Layers getLayers() const</div><div class="ttdoc">获取管理器图层容器</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:175</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_a8e6acbf1adeb5a27908d33b78d34a60f"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8e6acbf1adeb5a27908d33b78d34a60f">AsciiGL::AsciiBasicLayerMngr::setLayer</a></div><div class="ttdeci">void setLayer(const AsciiBasicLayer &amp;layer, const std::string &amp;name)</div><div class="ttdoc">设置指定名称的图层 （失败时抛出异常）</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:127</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_aa3c72f10710cb8ffa5e88356a711f39d"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#aa3c72f10710cb8ffa5e88356a711f39d">AsciiGL::AsciiBasicLayerMngr::AsciiBasicLayerMngr</a></div><div class="ttdeci">AsciiBasicLayerMngr(const Layers &amp;layers)</div><div class="ttdoc">AsciiBasicLayerMngr object constructor</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:37</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_abf9c65e7293896ca798d7af7c696aeda"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#abf9c65e7293896ca798d7af7c696aeda">AsciiGL::AsciiBasicLayerMngr::operator[]</a></div><div class="ttdeci">AsciiBasicLayer &amp; operator[](const std::string &amp;name)</div><div class="ttdoc">获取/修改指定名称的图层 （失败时创建并返回空图层）</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.cpp:77</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_acc7082ff35ef5366a5965960043fb181"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#acc7082ff35ef5366a5965960043fb181">AsciiGL::AsciiBasicLayerMngr::AsciiBasicLayerMngr</a></div><div class="ttdeci">AsciiBasicLayerMngr()=default</div><div class="ttdoc">AsciiBasicLayerMngr object constructor</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_ad4988047cf3ab3fb522c3ecf93bfdafb"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#ad4988047cf3ab3fb522c3ecf93bfdafb">AsciiGL::AsciiBasicLayerMngr::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">获取管理器图层数</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:169</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_ascii_basic_layer_mngr_html_aed8e92999eb2316f9122da9250340f7c"><div class="ttname"><a href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#aed8e92999eb2316f9122da9250340f7c">AsciiGL::AsciiBasicLayerMngr::getLayer</a></div><div class="ttdeci">AsciiBasicLayer getLayer(int index) const</div><div class="ttdoc">获取指定编号的图层 （失败时抛出异常）</div><div class="ttdef"><b>定义</b> agl_BasicLayerMngr.h:149</div></div>
+<div class="ttc" id="aclass_ascii_tools_1_1_ascii_basic_string_html"><div class="ttname"><a href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiTools::AsciiBasicString</a></div><div class="ttdef"><b>定义</b> at_BasicString.h:7</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html"><div class="ttname"><a href="namespace_ascii_g_l.html">AsciiGL</a></div><div class="ttdoc">AsciiGL命名空间，包括AsciiGL的基本声明和实现</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

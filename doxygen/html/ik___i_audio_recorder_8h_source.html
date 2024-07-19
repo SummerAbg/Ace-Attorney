@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: ik_IAudioRecorder.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_bdff311e6a51ceeebd2f20921314edd3.html">irrKlang</a></li><li class="navelem"><a class="el" href="dir_106950a5b36d4e98248f476d11963ac6.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">ik_IAudioRecorder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (C) 2002-2018 Nikolaus Gebhardt</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// This file is part of the &quot;irrKlang&quot; library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// For conditions of distribution and use, see copyright notice in irrKlang.h</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef __I_IRRKLANG_AUDIO_RECORDER_H_INCLUDED__</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define __I_IRRKLANG_AUDIO_RECORDER_H_INCLUDED__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;ik_IRefCounted.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;ik_ISoundSource.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceirrklang.html">irrklang</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span>ICapturedAudioDataReceiver;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classirrklang_1_1_i_audio_recorder.html">IAudioRecorder</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classirrklang_1_1_i_ref_counted.html">IRefCounted</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#ad02c63bf445c6f916e43271c428a05f4">   31</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ad02c63bf445c6f916e43271c428a05f4">startRecordingBufferedAudio</a>(<a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> sampleRate = 22000,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                                           <a class="code hl_enumeration" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">ESampleFormat</a> sampleFormat = <a class="code hl_enumvalue" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104">ESF_S16</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                           <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> channelCount = 1) = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#ae1d39c90335b96f95c050fc98c1bfac1">   46</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ae1d39c90335b96f95c050fc98c1bfac1">startRecordingCustomHandledAudio</a>(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <a class="code hl_class" href="classirrklang_1_1_i_captured_audio_data_receiver.html">ICapturedAudioDataReceiver</a> *receiver, <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> sampleRate = 22000,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <a class="code hl_enumeration" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">ESampleFormat</a> sampleFormat = <a class="code hl_enumvalue" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104">ESF_S16</a>, <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> channelCount = 1) = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#aa00ecf279dfad147e313acac7a04024b">   51</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#aa00ecf279dfad147e313acac7a04024b">stopRecordingAudio</a>() = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classirrklang_1_1_i_sound_source.html">ISoundSource</a> *</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#ab083d7bd622b0bf556357ac927d2dd7f">   61</a></span>  <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ab083d7bd622b0bf556357ac927d2dd7f">addSoundSourceFromRecordedAudio</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *soundName) = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#a3c45b902520c4bf5610da78476183fb2">   65</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#a3c45b902520c4bf5610da78476183fb2">clearRecordedAudioDataBuffer</a>() = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#a6b98611df2d840191002479455e73f3e">   68</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#a6b98611df2d840191002479455e73f3e">isRecording</a>() = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#ac6f664694d15960dff90d9288850c472">   73</a></span>  <span class="keyword">virtual</span> <a class="code hl_struct" href="structirrklang_1_1_s_audio_stream_format.html">SAudioStreamFormat</a> <a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ac6f664694d15960dff90d9288850c472">getAudioFormat</a>() = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#ad0382678826f8dc93f20970175855083">   82</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> *<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#ad0382678826f8dc93f20970175855083">getRecordedAudioData</a>() = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_audio_recorder.html#a20687dc3b59a4e58ca645eca1a4e02bc">   87</a></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="classirrklang_1_1_i_audio_recorder.html#a20687dc3b59a4e58ca645eca1a4e02bc">getDriverName</a>() = 0;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_captured_audio_data_receiver.html">   93</a></span><span class="keyword">class </span><a class="code hl_class" href="classirrklang_1_1_i_captured_audio_data_receiver.html">ICapturedAudioDataReceiver</a> : <span class="keyword">public</span> <a class="code hl_class" href="classirrklang_1_1_i_ref_counted.html">IRefCounted</a> {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classirrklang_1_1_i_captured_audio_data_receiver.html#a1271d74901e6ce1a19f234fc0838c2b1">   99</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classirrklang_1_1_i_captured_audio_data_receiver.html#a1271d74901e6ce1a19f234fc0838c2b1">OnReceiveAudioDataStreamChunk</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *audioData,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                             <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lengthInBytes) = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// end namespace irrklang</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html">irrklang::IAudioRecorder</a></div><div class="ttdef"><b>定义</b> ik_IAudioRecorder.h:18</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_a20687dc3b59a4e58ca645eca1a4e02bc"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#a20687dc3b59a4e58ca645eca1a4e02bc">irrklang::IAudioRecorder::getDriverName</a></div><div class="ttdeci">virtual const char * getDriverName()=0</div><div class="ttdoc">returns the name of the sound driver, like 'ALSA' for the alsa device.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_a3c45b902520c4bf5610da78476183fb2"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#a3c45b902520c4bf5610da78476183fb2">irrklang::IAudioRecorder::clearRecordedAudioDataBuffer</a></div><div class="ttdeci">virtual void clearRecordedAudioDataBuffer()=0</div><div class="ttdoc">Clears recorded audio data buffer, freeing memory.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_a6b98611df2d840191002479455e73f3e"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#a6b98611df2d840191002479455e73f3e">irrklang::IAudioRecorder::isRecording</a></div><div class="ttdeci">virtual bool isRecording()=0</div><div class="ttdoc">Returns if the recorder is currently recording audio.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_aa00ecf279dfad147e313acac7a04024b"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#aa00ecf279dfad147e313acac7a04024b">irrklang::IAudioRecorder::stopRecordingAudio</a></div><div class="ttdeci">virtual void stopRecordingAudio()=0</div><div class="ttdoc">Stops recording audio.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ab083d7bd622b0bf556357ac927d2dd7f"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ab083d7bd622b0bf556357ac927d2dd7f">irrklang::IAudioRecorder::addSoundSourceFromRecordedAudio</a></div><div class="ttdeci">virtual ISoundSource * addSoundSourceFromRecordedAudio(const char *soundName)=0</div><div class="ttdoc">Creates a sound source for the recorded audio data.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ac6f664694d15960dff90d9288850c472"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ac6f664694d15960dff90d9288850c472">irrklang::IAudioRecorder::getAudioFormat</a></div><div class="ttdeci">virtual SAudioStreamFormat getAudioFormat()=0</div><div class="ttdoc">Returns the audio format of the recorded audio data.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ad02c63bf445c6f916e43271c428a05f4"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ad02c63bf445c6f916e43271c428a05f4">irrklang::IAudioRecorder::startRecordingBufferedAudio</a></div><div class="ttdeci">virtual bool startRecordingBufferedAudio(ik_s32 sampleRate=22000, ESampleFormat sampleFormat=ESF_S16, ik_s32 channelCount=1)=0</div><div class="ttdoc">Starts recording audio.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ad0382678826f8dc93f20970175855083"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ad0382678826f8dc93f20970175855083">irrklang::IAudioRecorder::getRecordedAudioData</a></div><div class="ttdeci">virtual void * getRecordedAudioData()=0</div><div class="ttdoc">Returns a pointer to the recorded audio data.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_audio_recorder_html_ae1d39c90335b96f95c050fc98c1bfac1"><div class="ttname"><a href="classirrklang_1_1_i_audio_recorder.html#ae1d39c90335b96f95c050fc98c1bfac1">irrklang::IAudioRecorder::startRecordingCustomHandledAudio</a></div><div class="ttdeci">virtual bool startRecordingCustomHandledAudio(ICapturedAudioDataReceiver *receiver, ik_s32 sampleRate=22000, ESampleFormat sampleFormat=ESF_S16, ik_s32 channelCount=1)=0</div><div class="ttdoc">Starts recording audio.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_captured_audio_data_receiver_html"><div class="ttname"><a href="classirrklang_1_1_i_captured_audio_data_receiver.html">irrklang::ICapturedAudioDataReceiver</a></div><div class="ttdef"><b>定义</b> ik_IAudioRecorder.h:93</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_captured_audio_data_receiver_html_a1271d74901e6ce1a19f234fc0838c2b1"><div class="ttname"><a href="classirrklang_1_1_i_captured_audio_data_receiver.html#a1271d74901e6ce1a19f234fc0838c2b1">irrklang::ICapturedAudioDataReceiver::OnReceiveAudioDataStreamChunk</a></div><div class="ttdeci">virtual void OnReceiveAudioDataStreamChunk(unsigned char *audioData, unsigned long lengthInBytes)=0</div><div class="ttdoc">Gets called once for each captured audio data chunk.</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_ref_counted_html"><div class="ttname"><a href="classirrklang_1_1_i_ref_counted.html">irrklang::IRefCounted</a></div><div class="ttdoc">Base class of most objects of the irrKlang.</div><div class="ttdef"><b>定义</b> ik_IRefCounted.h:41</div></div>
+<div class="ttc" id="aclassirrklang_1_1_i_sound_source_html"><div class="ttname"><a href="classirrklang_1_1_i_sound_source.html">irrklang::ISoundSource</a></div><div class="ttdef"><b>定义</b> ik_ISoundSource.h:19</div></div>
+<div class="ttc" id="anamespaceirrklang_html"><div class="ttname"><a href="namespaceirrklang.html">irrklang</a></div><div class="ttdoc">Everything in the irrKlang Sound Engine can be found in this namespace.</div><div class="ttdef"><b>定义</b> ik_ESoundEngineOptions.h:8</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a2b85d1e9288cb552fceef8e8a726a80e"><div class="ttname"><a href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">irrklang::ESampleFormat</a></div><div class="ttdeci">ESampleFormat</div><div class="ttdoc">audio sample data format enumeration for supported formats</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:12</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104"><div class="ttname"><a href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104">irrklang::ESF_S16</a></div><div class="ttdeci">@ ESF_S16</div><div class="ttdoc">16 bit, signed (-32k;32k)</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:17</div></div>
+<div class="ttc" id="anamespaceirrklang_html_af8028b1c477e50d479270611ecb76e92"><div class="ttname"><a href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">irrklang::ik_s32</a></div><div class="ttdeci">signed int ik_s32</div><div class="ttdoc">32 bit signed variable.</div><div class="ttdef"><b>定义</b> ik_irrKlangTypes.h:37</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html">irrklang::SAudioStreamFormat</a></div><div class="ttdoc">structure describing an audio stream format with helper functions</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

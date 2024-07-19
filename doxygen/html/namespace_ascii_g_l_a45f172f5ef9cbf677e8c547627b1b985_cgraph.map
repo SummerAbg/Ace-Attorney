@@ -1,0 +1,19 @@
+<map id="AsciiGL::overlapCanvas" name="AsciiGL::overlapCanvas">
+<area shape="rect" id="Node000001" title="重叠两个画布" alt="" coords="5,68,163,95"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="665,60,845,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,65,215,40,337,15,406,7,477,3,548,6,618,16,664,31,705,50,703,55,662,36,617,21,548,11,477,8,406,12,338,20,216,45,127,70"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a2c0731f8568d48bd113ede16abfd3051" title="比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）" alt="" coords="217,97,384,124"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,89,202,95,201,100,163,95"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a0443523e4190ea0d4793965d6c6742b1" title="获取指定坐标的画布数据(失败时抛出异常)" alt="" coords="438,31,617,73"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="163,73,422,56,423,62,163,79"/>
+<area shape="rect" id="Node000007" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="211,211,390,253"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="107,93,257,199,254,204,104,97"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="384,103,649,85,650,91,385,108"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="354,94,427,75,428,80,356,99"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#adb1c835773ca233cd80dc9802990b4f5" title="获取画布长度" alt="" coords="438,148,617,191"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="356,122,428,141,427,146,354,127"/>
+<area shape="rect" id="Node000006" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a3dc98005a3f1d66c740e978945bf1aaf" title="获取画布宽度" alt="" coords="438,215,617,257"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="321,122,373,160,439,200,450,206,448,210,437,205,370,164,318,127"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="618,61,650,65,649,70,617,66"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="351,251,408,271,476,285,512,288,548,286,583,280,616,267,638,253,658,236,693,196,719,154,738,116,742,118,724,156,697,200,662,240,641,258,619,272,584,285,549,292,512,293,475,290,406,276,349,256"/>
+</map>

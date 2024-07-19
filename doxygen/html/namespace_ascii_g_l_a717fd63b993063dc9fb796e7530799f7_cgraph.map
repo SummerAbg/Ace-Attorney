@@ -1,0 +1,9 @@
+<map id="AsciiGL::setLine" name="AsciiGL::setLine">
+<area shape="rect" id="Node000001" title="在指定画布下的两个指定坐标之间绘制线条" alt="" coords="5,35,123,61"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a3af01664c58d532712ace140bd504b14" title="根据两个坐标的斜率获得一次函数的值" alt="" coords="209,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,37,193,26,194,31,123,42"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="171,56,350,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,54,155,59,155,64,123,59"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="398,56,577,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="350,75,382,75,382,80,350,80"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="AsciiGL::AsciiBasicCanvas::getCanvasData" name="AsciiGL::AsciiBasicCanvas::getCanvasData">
+<area shape="rect" id="Node000001" title="获取指定坐标的画布数据(失败时抛出异常)" alt="" coords="655,89,835,132"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a08f4637470bf70ebc9556b4fd5bb6d7c" title="AsciiBasicCanvas object constructor" alt="" coords="428,5,607,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="670,86,577,51,578,46,672,81"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a2c0731f8568d48bd113ede16abfd3051" title="比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）" alt="" coords="434,72,601,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="640,102,601,97,602,92,640,96"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a45f172f5ef9cbf677e8c547627b1b985" title="重叠两个画布" alt="" coords="223,97,380,124"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="640,113,381,113,381,108,640,108"/>
+<area shape="rect" id="Node000006" href="$namespace_ascii_g_l.html#a071cbbd6a2149a342c94420f327d7592" title="倒映画布 （指的是将指定画布切割至最小单位宽度的长条后，将从最上方的部分自下往上排列），如：" alt="" coords="462,173,573,200"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="665,140,561,175,559,170,664,135"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="419,100,381,104,380,99,418,94"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a69f60ba8efa27eb0150e9c15ab01f27e" title="获取多图层合并后生成的画布 (失败时抛出异常)" alt="" coords="5,89,175,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="207,113,175,113,175,108,207,108"/>
+</map>

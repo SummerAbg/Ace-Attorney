@@ -1,0 +1,5 @@
+<map id="AsciiGL::AsciiBasicLayerMngr::operator[]" name="AsciiGL::AsciiBasicLayerMngr::operator[]">
+<area shape="rect" id="Node000001" title="获取/修改指定编号的图层 （失败时抛出异常）" alt="" coords="5,5,175,48"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912" title="添加指定图层" alt="" coords="223,5,392,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,24,207,24,207,29,175,29"/>
+</map>

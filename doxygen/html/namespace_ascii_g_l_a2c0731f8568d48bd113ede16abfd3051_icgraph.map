@@ -1,0 +1,7 @@
+<map id="AsciiGL::compareCanvas" name="AsciiGL::compareCanvas">
+<area shape="rect" id="Node000001" title="比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）" alt="" coords="428,13,595,40"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a45f172f5ef9cbf677e8c547627b1b985" title="重叠两个画布" alt="" coords="223,13,380,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,29,381,29,381,24,413,24"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a69f60ba8efa27eb0150e9c15ab01f27e" title="获取多图层合并后生成的画布 (失败时抛出异常)" alt="" coords="5,5,175,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AsciiGL::AsciiBasicCanvas::getFill" name="AsciiGL::AsciiBasicCanvas::getFill">
+<area shape="rect" id="Node000001" title="获取默认填充字符串" alt="" coords="233,35,412,77"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a08f4637470bf70ebc9556b4fd5bb6d7c" title="AsciiBasicCanvas object constructor" alt="" coords="5,5,185,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,45,185,41,186,36,218,40"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#ad69f612f30b409eb0e146d1ac1d5e1ab" title="获取指定区域的画布 （失败时抛出异常）" alt="" coords="27,72,163,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,72,163,79,163,74,217,67"/>
+</map>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: graphics.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_67ab33cf501127eff0577214bc245c93.html">AsciiGL</a></li><li class="navelem"><a class="el" href="dir_f3681dd7d1f4e13f33a4b57ca8069e04.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">graphics.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="graphics_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="agl___basic_layer_mngr_8h.html">agl_BasicLayerMngr.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ascii_g_l.html">AsciiGL</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>AsciiBasicCanvas <a class="code hl_function" href="namespace_ascii_g_l.html#ad69f612f30b409eb0e146d1ac1d5e1ab">getCanvas</a>(<span class="keyword">const</span> AsciiBasicCanvas &amp;canvas, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coordA,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                           <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coordB);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>AsciiBasicCanvas <a class="code hl_function" href="namespace_ascii_g_l.html#a45f172f5ef9cbf677e8c547627b1b985">overlapCanvas</a>(<span class="keyword">const</span> AsciiBasicCanvas &amp;canvas,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                               <span class="keyword">const</span> AsciiBasicCanvas &amp;target, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c">setText</a>(AsciiBasicCanvas &amp;canvas, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>             <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;text);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c">setText</a>(AsciiBasicLayer &amp;layer, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>             <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;text);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c">setText</a>(AsciiBasicLayerMngr &amp;mngr, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>             <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;text,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>             <span class="keyword">const</span> std::string &amp;layerName = <a class="code hl_function" href="namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c">makeName</a>(<span class="stringliteral">&quot;textLayer&quot;</span>));</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a6dc7a6d92e1a36d81138c350f859d73c">setBorder</a>(AsciiBasicCanvas &amp;canvas, <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;str);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>std::vector&lt;Point2D&gt; <a class="code hl_function" href="namespace_ascii_g_l.html#a2c0731f8568d48bd113ede16abfd3051">compareCanvas</a>(<span class="keyword">const</span> AsciiBasicCanvas &amp;target,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                   <span class="keyword">const</span> AsciiBasicCanvas &amp;canvas,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                   <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord = <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Vec2d</a>(0, 0));</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a717fd63b993063dc9fb796e7530799f7">setLine</a>(AsciiBasicCanvas &amp;canvas, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coordA, <a class="code hl_struct" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coordB,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>             <span class="keyword">const</span> <a class="code hl_class" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;str, <span class="keywordtype">int</span> level = 1);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespace_ascii_g_l.html#a071cbbd6a2149a342c94420f327d7592">reflect</a>(AsciiBasicCanvas &amp;canvas);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#if defined(_WIN64) || defined(_WIN32)</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> WinAPIDraw(<span class="keyword">const</span> AsciiBasicCanvas &amp;canvas, <span class="keywordtype">bool</span> isClean = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> WinAPIDraw(<span class="keyword">const</span> AsciiBasicLayerMngr &amp;mngr, <span class="keywordtype">bool</span> isClear = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keywordtype">void</span> hideCursor();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>} <span class="comment">// namespace AsciiGL</span></div>
+<div class="ttc" id="aagl___basic_layer_mngr_8h_html"><div class="ttname"><a href="agl___basic_layer_mngr_8h.html">agl_BasicLayerMngr.h</a></div><div class="ttdoc">包括基本字符串图层管理器类的实现</div></div>
+<div class="ttc" id="aclass_ascii_tools_1_1_ascii_basic_string_html"><div class="ttname"><a href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiTools::AsciiBasicString</a></div><div class="ttdef"><b>定义</b> at_BasicString.h:7</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html"><div class="ttname"><a href="namespace_ascii_g_l.html">AsciiGL</a></div><div class="ttdoc">AsciiGL命名空间，包括AsciiGL的基本声明和实现</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a071cbbd6a2149a342c94420f327d7592"><div class="ttname"><a href="namespace_ascii_g_l.html#a071cbbd6a2149a342c94420f327d7592">AsciiGL::reflect</a></div><div class="ttdeci">void reflect(AsciiBasicCanvas &amp;canvas)</div><div class="ttdoc">倒映画布 （指的是将指定画布切割至最小单位宽度的长条后，将从最上方的部分自下往上排列），如：</div><div class="ttdef"><b>定义</b> graphics.cpp:226</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a2c0731f8568d48bd113ede16abfd3051"><div class="ttname"><a href="namespace_ascii_g_l.html#a2c0731f8568d48bd113ede16abfd3051">AsciiGL::compareCanvas</a></div><div class="ttdeci">std::vector&lt; Point2D &gt; compareCanvas(const AsciiBasicCanvas &amp;target, const AsciiBasicCanvas &amp;canvas, Coord2d coord=Vec2d(0, 0))</div><div class="ttdoc">比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）</div><div class="ttdef"><b>定义</b> graphics.cpp:172</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a45f172f5ef9cbf677e8c547627b1b985"><div class="ttname"><a href="namespace_ascii_g_l.html#a45f172f5ef9cbf677e8c547627b1b985">AsciiGL::overlapCanvas</a></div><div class="ttdeci">AsciiBasicCanvas overlapCanvas(const AsciiBasicCanvas &amp;canvas, const AsciiBasicCanvas &amp;target, Coord2d coord)</div><div class="ttdoc">重叠两个画布</div><div class="ttdef"><b>定义</b> graphics.cpp:32</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a6b0854af1bf637f3ffd3f65e4927244c"><div class="ttname"><a href="namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c">AsciiGL::setText</a></div><div class="ttdeci">void setText(AsciiBasicCanvas &amp;canvas, Coord2d coord, const AsciiBasicString &amp;text)</div><div class="ttdoc">在指定画布下的指定坐标设置文本 （不添加图层,在原有画布进行修改）</div><div class="ttdef"><b>定义</b> graphics.cpp:74</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a6dc7a6d92e1a36d81138c350f859d73c"><div class="ttname"><a href="namespace_ascii_g_l.html#a6dc7a6d92e1a36d81138c350f859d73c">AsciiGL::setBorder</a></div><div class="ttdeci">void setBorder(AsciiBasicCanvas &amp;canvas, const AsciiBasicString &amp;str)</div><div class="ttdoc">在指定画布中设置指定字符串的边框（厚度默认为一个控制台字符单位）</div><div class="ttdef"><b>定义</b> graphics.cpp:137</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a717fd63b993063dc9fb796e7530799f7"><div class="ttname"><a href="namespace_ascii_g_l.html#a717fd63b993063dc9fb796e7530799f7">AsciiGL::setLine</a></div><div class="ttdeci">void setLine(AsciiBasicCanvas &amp;canvas, Coord2d coordA, Coord2d coordB, const AsciiBasicString &amp;str, int level=1)</div><div class="ttdoc">在指定画布下的两个指定坐标之间绘制线条</div><div class="ttdef"><b>定义</b> graphics.cpp:197</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_a8d159963df2247502cb5bffb9306fe3c"><div class="ttname"><a href="namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c">AsciiGL::makeName</a></div><div class="ttdeci">std::string makeName(const std::string &amp;prefix)</div><div class="ttdoc">获取名字/取名器(随着名字重复而添加编号)</div><div class="ttdef"><b>定义</b> agl_Basic.cpp:19</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html_ad69f612f30b409eb0e146d1ac1d5e1ab"><div class="ttname"><a href="namespace_ascii_g_l.html#ad69f612f30b409eb0e146d1ac1d5e1ab">AsciiGL::getCanvas</a></div><div class="ttdeci">AsciiBasicCanvas getCanvas(const AsciiBasicCanvas &amp;canvas, Coord2d coordA, Coord2d coordB)</div><div class="ttdoc">获取指定区域的画布 （失败时抛出异常）</div><div class="ttdef"><b>定义</b> graphics.cpp:4</div></div>
+<div class="ttc" id="astruct_ascii_tools_1_1_coordinate2d_html"><div class="ttname"><a href="struct_ascii_tools_1_1_coordinate2d.html">AsciiTools::Coordinate2d</a></div><div class="ttdef"><b>定义</b> at_Coordinate2d.h:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

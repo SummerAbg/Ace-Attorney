@@ -1,0 +1,7 @@
+<map id="AsciiGL::getFileData" name="AsciiGL::getFileData">
+<area shape="rect" id="Node000001" title="获取文件数据" alt="" coords="460,13,601,40"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a02fb149185ec29198baa5c920da4bcde" title="以文件的形式（.asc2）加载画布" alt="" coords="233,5,412,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="444,29,413,29,413,24,444,24"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a637d5701a29aafd4dc15f1d9e544bec5" title="AsciiBasicCanvas object constructor" alt="" coords="5,5,185,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,29,185,29,185,24,217,24"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AsciiGL::getY" name="AsciiGL::getY">
+<area shape="rect" id="Node000001" title="根据两个坐标的斜率获得一次函数的值" alt="" coords="350,5,452,32"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a717fd63b993063dc9fb796e7530799f7" title="在指定画布下的两个指定坐标之间绘制线条" alt="" coords="185,5,302,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="334,21,302,21,302,16,334,16"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a6dc7a6d92e1a36d81138c350f859d73c" title="在指定画布中设置指定字符串的边框（厚度默认为一个控制台字符单位）" alt="" coords="5,5,137,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,21,137,21,137,16,169,16"/>
+</map>

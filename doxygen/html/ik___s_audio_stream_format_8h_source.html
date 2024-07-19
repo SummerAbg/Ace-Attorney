@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: ik_SAudioStreamFormat.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_bdff311e6a51ceeebd2f20921314edd3.html">irrKlang</a></li><li class="navelem"><a class="el" href="dir_106950a5b36d4e98248f476d11963ac6.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">ik_SAudioStreamFormat.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (C) 2002-2018 Nikolaus Gebhardt</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// This file is part of the &quot;irrKlang&quot; library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// For conditions of distribution and use, see copyright notice in irrKlang.h</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef __S_IRRKLANG_AUDIO_STREAM_FORMAT_H_INCLUDED__</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define __S_IRRKLANG_AUDIO_STREAM_FORMAT_H_INCLUDED__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;ik_IRefCounted.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceirrklang.html">irrklang</a> {</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">   12</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">ESampleFormat</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44">   14</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44">ESF_U8</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104">ESF_S16</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104">   18</a></span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structirrklang_1_1_s_audio_stream_format.html">SAudioStreamFormat</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#a4ff43d45603ce7e65c27a07a860b96f5">   23</a></span>  <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#a4ff43d45603ce7e65c27a07a860b96f5">ChannelCount</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#ab4f3d1b9df4e1adf53b128c0f14af313">   27</a></span>  <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#ab4f3d1b9df4e1adf53b128c0f14af313">FrameCount</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756">   30</a></span>  <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756">SampleRate</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#a6a3c4b7a3ac829555b0bcc7312e12c8f">   33</a></span>  <a class="code hl_enumeration" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">ESampleFormat</a> <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#a6a3c4b7a3ac829555b0bcc7312e12c8f">SampleFormat</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#a03044a3edc3381c7705523778e9fd6fd">   37</a></span>  <span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#a03044a3edc3381c7705523778e9fd6fd">getSampleSize</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#a6a3c4b7a3ac829555b0bcc7312e12c8f">SampleFormat</a> == <a class="code hl_enumvalue" href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44">ESF_U8</a>) ? 1 : 2;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#a361c0a128dc3e975ec2d20676ef05753">   42</a></span>  <span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#a361c0a128dc3e975ec2d20676ef05753">getFrameSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#a4ff43d45603ce7e65c27a07a860b96f5">ChannelCount</a> * <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#a03044a3edc3381c7705523778e9fd6fd">getSampleSize</a>(); }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">/* Returns an invalid negative value when the stream has an unknown lenght */</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#ac5f71087a7f4febaff7696bb5ce9272f">   46</a></span>  <span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#ac5f71087a7f4febaff7696bb5ce9272f">getSampleDataSize</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#a361c0a128dc3e975ec2d20676ef05753">getFrameSize</a>() * <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#ab4f3d1b9df4e1adf53b128c0f14af313">FrameCount</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structirrklang_1_1_s_audio_stream_format.html#a88970dafdc467af743ef4d688413e127">   51</a></span>  <span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">ik_s32</a> <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#a88970dafdc467af743ef4d688413e127">getBytesPerSecond</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="structirrklang_1_1_s_audio_stream_format.html#a361c0a128dc3e975ec2d20676ef05753">getFrameSize</a>() * <a class="code hl_variable" href="structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756">SampleRate</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// end namespace irrklang</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespaceirrklang_html"><div class="ttname"><a href="namespaceirrklang.html">irrklang</a></div><div class="ttdoc">Everything in the irrKlang Sound Engine can be found in this namespace.</div><div class="ttdef"><b>定义</b> ik_ESoundEngineOptions.h:8</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a2b85d1e9288cb552fceef8e8a726a80e"><div class="ttname"><a href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80e">irrklang::ESampleFormat</a></div><div class="ttdeci">ESampleFormat</div><div class="ttdoc">audio sample data format enumeration for supported formats</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:12</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44"><div class="ttname"><a href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44">irrklang::ESF_U8</a></div><div class="ttdeci">@ ESF_U8</div><div class="ttdoc">one unsigned byte (0;255)</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:14</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104"><div class="ttname"><a href="namespaceirrklang.html#a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104">irrklang::ESF_S16</a></div><div class="ttdeci">@ ESF_S16</div><div class="ttdoc">16 bit, signed (-32k;32k)</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:17</div></div>
+<div class="ttc" id="anamespaceirrklang_html_af8028b1c477e50d479270611ecb76e92"><div class="ttname"><a href="namespaceirrklang.html#af8028b1c477e50d479270611ecb76e92">irrklang::ik_s32</a></div><div class="ttdeci">signed int ik_s32</div><div class="ttdoc">32 bit signed variable.</div><div class="ttdef"><b>定义</b> ik_irrKlangTypes.h:37</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html">irrklang::SAudioStreamFormat</a></div><div class="ttdoc">structure describing an audio stream format with helper functions</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:21</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_a03044a3edc3381c7705523778e9fd6fd"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#a03044a3edc3381c7705523778e9fd6fd">irrklang::SAudioStreamFormat::getSampleSize</a></div><div class="ttdeci">ik_s32 getSampleSize() const</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:37</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_a361c0a128dc3e975ec2d20676ef05753"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#a361c0a128dc3e975ec2d20676ef05753">irrklang::SAudioStreamFormat::getFrameSize</a></div><div class="ttdeci">ik_s32 getFrameSize() const</div><div class="ttdoc">returns the frame size of the stream data in bytes</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:42</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_a4ff43d45603ce7e65c27a07a860b96f5"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#a4ff43d45603ce7e65c27a07a860b96f5">irrklang::SAudioStreamFormat::ChannelCount</a></div><div class="ttdeci">ik_s32 ChannelCount</div><div class="ttdoc">channels, 1 for mono, 2 for stereo</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:23</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_a6a3c4b7a3ac829555b0bcc7312e12c8f"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#a6a3c4b7a3ac829555b0bcc7312e12c8f">irrklang::SAudioStreamFormat::SampleFormat</a></div><div class="ttdeci">ESampleFormat SampleFormat</div><div class="ttdoc">format of the sample data</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:33</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_a88970dafdc467af743ef4d688413e127"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#a88970dafdc467af743ef4d688413e127">irrklang::SAudioStreamFormat::getBytesPerSecond</a></div><div class="ttdeci">ik_s32 getBytesPerSecond() const</div><div class="ttdoc">returns amount of bytes per second</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:51</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_ab4f3d1b9df4e1adf53b128c0f14af313"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#ab4f3d1b9df4e1adf53b128c0f14af313">irrklang::SAudioStreamFormat::FrameCount</a></div><div class="ttdeci">ik_s32 FrameCount</div><div class="ttdoc">amount of frames in the sample data or stream.</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:27</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_ac5f71087a7f4febaff7696bb5ce9272f"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#ac5f71087a7f4febaff7696bb5ce9272f">irrklang::SAudioStreamFormat::getSampleDataSize</a></div><div class="ttdeci">ik_s32 getSampleDataSize() const</div><div class="ttdoc">returns the size of the sample data in bytes</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:46</div></div>
+<div class="ttc" id="astructirrklang_1_1_s_audio_stream_format_html_adffd0aaf1d5e09b2832f6ad9b2589756"><div class="ttname"><a href="structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756">irrklang::SAudioStreamFormat::SampleRate</a></div><div class="ttdeci">ik_s32 SampleRate</div><div class="ttdoc">samples per second</div><div class="ttdef"><b>定义</b> ik_SAudioStreamFormat.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" href="$class_ascii_tools_1_1_ascii_basic_object.html" title=" " alt="" coords="5,56,195,83"/>
+<area shape="rect" id="Node000001" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类" alt="" coords="246,5,425,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="180,50,269,30,271,35,181,55"/>
+<area shape="rect" id="Node000003" href="$class_ascii_tools_1_1_ascii_basic_char.html" title=" " alt="" coords="246,56,424,83"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="210,67,246,67,246,72,210,72"/>
+<area shape="rect" id="Node000004" href="$class_ascii_tools_1_1_ascii_basic_string.html" title=" " alt="" coords="243,107,428,133"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="181,84,271,103,269,109,180,89"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层" alt="" coords="476,5,645,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="441,16,475,16,475,21,441,21"/>
+</map>

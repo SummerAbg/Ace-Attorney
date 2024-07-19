@@ -1,0 +1,5 @@
+<map id="AsciiGL::AsciiBasicCanvas::setCanvasData" name="AsciiGL::AsciiBasicCanvas::setCanvasData">
+<area shape="rect" id="Node000001" title="设置画布中指定坐标的数据" alt="" coords="5,5,185,48"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="233,5,412,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,24,217,24,217,29,185,29"/>
+</map>

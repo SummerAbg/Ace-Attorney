@@ -1,0 +1,9 @@
+<map id="AsciiGL::AsciiBasicCanvas::AsciiBasicCanvas" name="AsciiGL::AsciiBasicCanvas::AsciiBasicCanvas">
+<area shape="rect" id="Node000001" title="AsciiBasicCanvas object constructor" alt="" coords="5,35,185,77"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a02fb149185ec29198baa5c920da4bcde" title="以文件的形式（.asc2）加载画布" alt="" coords="233,35,412,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,53,217,53,217,59,185,59"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ac5e225ea5f49c81c6b5cea32ea17e013" title="AsciiBasicCanvas object constructor" alt="" coords="460,5,639,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,42,444,38,445,43,413,47"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a0920f3db5fddabfe968b0b77df71c812" title="获取文件数据" alt="" coords="479,72,620,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="413,65,464,72,463,77,412,70"/>
+</map>

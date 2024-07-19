@@ -1,0 +1,9 @@
+<map id="AsciiGL::AsciiBasicLayer::AsciiBasicLayer" name="AsciiGL::AsciiBasicLayer::AsciiBasicLayer">
+<area shape="rect" id="Node000001" title="AsciiBasicLayer object constructor" alt="" coords="5,23,175,65"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c" title="获取名字/取名器(随着名字重复而添加编号)" alt="" coords="223,31,364,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,41,207,41,207,47,175,47"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a9323930539e382b18b720a9793e28dcc" title="获取容器指定元素的下标(成功了返回元素下标，失败了返回0)" alt="" coords="412,5,536,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,31,397,27,397,32,365,37"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a28765dd90ef3a163d06e95b2067492d7" title="判断容器是否存在指定元素" alt="" coords="416,56,532,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="365,51,402,57,401,62,364,57"/>
+</map>

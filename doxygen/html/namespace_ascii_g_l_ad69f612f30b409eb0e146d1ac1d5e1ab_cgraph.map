@@ -1,0 +1,10 @@
+<map id="AsciiGL::getCanvas" name="AsciiGL::getCanvas">
+<area shape="rect" id="Node000001" title="获取指定区域的画布 （失败时抛出异常）" alt="" coords="5,34,141,60"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="416,30,595,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,31,148,19,188,11,278,3,368,11,424,22,423,28,368,16,278,8,189,16,149,25,113,36"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#af8f9e78b2359097e641eccbfff77e4ae" title="获取默认填充字符串" alt="" coords="189,26,368,68"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,44,173,44,173,50,141,50"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="189,92,368,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="118,58,197,84,195,89,116,63"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="358,89,410,74,412,80,359,94"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="irrklang::SAudioStreamFormat::getSampleSize" name="irrklang::SAudioStreamFormat::getSampleSize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="494,39,690,81"/>
+<area shape="rect" id="Node000002" href="$structirrklang_1_1_s_audio_stream_format.html#a361c0a128dc3e975ec2d20676ef05753" title="returns the frame size of the stream data in bytes" alt="" coords="250,39,446,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="479,63,447,63,447,57,479,57"/>
+<area shape="rect" id="Node000003" href="$structirrklang_1_1_s_audio_stream_format.html#a88970dafdc467af743ef4d688413e127" title="returns amount of bytes per second" alt="" coords="5,5,202,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,47,202,43,203,37,235,42"/>
+<area shape="rect" id="Node000004" href="$structirrklang_1_1_s_audio_stream_format.html#ac5f71087a7f4febaff7696bb5ce9272f" title="returns the size of the sample data in bytes" alt="" coords="5,72,202,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="235,78,203,83,202,77,234,73"/>
+</map>

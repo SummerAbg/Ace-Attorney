@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: AsciiGL::AsciiBasicLayer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_ascii_g_l.html">AsciiGL</a></li><li class="navelem"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_ascii_g_l_1_1_ascii_basic_layer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">AsciiGL::AsciiBasicLayer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>基本字符串图层  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="agl___basic_layer_8h_source.html">agl_BasicLayer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 AsciiGL::AsciiBasicLayer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer__inherit__graph.png" border="0" usemap="#a_ascii_g_l_1_1_ascii_basic_layer_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_ascii_g_l_1_1_ascii_basic_layer_inherit__map" id="a_ascii_g_l_1_1_ascii_basic_layer_inherit__map">
+<area shape="rect" title="基本字符串图层" alt="" coords="15,155,185,181"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类" alt="" coords="10,80,190,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_ascii_tools_1_1_ascii_basic_object.html" title=" " alt="" coords="5,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+AsciiGL::AsciiBasicLayer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer__coll__graph.png" border="0" usemap="#a_ascii_g_l_1_1_ascii_basic_layer_coll__map" alt="Collaboration graph"/></div>
+<map name="a_ascii_g_l_1_1_ascii_basic_layer_coll__map" id="a_ascii_g_l_1_1_ascii_basic_layer_coll__map">
+<area shape="rect" title="基本字符串图层" alt="" coords="15,155,185,181"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类" alt="" coords="10,80,190,107"/>
+<area shape="poly" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" href="class_ascii_tools_1_1_ascii_basic_object.html" title=" " alt="" coords="5,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab8272943376668693cfcc3a7ded57ba3" id="r_ab8272943376668693cfcc3a7ded57ba3"><td class="memItemLeft" align="right" valign="top"><a id="ab8272943376668693cfcc3a7ded57ba3" name="ab8272943376668693cfcc3a7ded57ba3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AsciiBasicLayer</b> ()</td></tr>
+<tr class="memdesc:ab8272943376668693cfcc3a7ded57ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor <br /></td></tr>
+<tr class="separator:ab8272943376668693cfcc3a7ded57ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bcd0d12ca3ffbed7d8a3e06e4cc6359" id="r_a1bcd0d12ca3ffbed7d8a3e06e4cc6359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bcd0d12ca3ffbed7d8a3e06e4cc6359">AsciiBasicLayer</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;canvas, <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord)</td></tr>
+<tr class="memdesc:a1bcd0d12ca3ffbed7d8a3e06e4cc6359"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor  <br /></td></tr>
+<tr class="separator:a1bcd0d12ca3ffbed7d8a3e06e4cc6359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e8a59ef3a13f984e4c9054732b5894" id="r_a17e8a59ef3a13f984e4c9054732b5894"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17e8a59ef3a13f984e4c9054732b5894">AsciiBasicLayer</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;canvas, <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord, const std::string &amp;name, bool displayState=true)</td></tr>
+<tr class="memdesc:a17e8a59ef3a13f984e4c9054732b5894"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor  <br /></td></tr>
+<tr class="separator:a17e8a59ef3a13f984e4c9054732b5894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5946773b0368588c2c7c02edf36544ca" id="r_a5946773b0368588c2c7c02edf36544ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5946773b0368588c2c7c02edf36544ca">AsciiBasicLayer</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a5946773b0368588c2c7c02edf36544ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor  <br /></td></tr>
+<tr class="separator:a5946773b0368588c2c7c02edf36544ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a4d440af498f4384c2679e5f7b1d93" id="r_aa9a4d440af498f4384c2679e5f7b1d93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9a4d440af498f4384c2679e5f7b1d93">AsciiBasicLayer</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer)</td></tr>
+<tr class="memdesc:aa9a4d440af498f4384c2679e5f7b1d93"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor  <br /></td></tr>
+<tr class="separator:aa9a4d440af498f4384c2679e5f7b1d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdfb6c21396abb85f7dacfb0e03db46e" id="r_abdfb6c21396abb85f7dacfb0e03db46e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdfb6c21396abb85f7dacfb0e03db46e">setCoordinate</a> (<a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord)</td></tr>
+<tr class="memdesc:abdfb6c21396abb85f7dacfb0e03db46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置图层中画布的坐标  <br /></td></tr>
+<tr class="separator:abdfb6c21396abb85f7dacfb0e03db46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7e09308480d2f5553c70502a739f52" id="r_aca7e09308480d2f5553c70502a739f52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca7e09308480d2f5553c70502a739f52">getCoordinate</a> () const</td></tr>
+<tr class="memdesc:aca7e09308480d2f5553c70502a739f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取图层中画布的坐标  <br /></td></tr>
+<tr class="separator:aca7e09308480d2f5553c70502a739f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982c656dbe02177ec3ea728f888ac20f" id="r_a982c656dbe02177ec3ea728f888ac20f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a982c656dbe02177ec3ea728f888ac20f">setCenterCoordinate</a> (<a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> coord)</td></tr>
+<tr class="memdesc:a982c656dbe02177ec3ea728f888ac20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置图层中画布的中心坐标  <br /></td></tr>
+<tr class="separator:a982c656dbe02177ec3ea728f888ac20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a257207b3391ce00d448ac6a9901730" id="r_a6a257207b3391ce00d448ac6a9901730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a257207b3391ce00d448ac6a9901730">getCenterCoordinate</a> () const</td></tr>
+<tr class="memdesc:a6a257207b3391ce00d448ac6a9901730"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取图层中画布的中心坐标  <br /></td></tr>
+<tr class="separator:a6a257207b3391ce00d448ac6a9901730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28fb172bc5fb0b8b48080bb856fbcd0c" id="r_a28fb172bc5fb0b8b48080bb856fbcd0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28fb172bc5fb0b8b48080bb856fbcd0c">setName</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a28fb172bc5fb0b8b48080bb856fbcd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置图层名称  <br /></td></tr>
+<tr class="separator:a28fb172bc5fb0b8b48080bb856fbcd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18673e90be1f2271a05d1e8917f06448" id="r_a18673e90be1f2271a05d1e8917f06448"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18673e90be1f2271a05d1e8917f06448">getName</a> () const</td></tr>
+<tr class="memdesc:a18673e90be1f2271a05d1e8917f06448"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取图层名称  <br /></td></tr>
+<tr class="separator:a18673e90be1f2271a05d1e8917f06448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8bac93cc7f701a1a3f9ae6cf5f55b5" id="r_a3a8bac93cc7f701a1a3f9ae6cf5f55b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a8bac93cc7f701a1a3f9ae6cf5f55b5">setDisplayState</a> (bool displayState)</td></tr>
+<tr class="memdesc:a3a8bac93cc7f701a1a3f9ae6cf5f55b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置图层的显示状态  <br /></td></tr>
+<tr class="separator:a3a8bac93cc7f701a1a3f9ae6cf5f55b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac894801bb781961bf44b98ba5e85e3d2" id="r_ac894801bb781961bf44b98ba5e85e3d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac894801bb781961bf44b98ba5e85e3d2">isDisplay</a> () const</td></tr>
+<tr class="memdesc:ac894801bb781961bf44b98ba5e85e3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取图层的显示状态  <br /></td></tr>
+<tr class="separator:ac894801bb781961bf44b98ba5e85e3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03571130f45330676aa70c8f779ad9e" id="r_aa03571130f45330676aa70c8f779ad9e"><td class="memItemLeft" align="right" valign="top"><a id="aa03571130f45330676aa70c8f779ad9e" name="aa03571130f45330676aa70c8f779ad9e"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer) const</td></tr>
+<tr class="separator:aa03571130f45330676aa70c8f779ad9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7822af722d054d96c1f22e19e1d3a286" id="r_a7822af722d054d96c1f22e19e1d3a286"><td class="memItemLeft" align="right" valign="top"><a id="a7822af722d054d96c1f22e19e1d3a286" name="a7822af722d054d96c1f22e19e1d3a286"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;layer) const</td></tr>
+<tr class="separator:a7822af722d054d96c1f22e19e1d3a286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiGL::AsciiBasicCanvas</a></td></tr>
+<tr class="memitem:ac5e225ea5f49c81c6b5cea32ea17e013 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_ac5e225ea5f49c81c6b5cea32ea17e013"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>AsciiBasicCanvas</b> ()=default</td></tr>
+<tr class="memdesc:ac5e225ea5f49c81c6b5cea32ea17e013 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类">AsciiBasicCanvas</a> object constructor <br /></td></tr>
+<tr class="separator:ac5e225ea5f49c81c6b5cea32ea17e013 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdb9e88641467c824274ef8a0c7b1ef inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a5cdb9e88641467c824274ef8a0c7b1ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a5cdb9e88641467c824274ef8a0c7b1ef">AsciiBasicCanvas</a> (int length, int width, const <a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;str=TRPRSTR)</td></tr>
+<tr class="memdesc:a5cdb9e88641467c824274ef8a0c7b1ef inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类">AsciiBasicCanvas</a> object constructor  <br /></td></tr>
+<tr class="separator:a5cdb9e88641467c824274ef8a0c7b1ef inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637d5701a29aafd4dc15f1d9e544bec5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a637d5701a29aafd4dc15f1d9e544bec5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a637d5701a29aafd4dc15f1d9e544bec5">AsciiBasicCanvas</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a637d5701a29aafd4dc15f1d9e544bec5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类">AsciiBasicCanvas</a> object constructor  <br /></td></tr>
+<tr class="separator:a637d5701a29aafd4dc15f1d9e544bec5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f4637470bf70ebc9556b4fd5bb6d7c inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a08f4637470bf70ebc9556b4fd5bb6d7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a08f4637470bf70ebc9556b4fd5bb6d7c">AsciiBasicCanvas</a> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;canvas)</td></tr>
+<tr class="memdesc:a08f4637470bf70ebc9556b4fd5bb6d7c inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类">AsciiBasicCanvas</a> object constructor  <br /></td></tr>
+<tr class="separator:a08f4637470bf70ebc9556b4fd5bb6d7c inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c4e0c56c4d088ba832506fd0ec1d64 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_ae0c4e0c56c4d088ba832506fd0ec1d64"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#ae0c4e0c56c4d088ba832506fd0ec1d64">begin</a> () const</td></tr>
+<tr class="memdesc:ae0c4e0c56c4d088ba832506fd0ec1d64 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return iterator to beginning  <br /></td></tr>
+<tr class="separator:ae0c4e0c56c4d088ba832506fd0ec1d64 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872ae86df7429ff266f1ef36e93b9677 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a872ae86df7429ff266f1ef36e93b9677"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a872ae86df7429ff266f1ef36e93b9677">end</a> () const</td></tr>
+<tr class="memdesc:a872ae86df7429ff266f1ef36e93b9677 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return iterator to end  <br /></td></tr>
+<tr class="separator:a872ae86df7429ff266f1ef36e93b9677 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e42b4bf58ec8982dc791e093d3f4ee2 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a3e42b4bf58ec8982dc791e093d3f4ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a3e42b4bf58ec8982dc791e093d3f4ee2">info</a> () const</td></tr>
+<tr class="memdesc:a3e42b4bf58ec8982dc791e093d3f4ee2 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出画布信息  <br /></td></tr>
+<tr class="separator:a3e42b4bf58ec8982dc791e093d3f4ee2 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79e6fe14d2588d6ae104b55803b24c5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_ad79e6fe14d2588d6ae104b55803b24c5"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord)</td></tr>
+<tr class="separator:ad79e6fe14d2588d6ae104b55803b24c5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3ccd871595e5071192b483e8c2835a inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a1d3ccd871595e5071192b483e8c2835a"><td class="memItemLeft" align="right" valign="top">
+const <a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord) const</td></tr>
+<tr class="separator:a1d3ccd871595e5071192b483e8c2835a inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb23c5386a4e8e0455547ddcb354f2f inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_abeb23c5386a4e8e0455547ddcb354f2f"><td class="memItemLeft" align="right" valign="top">
+const <a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int x, int y) const</td></tr>
+<tr class="separator:abeb23c5386a4e8e0455547ddcb354f2f inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad598c9941c415fa2dd1a26fab581ee29 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_ad598c9941c415fa2dd1a26fab581ee29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29">setCanvasData</a> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord, const <a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a> &amp;str)</td></tr>
+<tr class="memdesc:ad598c9941c415fa2dd1a26fab581ee29 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置画布中指定坐标的数据  <br /></td></tr>
+<tr class="separator:ad598c9941c415fa2dd1a26fab581ee29 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0443523e4190ea0d4793965d6c6742b1 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a0443523e4190ea0d4793965d6c6742b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a0443523e4190ea0d4793965d6c6742b1">getCanvasData</a> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord) const</td></tr>
+<tr class="memdesc:a0443523e4190ea0d4793965d6c6742b1 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定坐标的画布数据(失败时抛出异常)  <br /></td></tr>
+<tr class="separator:a0443523e4190ea0d4793965d6c6742b1 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29201fd53f539387d6b68d42d3402a83 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a29201fd53f539387d6b68d42d3402a83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_tools_1_1_matrix2d.html">CanvasData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a29201fd53f539387d6b68d42d3402a83">getCanvasData</a> () const</td></tr>
+<tr class="memdesc:a29201fd53f539387d6b68d42d3402a83 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取整个画布数据  <br /></td></tr>
+<tr class="separator:a29201fd53f539387d6b68d42d3402a83 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c087805266821f373f11c7099cab0d inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a83c087805266821f373f11c7099cab0d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a83c087805266821f373f11c7099cab0d">toString</a> () const</td></tr>
+<tr class="memdesc:a83c087805266821f373f11c7099cab0d inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取画布组成的字符串  <br /></td></tr>
+<tr class="separator:a83c087805266821f373f11c7099cab0d inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a878b5d571e5c814c181c693b0891ee48 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a878b5d571e5c814c181c693b0891ee48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a878b5d571e5c814c181c693b0891ee48">getAsciiBasicString</a> () const</td></tr>
+<tr class="memdesc:a878b5d571e5c814c181c693b0891ee48 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取画布组成的AsciiBasicString字符串  <br /></td></tr>
+<tr class="separator:a878b5d571e5c814c181c693b0891ee48 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1c835773ca233cd80dc9802990b4f5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_adb1c835773ca233cd80dc9802990b4f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#adb1c835773ca233cd80dc9802990b4f5">getLength</a> () const</td></tr>
+<tr class="memdesc:adb1c835773ca233cd80dc9802990b4f5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取画布长度  <br /></td></tr>
+<tr class="separator:adb1c835773ca233cd80dc9802990b4f5 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc98005a3f1d66c740e978945bf1aaf inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a3dc98005a3f1d66c740e978945bf1aaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a3dc98005a3f1d66c740e978945bf1aaf">getWidth</a> () const</td></tr>
+<tr class="memdesc:a3dc98005a3f1d66c740e978945bf1aaf inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取画布宽度  <br /></td></tr>
+<tr class="separator:a3dc98005a3f1d66c740e978945bf1aaf inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4314185737544fc3187150738edcff47 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a4314185737544fc3187150738edcff47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a4314185737544fc3187150738edcff47">getBlockLength</a> () const</td></tr>
+<tr class="memdesc:a4314185737544fc3187150738edcff47 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取块长度  <br /></td></tr>
+<tr class="separator:a4314185737544fc3187150738edcff47 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f9e78b2359097e641eccbfff77e4ae inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_af8f9e78b2359097e641eccbfff77e4ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#af8f9e78b2359097e641eccbfff77e4ae">getFill</a> () const</td></tr>
+<tr class="memdesc:af8f9e78b2359097e641eccbfff77e4ae inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取默认填充字符串  <br /></td></tr>
+<tr class="separator:af8f9e78b2359097e641eccbfff77e4ae inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd174dbea0b4c208ed932a06ad4cbb66 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_afd174dbea0b4c208ed932a06ad4cbb66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#afd174dbea0b4c208ed932a06ad4cbb66">save</a> (const std::string &amp;path) const</td></tr>
+<tr class="memdesc:afd174dbea0b4c208ed932a06ad4cbb66 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">以文件的形式（.asc2）保存画布  <br /></td></tr>
+<tr class="separator:afd174dbea0b4c208ed932a06ad4cbb66 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02fb149185ec29198baa5c920da4bcde inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a02fb149185ec29198baa5c920da4bcde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a02fb149185ec29198baa5c920da4bcde">load</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a02fb149185ec29198baa5c920da4bcde inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">以文件的形式（.asc2）加载画布  <br /></td></tr>
+<tr class="separator:a02fb149185ec29198baa5c920da4bcde inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af47c417f71f11bfa1b33122b97b405d6 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_af47c417f71f11bfa1b33122b97b405d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#af47c417f71f11bfa1b33122b97b405d6">clear</a> (bool flag=true)</td></tr>
+<tr class="memdesc:af47c417f71f11bfa1b33122b97b405d6 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空画布数据  <br /></td></tr>
+<tr class="separator:af47c417f71f11bfa1b33122b97b405d6 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef282ce474c5964bafdb50c416972588 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_aef282ce474c5964bafdb50c416972588"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>show</b> () const</td></tr>
+<tr class="memdesc:aef282ce474c5964bafdb50c416972588 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">展示画布 <br /></td></tr>
+<tr class="separator:aef282ce474c5964bafdb50c416972588 inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6a3316d31a03c29a99ba52ae63692e inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a6a6a3316d31a03c29a99ba52ae63692e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e">checkCoordinate</a> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord) const</td></tr>
+<tr class="memdesc:a6a6a3316d31a03c29a99ba52ae63692e inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断指定坐标是否合法  <br /></td></tr>
+<tr class="separator:a6a6a3316d31a03c29a99ba52ae63692e inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6269142985bbbd215cfdabb4a5aedc inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_add6269142985bbbd215cfdabb4a5aedc"><td class="memItemLeft" align="right" valign="top">COORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#add6269142985bbbd215cfdabb4a5aedc">toConsoleCoord</a> (const <a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> &amp;coord) const</td></tr>
+<tr class="memdesc:add6269142985bbbd215cfdabb4a5aedc inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="mdescLeft">&#160;</td><td class="mdescRight">画布指定坐标转换为控制台坐标  <br /></td></tr>
+<tr class="separator:add6269142985bbbd215cfdabb4a5aedc inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb8833afd71d85c66f90739f5e90c5b inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_a7cb8833afd71d85c66f90739f5e90c5b"><td class="memItemLeft" align="right" valign="top">
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;canvas) const</td></tr>
+<tr class="separator:a7cb8833afd71d85c66f90739f5e90c5b inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae338b01087fef24547d458a6b00eec8d inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_ae338b01087fef24547d458a6b00eec8d"><td class="memItemLeft" align="right" valign="top">
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;canvas) const</td></tr>
+<tr class="separator:ae338b01087fef24547d458a6b00eec8d inherit pub_methods_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_class_ascii_g_l_1_1_ascii_basic_canvas"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_ascii_g_l_1_1_ascii_basic_canvas')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiGL::AsciiBasicCanvas</a></td></tr>
+<tr class="memitem:ae8cfcf86d5f33bb41404819174165c2d inherit pub_types_class_ascii_g_l_1_1_ascii_basic_canvas" id="r_ae8cfcf86d5f33bb41404819174165c2d"><td class="memItemLeft" align="right" valign="top">
+using&#160;</td><td class="memItemRight" valign="bottom"><b>CanvasData</b> = <a class="el" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a>&lt;<a class="el" href="class_ascii_tools_1_1_ascii_basic_string.html">AsciiBasicString</a>&gt;</td></tr>
+<tr class="separator:ae8cfcf86d5f33bb41404819174165c2d inherit pub_types_class_ascii_g_l_1_1_ascii_basic_canvas"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>基本字符串图层 </p>
+<p>~继承了基本字符串图层类，并添加了对图层坐标、中心坐标、图层名字、显示状态的操作 </p><dl class="section date"><dt>日期</dt><dd>19.07.2024 </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1bcd0d12ca3ffbed7d8a3e06e4cc6359" name="a1bcd0d12ca3ffbed7d8a3e06e4cc6359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bcd0d12ca3ffbed7d8a3e06e4cc6359">&#9670;&#160;</a></span>AsciiBasicLayer() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsciiGL::AsciiBasicLayer::AsciiBasicLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a></td>          <td class="paramname"><span class="paramname"><em>coord</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>- 指定画布 </td></tr>
+    <tr><td class="paramname">coord</td><td>- 图层坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_a1bcd0d12ca3ffbed7d8a3e06e4cc6359_cgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_a1bcd0d12ca3ffbed7d8a3e06e4cc6359_cgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_a1bcd0d12ca3ffbed7d8a3e06e4cc6359_cgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_a1bcd0d12ca3ffbed7d8a3e06e4cc6359_cgraph">
+<area shape="rect" title="AsciiBasicLayer object constructor" alt="" coords="5,23,175,65"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c" title="获取名字/取名器(随着名字重复而添加编号)" alt="" coords="223,31,364,57"/>
+<area shape="poly" title=" " alt="" coords="175,41,207,41,207,47,175,47"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a9323930539e382b18b720a9793e28dcc" title="获取容器指定元素的下标(成功了返回元素下标，失败了返回0)" alt="" coords="412,5,536,32"/>
+<area shape="poly" title=" " alt="" coords="364,31,397,27,397,32,365,37"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a28765dd90ef3a163d06e95b2067492d7" title="判断容器是否存在指定元素" alt="" coords="416,56,532,83"/>
+<area shape="poly" title=" " alt="" coords="365,51,402,57,401,62,364,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17e8a59ef3a13f984e4c9054732b5894" name="a17e8a59ef3a13f984e4c9054732b5894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e8a59ef3a13f984e4c9054732b5894">&#9670;&#160;</a></span>AsciiBasicLayer() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsciiGL::AsciiBasicLayer::AsciiBasicLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a></td>          <td class="paramname"><span class="paramname"><em>coord</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>displayState</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>- 指定画布 </td></tr>
+    <tr><td class="paramname">coord</td><td>- 图层坐标 </td></tr>
+    <tr><td class="paramname">name</td><td>- 图层名称 </td></tr>
+    <tr><td class="paramname">displayState</td><td>- 显示状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5946773b0368588c2c7c02edf36544ca" name="a5946773b0368588c2c7c02edf36544ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5946773b0368588c2c7c02edf36544ca">&#9670;&#160;</a></span>AsciiBasicLayer() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsciiGL::AsciiBasicLayer::AsciiBasicLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9a4d440af498f4384c2679e5f7b1d93" name="aa9a4d440af498f4384c2679e5f7b1d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a4d440af498f4384c2679e5f7b1d93">&#9670;&#160;</a></span>AsciiBasicLayer() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsciiGL::AsciiBasicLayer::AsciiBasicLayer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html">AsciiBasicLayer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>layer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层">AsciiBasicLayer</a> object constructor </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>- 图层 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_aa9a4d440af498f4384c2679e5f7b1d93_cgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_aa9a4d440af498f4384c2679e5f7b1d93_cgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_aa9a4d440af498f4384c2679e5f7b1d93_cgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_aa9a4d440af498f4384c2679e5f7b1d93_cgraph">
+<area shape="rect" title="AsciiBasicLayer object constructor" alt="" coords="5,105,175,148"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#a6a257207b3391ce00d448ac6a9901730" title="获取图层中画布的中心坐标" alt="" coords="223,5,392,48"/>
+<area shape="poly" title=" " alt="" coords="131,102,222,58,234,52,236,57,224,62,133,107"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#aca7e09308480d2f5553c70502a739f52" title="获取图层中画布的坐标" alt="" coords="223,72,392,115"/>
+<area shape="poly" title=" " alt="" coords="175,111,207,106,208,111,175,116"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#a18673e90be1f2271a05d1e8917f06448" title="获取图层名称" alt="" coords="223,139,392,181"/>
+<area shape="poly" title=" " alt="" coords="175,137,208,142,207,147,175,142"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#ac894801bb781961bf44b98ba5e85e3d2" title="获取图层的显示状态" alt="" coords="223,205,392,248"/>
+<area shape="poly" title=" " alt="" coords="133,146,224,191,236,196,234,201,222,196,131,151"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6a257207b3391ce00d448ac6a9901730" name="a6a257207b3391ce00d448ac6a9901730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a257207b3391ce00d448ac6a9901730">&#9670;&#160;</a></span>getCenterCoordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> AsciiGL::AsciiBasicLayer::getCenterCoordinate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取图层中画布的中心坐标 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>中心坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_a6a257207b3391ce00d448ac6a9901730_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_a6a257207b3391ce00d448ac6a9901730_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_a6a257207b3391ce00d448ac6a9901730_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_a6a257207b3391ce00d448ac6a9901730_icgraph">
+<area shape="rect" title="获取图层中画布的中心坐标" alt="" coords="223,5,392,48"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#aa9a4d440af498f4384c2679e5f7b1d93" title="AsciiBasicLayer object constructor" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aca7e09308480d2f5553c70502a739f52" name="aca7e09308480d2f5553c70502a739f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7e09308480d2f5553c70502a739f52">&#9670;&#160;</a></span>getCoordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a> AsciiGL::AsciiBasicLayer::getCoordinate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取图层中画布的坐标 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>图层坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_aca7e09308480d2f5553c70502a739f52_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_aca7e09308480d2f5553c70502a739f52_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_aca7e09308480d2f5553c70502a739f52_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_aca7e09308480d2f5553c70502a739f52_icgraph">
+<area shape="rect" title="获取图层中画布的坐标" alt="" coords="223,5,392,48"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#aa9a4d440af498f4384c2679e5f7b1d93" title="AsciiBasicLayer object constructor" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18673e90be1f2271a05d1e8917f06448" name="a18673e90be1f2271a05d1e8917f06448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18673e90be1f2271a05d1e8917f06448">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string AsciiGL::AsciiBasicLayer::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取图层名称 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>图层名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_a18673e90be1f2271a05d1e8917f06448_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_a18673e90be1f2271a05d1e8917f06448_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_a18673e90be1f2271a05d1e8917f06448_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_a18673e90be1f2271a05d1e8917f06448_icgraph">
+<area shape="rect" title="获取图层名称" alt="" coords="223,35,392,77"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#aa9a4d440af498f4384c2679e5f7b1d93" title="AsciiBasicLayer object constructor" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,45,175,41,175,35,208,40"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a67e1c6adea7f7a2a81d6835554b7d54e" title="在指定图层下的指定坐标设置文本 （不添加图层,在原有图层进行修改）" alt="" coords="31,72,149,99"/>
+<area shape="poly" title=" " alt="" coords="208,72,150,80,149,75,207,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac894801bb781961bf44b98ba5e85e3d2" name="ac894801bb781961bf44b98ba5e85e3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac894801bb781961bf44b98ba5e85e3d2">&#9670;&#160;</a></span>isDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AsciiGL::AsciiBasicLayer::isDisplay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取图层的显示状态 </p>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-</td><td>显示状态的布尔值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_ascii_g_l_1_1_ascii_basic_layer_ac894801bb781961bf44b98ba5e85e3d2_icgraph.png" border="0" usemap="#aclass_ascii_g_l_1_1_ascii_basic_layer_ac894801bb781961bf44b98ba5e85e3d2_icgraph" alt=""/></div>
+<map name="aclass_ascii_g_l_1_1_ascii_basic_layer_ac894801bb781961bf44b98ba5e85e3d2_icgraph" id="aclass_ascii_g_l_1_1_ascii_basic_layer_ac894801bb781961bf44b98ba5e85e3d2_icgraph">
+<area shape="rect" title="获取图层的显示状态" alt="" coords="223,5,392,48"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer.html#aa9a4d440af498f4384c2679e5f7b1d93" title="AsciiBasicLayer object constructor" alt="" coords="5,5,175,48"/>
+<area shape="poly" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a982c656dbe02177ec3ea728f888ac20f" name="a982c656dbe02177ec3ea728f888ac20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982c656dbe02177ec3ea728f888ac20f">&#9670;&#160;</a></span>setCenterCoordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayer::setCenterCoordinate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a></td>          <td class="paramname"><span class="paramname"><em>coord</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置图层中画布的中心坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>- 指定坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdfb6c21396abb85f7dacfb0e03db46e" name="abdfb6c21396abb85f7dacfb0e03db46e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdfb6c21396abb85f7dacfb0e03db46e">&#9670;&#160;</a></span>setCoordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayer::setCoordinate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ascii_tools_1_1_coordinate2d.html">Coord2d</a></td>          <td class="paramname"><span class="paramname"><em>coord</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置图层中画布的坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coord</td><td>- 指定坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a8bac93cc7f701a1a3f9ae6cf5f55b5" name="a3a8bac93cc7f701a1a3f9ae6cf5f55b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8bac93cc7f701a1a3f9ae6cf5f55b5">&#9670;&#160;</a></span>setDisplayState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayer::setDisplayState </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>displayState</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置图层的显示状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">displayState</td><td>- 显示状态的布尔值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28fb172bc5fb0b8b48080bb856fbcd0c" name="a28fb172bc5fb0b8b48080bb856fbcd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28fb172bc5fb0b8b48080bb856fbcd0c">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsciiGL::AsciiBasicLayer::setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置图层名称 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>- 指定名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="agl___basic_layer_8h_source.html">agl_BasicLayer.h</a></li>
+<li><b>agl_BasicLayer.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

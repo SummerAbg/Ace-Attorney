@@ -1,0 +1,5 @@
+<map id="AsciiGL::AsciiBasicLayerMngr::setLayer" name="AsciiGL::AsciiBasicLayerMngr::setLayer">
+<area shape="rect" id="Node000001" title="设置指定名称的图层 （失败时抛出异常）" alt="" coords="172,5,341,48"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a36de7186d9d2601ff30313c6915ec001" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="5,13,124,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,29,124,29,124,24,156,24"/>
+</map>

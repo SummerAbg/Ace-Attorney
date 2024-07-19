@@ -1,0 +1,12 @@
+<map id="AsciiGL::compareCanvas" name="AsciiGL::compareCanvas">
+<area shape="rect" id="Node000001" title="比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）" alt="" coords="5,76,173,103"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="448,5,627,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,73,157,44,188,30,220,20,274,11,329,7,433,10,432,15,329,12,275,16,221,25,190,35,160,49,111,78"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a0443523e4190ea0d4793965d6c6742b1" title="获取指定坐标的画布数据(失败时抛出异常)" alt="" coords="221,35,400,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,74,205,69,205,74,173,79"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#adb1c835773ca233cd80dc9802990b4f5" title="获取画布长度" alt="" coords="221,101,400,144"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="173,99,205,104,205,109,173,105"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a3dc98005a3f1d66c740e978945bf1aaf" title="获取画布宽度" alt="" coords="221,168,400,211"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="117,101,222,154,235,159,233,164,220,158,114,106"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="400,42,432,38,433,43,401,47"/>
+</map>

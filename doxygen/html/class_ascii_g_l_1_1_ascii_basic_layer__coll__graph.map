@@ -1,0 +1,7 @@
+<map id="AsciiGL::AsciiBasicLayer" name="AsciiGL::AsciiBasicLayer">
+<area shape="rect" id="Node000001" title="基本字符串图层" alt="" coords="15,155,185,181"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类" alt="" coords="10,80,190,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,122,103,154,97,154,97,122"/>
+<area shape="rect" id="Node000003" href="$class_ascii_tools_1_1_ascii_basic_object.html" title=" " alt="" coords="5,5,195,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,48,103,80,97,80,97,48"/>
+</map>

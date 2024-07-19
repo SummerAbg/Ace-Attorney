@@ -1,0 +1,5 @@
+<map id="irrklang::ISoundEngine" name="irrklang::ISoundEngine">
+<area shape="rect" id="Node000001" title="Interface to the sound engine, for playing 3d and 2d sound and music." alt="" coords="5,80,157,107"/>
+<area shape="rect" id="Node000002" href="$classirrklang_1_1_i_ref_counted.html" title="Base class of most objects of the irrKlang." alt="" coords="10,5,152,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,48,84,80,78,80,78,48"/>
+</map>

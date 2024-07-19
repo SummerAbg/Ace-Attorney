@@ -1,0 +1,15 @@
+<map id="AsciiGL::setBorder" name="AsciiGL::setBorder">
+<area shape="rect" id="Node000001" title="在指定画布中设置指定字符串的边框（厚度默认为一个控制台字符单位）" alt="" coords="5,80,137,107"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#adb1c835773ca233cd80dc9802990b4f5" title="获取画布长度" alt="" coords="185,5,364,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,77,192,51,194,56,115,82"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a3dc98005a3f1d66c740e978945bf1aaf" title="获取画布宽度" alt="" coords="185,72,364,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,91,169,91,169,96,137,96"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a717fd63b993063dc9fb796e7530799f7" title="在指定画布下的两个指定坐标之间绘制线条" alt="" coords="216,139,333,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,105,185,124,210,131,208,136,184,129,118,110"/>
+<area shape="rect" id="Node000005" href="$namespace_ascii_g_l.html#a3af01664c58d532712ace140bd504b14" title="根据两个坐标的斜率获得一次函数的值" alt="" coords="450,109,553,136"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="333,142,434,129,435,134,334,147"/>
+<area shape="rect" id="Node000006" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="412,160,591,203"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="334,157,397,165,396,170,333,162"/>
+<area shape="rect" id="Node000007" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="639,160,819,203"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="592,179,624,179,624,184,592,184"/>
+</map>

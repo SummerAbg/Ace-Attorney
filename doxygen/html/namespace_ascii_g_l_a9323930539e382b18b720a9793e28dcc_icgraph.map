@@ -1,0 +1,9 @@
+<map id="AsciiGL::getIndex" name="AsciiGL::getIndex">
+<area shape="rect" id="Node000001" title="获取容器指定元素的下标(成功了返回元素下标，失败了返回0)" alt="" coords="412,47,536,73"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a8d159963df2247502cb5bffb9306fe3c" title="获取名字/取名器(随着名字重复而添加编号)" alt="" coords="223,47,364,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="396,63,365,63,365,57,396,57"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#ab8272943376668693cfcc3a7ded57ba3" title="AsciiBasicLayer object constructor" alt="" coords="5,5,175,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,49,175,43,175,38,208,43"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#a1bcd0d12ca3ffbed7d8a3e06e4cc6359" title="AsciiBasicLayer object constructor" alt="" coords="5,72,175,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="208,77,175,82,175,77,207,71"/>
+</map>

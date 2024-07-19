@@ -1,0 +1,21 @@
+<map id="AsciiGL::AsciiBasicLayerMngr::getCanvas" name="AsciiGL::AsciiBasicLayerMngr::getCanvas">
+<area shape="rect" id="Node000001" title="获取多图层合并后生成的画布 (失败时抛出异常)" alt="" coords="5,60,175,103"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#a45f172f5ef9cbf677e8c547627b1b985" title="重叠两个画布" alt="" coords="223,68,380,95"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,79,207,79,207,84,175,84"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="883,60,1062,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="343,65,432,40,555,15,623,7,694,3,766,6,835,16,881,31,923,50,921,55,879,36,834,21,765,11,694,8,624,12,555,20,433,45,344,70"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a2c0731f8568d48bd113ede16abfd3051" title="比较指定画布在指定坐标下的目标画布重叠后的不同（这要求双方的blockLength要一致！）" alt="" coords="434,97,601,124"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="381,89,419,95,418,100,380,95"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a0443523e4190ea0d4793965d6c6742b1" title="获取指定坐标的画布数据(失败时抛出异常)" alt="" coords="655,31,835,73"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="380,73,640,56,640,62,381,79"/>
+<area shape="rect" id="Node000008" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="428,211,607,253"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="324,93,475,199,472,204,321,97"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="602,103,867,85,867,91,602,108"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="572,94,644,75,646,80,573,99"/>
+<area shape="rect" id="Node000006" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#adb1c835773ca233cd80dc9802990b4f5" title="获取画布长度" alt="" coords="655,148,835,191"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="573,122,646,141,644,146,572,127"/>
+<area shape="rect" id="Node000007" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a3dc98005a3f1d66c740e978945bf1aaf" title="获取画布宽度" alt="" coords="655,215,835,257"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="538,122,590,160,657,200,668,206,665,210,654,205,587,164,535,127"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="835,61,867,65,867,70,835,66"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="568,251,625,271,693,285,729,288,765,286,800,280,833,267,856,253,876,236,910,196,936,154,955,116,960,118,941,156,914,200,879,240,859,258,836,272,802,285,766,292,729,293,693,290,624,276,567,256"/>
+</map>

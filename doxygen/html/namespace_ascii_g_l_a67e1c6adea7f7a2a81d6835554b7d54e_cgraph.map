@@ -1,0 +1,16 @@
+<map id="AsciiGL::setText" name="AsciiGL::setText">
+<area shape="rect" id="Node000001" title="在指定图层下的指定坐标设置文本 （不添加图层,在原有图层进行修改）" alt="" coords="5,64,124,91"/>
+<area shape="rect" id="Node000002" href="$namespace_ascii_g_l.html#ae72168967580405314f1fc398776720b" title="将字符串长度等价转换为Block（块）的个数" alt="" coords="172,5,343,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,61,171,41,194,34,195,40,172,47,110,66"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#a18673e90be1f2271a05d1e8917f06448" title="获取图层名称" alt="" coords="173,56,342,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,75,157,75,157,80,124,80"/>
+<area shape="rect" id="Node000004" href="$namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c" title="在指定画布下的指定坐标设置文本 （不添加图层,在原有画布进行修改）" alt="" coords="198,123,316,149"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,89,172,108,195,115,194,120,171,113,109,94"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="618,119,798,161"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="302,120,344,108,391,100,481,92,571,100,627,112,626,117,570,105,481,98,391,105,346,114,303,125"/>
+<area shape="rect" id="Node000006" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a4314185737544fc3187150738edcff47" title="获取块长度" alt="" coords="391,115,570,157"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="317,133,375,133,375,139,317,139"/>
+<area shape="rect" id="Node000007" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="391,181,570,224"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="306,147,393,174,391,179,304,153"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="560,178,613,163,614,169,561,183"/>
+</map>

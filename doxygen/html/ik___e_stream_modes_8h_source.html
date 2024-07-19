@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: ik_EStreamModes.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_bdff311e6a51ceeebd2f20921314edd3.html">irrKlang</a></li><li class="navelem"><a class="el" href="dir_106950a5b36d4e98248f476d11963ac6.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">ik_EStreamModes.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (C) 2002-2018 Nikolaus Gebhardt</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// This file is part of the &quot;irrKlang&quot; library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// For conditions of distribution and use, see copyright notice in irrKlang.h</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef __E_IRRKLANG_STREAM_MODES_H_INCLUDED__</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define __E_IRRKLANG_STREAM_MODES_H_INCLUDED__</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceirrklang.html">irrklang</a> {</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06e">   10</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06e">E_STREAM_MODE</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717">   12</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717">ESM_AUTO_DETECT</a> = 0,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b">   15</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b">ESM_STREAMING</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07">   18</a></span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07">ESM_NO_STREAMING</a>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_enumvalue" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19">ESM_FORCE_32_BIT</a> = 0x7fffffff</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19">   23</a></span>};</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">// end namespace irrklang</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespaceirrklang_html"><div class="ttname"><a href="namespaceirrklang.html">irrklang</a></div><div class="ttdoc">Everything in the irrKlang Sound Engine can be found in this namespace.</div><div class="ttdef"><b>定义</b> ik_ESoundEngineOptions.h:8</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a6eab873ba387c6a4e05839e6a434d06e"><div class="ttname"><a href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06e">irrklang::E_STREAM_MODE</a></div><div class="ttdeci">E_STREAM_MODE</div><div class="ttdoc">An enumeration for all types of supported stream modes</div><div class="ttdef"><b>定义</b> ik_EStreamModes.h:10</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b"><div class="ttname"><a href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b">irrklang::ESM_STREAMING</a></div><div class="ttdeci">@ ESM_STREAMING</div><div class="ttdoc">Streams the audio data when needed.</div><div class="ttdef"><b>定义</b> ik_EStreamModes.h:15</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07"><div class="ttname"><a href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07">irrklang::ESM_NO_STREAMING</a></div><div class="ttdeci">@ ESM_NO_STREAMING</div><div class="ttdoc">Loads the whole audio data into the memory.</div><div class="ttdef"><b>定义</b> ik_EStreamModes.h:18</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717"><div class="ttname"><a href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717">irrklang::ESM_AUTO_DETECT</a></div><div class="ttdeci">@ ESM_AUTO_DETECT</div><div class="ttdoc">Autodetects the best stream mode for a specified audio data.</div><div class="ttdef"><b>定义</b> ik_EStreamModes.h:12</div></div>
+<div class="ttc" id="anamespaceirrklang_html_a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19"><div class="ttname"><a href="namespaceirrklang.html#a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19">irrklang::ESM_FORCE_32_BIT</a></div><div class="ttdeci">@ ESM_FORCE_32_BIT</div><div class="ttdef"><b>定义</b> ik_EStreamModes.h:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

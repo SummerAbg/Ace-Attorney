@@ -1,0 +1,7 @@
+<map id="AsciiGL::AsciiBasicLayer::getName" name="AsciiGL::AsciiBasicLayer::getName">
+<area shape="rect" id="Node000001" title="获取图层名称" alt="" coords="223,35,392,77"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer.html#aa9a4d440af498f4384c2679e5f7b1d93" title="AsciiBasicLayer object constructor" alt="" coords="5,5,175,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,45,175,41,175,35,208,40"/>
+<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a67e1c6adea7f7a2a81d6835554b7d54e" title="在指定图层下的指定坐标设置文本 （不添加图层,在原有图层进行修改）" alt="" coords="31,72,149,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,72,150,80,149,75,207,67"/>
+</map>

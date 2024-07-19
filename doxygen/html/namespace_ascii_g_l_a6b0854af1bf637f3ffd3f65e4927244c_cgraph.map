@@ -1,0 +1,10 @@
+<map id="AsciiGL::setText" name="AsciiGL::setText">
+<area shape="rect" id="Node000001" title="在指定画布下的指定坐标设置文本 （不添加图层,在原有画布进行修改）" alt="" coords="5,34,124,61"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="399,30,578,73"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,31,134,20,171,11,261,3,351,11,407,23,406,28,351,17,261,8,172,17,135,25,101,36"/>
+<area shape="rect" id="Node000003" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#a4314185737544fc3187150738edcff47" title="获取块长度" alt="" coords="172,26,351,69"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,45,156,45,156,50,124,50"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="172,93,351,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,59,182,85,181,90,106,64"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="341,90,393,75,395,80,342,95"/>
+</map>

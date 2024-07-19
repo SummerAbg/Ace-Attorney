@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: irrklang::vec3d&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceirrklang.html">irrklang</a></li><li class="navelem"><a class="el" href="classirrklang_1_1vec3d.html">vec3d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classirrklang_1_1vec3d-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">irrklang::vec3d&lt; T &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>a 3d vector template class for representing vectors and points in 3d  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ik__vec3d_8h_source.html">ik_vec3d.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acf6454acf91480f6f3ff1f285b72665e" id="r_acf6454acf91480f6f3ff1f285b72665e"><td class="memItemLeft" align="right" valign="top"><a id="acf6454acf91480f6f3ff1f285b72665e" name="acf6454acf91480f6f3ff1f285b72665e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>vec3d</b> (T nx, T ny, T nz)</td></tr>
+<tr class="separator:acf6454acf91480f6f3ff1f285b72665e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cedbef9c16c38bc5bde34f39cd789eb" id="r_a3cedbef9c16c38bc5bde34f39cd789eb"><td class="memItemLeft" align="right" valign="top"><a id="a3cedbef9c16c38bc5bde34f39cd789eb" name="a3cedbef9c16c38bc5bde34f39cd789eb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>vec3d</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a3cedbef9c16c38bc5bde34f39cd789eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e945ef7ea6153ab132ebdbf4301ec5" id="r_af3e945ef7ea6153ab132ebdbf4301ec5"><td class="memItemLeft" align="right" valign="top"><a id="af3e945ef7ea6153ab132ebdbf4301ec5" name="af3e945ef7ea6153ab132ebdbf4301ec5"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> () const</td></tr>
+<tr class="memdesc:af3e945ef7ea6153ab132ebdbf4301ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor creating an irrklang <a class="el" href="classirrklang_1_1vec3d.html" title="a 3d vector template class for representing vectors and points in 3d">vec3d</a> from an irrlicht vector. <br /></td></tr>
+<tr class="separator:af3e945ef7ea6153ab132ebdbf4301ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127cd1c776829efaa72ddc2ec69802c7" id="r_a127cd1c776829efaa72ddc2ec69802c7"><td class="memItemLeft" align="right" valign="top"><a id="a127cd1c776829efaa72ddc2ec69802c7" name="a127cd1c776829efaa72ddc2ec69802c7"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a127cd1c776829efaa72ddc2ec69802c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16dad1c3ccb2f0e08573ce15822754c" id="r_ad16dad1c3ccb2f0e08573ce15822754c"><td class="memItemLeft" align="right" valign="top"><a id="ad16dad1c3ccb2f0e08573ce15822754c" name="ad16dad1c3ccb2f0e08573ce15822754c"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:ad16dad1c3ccb2f0e08573ce15822754c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417f0211c2a41fa90e0e0b9218c5db38" id="r_a417f0211c2a41fa90e0e0b9218c5db38"><td class="memItemLeft" align="right" valign="top"><a id="a417f0211c2a41fa90e0e0b9218c5db38" name="a417f0211c2a41fa90e0e0b9218c5db38"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a417f0211c2a41fa90e0e0b9218c5db38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60cb2201197246abb961d24156b9a79" id="r_af60cb2201197246abb961d24156b9a79"><td class="memItemLeft" align="right" valign="top"><a id="af60cb2201197246abb961d24156b9a79" name="af60cb2201197246abb961d24156b9a79"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:af60cb2201197246abb961d24156b9a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98926a14b9d5431896476aa07fda652b" id="r_a98926a14b9d5431896476aa07fda652b"><td class="memItemLeft" align="right" valign="top"><a id="a98926a14b9d5431896476aa07fda652b" name="a98926a14b9d5431896476aa07fda652b"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator-=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a98926a14b9d5431896476aa07fda652b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27108c9c4e96efcdd9f74bf06a595838" id="r_a27108c9c4e96efcdd9f74bf06a595838"><td class="memItemLeft" align="right" valign="top"><a id="a27108c9c4e96efcdd9f74bf06a595838" name="a27108c9c4e96efcdd9f74bf06a595838"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:a27108c9c4e96efcdd9f74bf06a595838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5adb2124f00a88ef5f6adf9b5f9065f8" id="r_a5adb2124f00a88ef5f6adf9b5f9065f8"><td class="memItemLeft" align="right" valign="top"><a id="a5adb2124f00a88ef5f6adf9b5f9065f8" name="a5adb2124f00a88ef5f6adf9b5f9065f8"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a5adb2124f00a88ef5f6adf9b5f9065f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc29c208c3c82ec5cd740a2122f149cc" id="r_abc29c208c3c82ec5cd740a2122f149cc"><td class="memItemLeft" align="right" valign="top"><a id="abc29c208c3c82ec5cd740a2122f149cc" name="abc29c208c3c82ec5cd740a2122f149cc"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const T v) const</td></tr>
+<tr class="separator:abc29c208c3c82ec5cd740a2122f149cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33099a60b9f34ef734957333837b777b" id="r_a33099a60b9f34ef734957333837b777b"><td class="memItemLeft" align="right" valign="top"><a id="a33099a60b9f34ef734957333837b777b" name="a33099a60b9f34ef734957333837b777b"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (const T v)</td></tr>
+<tr class="separator:a33099a60b9f34ef734957333837b777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f31707c4c7ccc9cdd6cc06eb2656b6" id="r_a42f31707c4c7ccc9cdd6cc06eb2656b6"><td class="memItemLeft" align="right" valign="top"><a id="a42f31707c4c7ccc9cdd6cc06eb2656b6" name="a42f31707c4c7ccc9cdd6cc06eb2656b6"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:a42f31707c4c7ccc9cdd6cc06eb2656b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6148705a3ca920392c58641588574811" id="r_a6148705a3ca920392c58641588574811"><td class="memItemLeft" align="right" valign="top"><a id="a6148705a3ca920392c58641588574811" name="a6148705a3ca920392c58641588574811"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a6148705a3ca920392c58641588574811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f0b927caec03f653d4b731ec6b861c" id="r_af2f0b927caec03f653d4b731ec6b861c"><td class="memItemLeft" align="right" valign="top"><a id="af2f0b927caec03f653d4b731ec6b861c" name="af2f0b927caec03f653d4b731ec6b861c"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const T v) const</td></tr>
+<tr class="separator:af2f0b927caec03f653d4b731ec6b861c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6d80176f731b7a203b0a4c755e489f" id="r_abd6d80176f731b7a203b0a4c755e489f"><td class="memItemLeft" align="right" valign="top"><a id="abd6d80176f731b7a203b0a4c755e489f" name="abd6d80176f731b7a203b0a4c755e489f"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator/=</b> (const T v)</td></tr>
+<tr class="separator:abd6d80176f731b7a203b0a4c755e489f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4484bb09efbc7ac7bc52ea8acef347" id="r_aca4484bb09efbc7ac7bc52ea8acef347"><td class="memItemLeft" align="right" valign="top"><a id="aca4484bb09efbc7ac7bc52ea8acef347" name="aca4484bb09efbc7ac7bc52ea8acef347"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:aca4484bb09efbc7ac7bc52ea8acef347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78610e6b571d4133e6549bdee76d323b" id="r_a78610e6b571d4133e6549bdee76d323b"><td class="memItemLeft" align="right" valign="top"><a id="a78610e6b571d4133e6549bdee76d323b" name="a78610e6b571d4133e6549bdee76d323b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:a78610e6b571d4133e6549bdee76d323b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74426ff98a7662df8eeff8f47872f4ad" id="r_a74426ff98a7662df8eeff8f47872f4ad"><td class="memItemLeft" align="right" valign="top"><a id="a74426ff98a7662df8eeff8f47872f4ad" name="a74426ff98a7662df8eeff8f47872f4ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:a74426ff98a7662df8eeff8f47872f4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55638035fdbaffbd5a82815358201d59" id="r_a55638035fdbaffbd5a82815358201d59"><td class="memItemLeft" align="right" valign="top"><a id="a55638035fdbaffbd5a82815358201d59" name="a55638035fdbaffbd5a82815358201d59"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="separator:a55638035fdbaffbd5a82815358201d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5c9411ad637d980a1cf320d0a1cf2e" id="r_a9f5c9411ad637d980a1cf320d0a1cf2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5c9411ad637d980a1cf320d0a1cf2e">equals</a> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="separator:a9f5c9411ad637d980a1cf320d0a1cf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843126596fd738246d0816030a53ac0f" id="r_a843126596fd738246d0816030a53ac0f"><td class="memItemLeft" align="right" valign="top"><a id="a843126596fd738246d0816030a53ac0f" name="a843126596fd738246d0816030a53ac0f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (const T nx, const T ny, const T nz)</td></tr>
+<tr class="separator:a843126596fd738246d0816030a53ac0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc80ce5e50e9889e6199696802a31976" id="r_afc80ce5e50e9889e6199696802a31976"><td class="memItemLeft" align="right" valign="top"><a id="afc80ce5e50e9889e6199696802a31976" name="afc80ce5e50e9889e6199696802a31976"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;p)</td></tr>
+<tr class="separator:afc80ce5e50e9889e6199696802a31976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27314f6d2e86989860436a5ac057b8f1" id="r_a27314f6d2e86989860436a5ac057b8f1"><td class="memItemLeft" align="right" valign="top"><a id="a27314f6d2e86989860436a5ac057b8f1" name="a27314f6d2e86989860436a5ac057b8f1"></a>
+<a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b> () const</td></tr>
+<tr class="memdesc:a27314f6d2e86989860436a5ac057b8f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns length of the vector. <br /></td></tr>
+<tr class="separator:a27314f6d2e86989860436a5ac057b8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078a898eadc23dcc4491603fd837c3f3" id="r_a078a898eadc23dcc4491603fd837c3f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a078a898eadc23dcc4491603fd837c3f3">getLengthSQ</a> () const</td></tr>
+<tr class="memdesc:a078a898eadc23dcc4491603fd837c3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns squared length of the vector.  <br /></td></tr>
+<tr class="separator:a078a898eadc23dcc4491603fd837c3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfdd9087080f068b99e6b3c42076aea" id="r_accfdd9087080f068b99e6b3c42076aea"><td class="memItemLeft" align="right" valign="top"><a id="accfdd9087080f068b99e6b3c42076aea" name="accfdd9087080f068b99e6b3c42076aea"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>dotProduct</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:accfdd9087080f068b99e6b3c42076aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dot product with another vector. <br /></td></tr>
+<tr class="separator:accfdd9087080f068b99e6b3c42076aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add73b933fd9344ff48574ee7c0eb4ec9" id="r_add73b933fd9344ff48574ee7c0eb4ec9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add73b933fd9344ff48574ee7c0eb4ec9">getDistanceFrom</a> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:add73b933fd9344ff48574ee7c0eb4ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns distance from an other point.  <br /></td></tr>
+<tr class="separator:add73b933fd9344ff48574ee7c0eb4ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5482ca722c7eb325489bf6608ddb60be" id="r_a5482ca722c7eb325489bf6608ddb60be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceirrklang.html#a6fa5a4dd85b476308461136072ef4e0f">ik_f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5482ca722c7eb325489bf6608ddb60be">getDistanceFromSQ</a> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a5482ca722c7eb325489bf6608ddb60be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns squared distance from an other point.  <br /></td></tr>
+<tr class="separator:a5482ca722c7eb325489bf6608ddb60be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884a09b48d1fd4b2e91fd5c198103e96" id="r_a884a09b48d1fd4b2e91fd5c198103e96"><td class="memItemLeft" align="right" valign="top"><a id="a884a09b48d1fd4b2e91fd5c198103e96" name="a884a09b48d1fd4b2e91fd5c198103e96"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>crossProduct</b> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;p) const</td></tr>
+<tr class="memdesc:a884a09b48d1fd4b2e91fd5c198103e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the cross product with another vector <br /></td></tr>
+<tr class="separator:a884a09b48d1fd4b2e91fd5c198103e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc883b8e86aa80e57788ebd822c87510" id="r_acc883b8e86aa80e57788ebd822c87510"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc883b8e86aa80e57788ebd822c87510">isBetweenPoints</a> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;begin, const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;end) const</td></tr>
+<tr class="separator:acc883b8e86aa80e57788ebd822c87510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de41014d72f79a4e9eb52eaf9706fbc" id="r_a2de41014d72f79a4e9eb52eaf9706fbc"><td class="memItemLeft" align="right" valign="top"><a id="a2de41014d72f79a4e9eb52eaf9706fbc" name="a2de41014d72f79a4e9eb52eaf9706fbc"></a>
+<a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b> ()</td></tr>
+<tr class="memdesc:a2de41014d72f79a4e9eb52eaf9706fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes the vector. <br /></td></tr>
+<tr class="separator:a2de41014d72f79a4e9eb52eaf9706fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae117ab59edab77fe6ecfe6dab3c546a9" id="r_ae117ab59edab77fe6ecfe6dab3c546a9"><td class="memItemLeft" align="right" valign="top"><a id="ae117ab59edab77fe6ecfe6dab3c546a9" name="ae117ab59edab77fe6ecfe6dab3c546a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLength</b> (T newlength)</td></tr>
+<tr class="memdesc:ae117ab59edab77fe6ecfe6dab3c546a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lenght of the vector to a new value <br /></td></tr>
+<tr class="separator:ae117ab59edab77fe6ecfe6dab3c546a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6007451ded719744d8e1b45c9ae56cd4" id="r_a6007451ded719744d8e1b45c9ae56cd4"><td class="memItemLeft" align="right" valign="top"><a id="a6007451ded719744d8e1b45c9ae56cd4" name="a6007451ded719744d8e1b45c9ae56cd4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>invert</b> ()</td></tr>
+<tr class="memdesc:a6007451ded719744d8e1b45c9ae56cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts the vector. <br /></td></tr>
+<tr class="separator:a6007451ded719744d8e1b45c9ae56cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c0df42f68cbbec6506091756d518c18" id="r_a3c0df42f68cbbec6506091756d518c18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c0df42f68cbbec6506091756d518c18">rotateXZBy</a> (<a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a> degrees, const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;center)</td></tr>
+<tr class="separator:a3c0df42f68cbbec6506091756d518c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e958aac6482aea6d4947d2737b3681" id="r_a73e958aac6482aea6d4947d2737b3681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e958aac6482aea6d4947d2737b3681">rotateXYBy</a> (<a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a> degrees, const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;center)</td></tr>
+<tr class="separator:a73e958aac6482aea6d4947d2737b3681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa619d2ed5f8e992f5ec60d7b262a0108" id="r_aa619d2ed5f8e992f5ec60d7b262a0108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa619d2ed5f8e992f5ec60d7b262a0108">rotateYZBy</a> (<a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a> degrees, const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;center)</td></tr>
+<tr class="separator:aa619d2ed5f8e992f5ec60d7b262a0108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c164656ee6a32d2c86db32f9acd06b" id="r_a85c164656ee6a32d2c86db32f9acd06b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85c164656ee6a32d2c86db32f9acd06b">getInterpolated</a> (const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;other, <a class="el" href="namespaceirrklang.html#a6fa5a4dd85b476308461136072ef4e0f">ik_f32</a> d) const</td></tr>
+<tr class="memdesc:a85c164656ee6a32d2c86db32f9acd06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns interpolated vector.  <br /></td></tr>
+<tr class="separator:a85c164656ee6a32d2c86db32f9acd06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ca9f25fed3fe726def02ad564dbbc9" id="r_a55ca9f25fed3fe726def02ad564dbbc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55ca9f25fed3fe726def02ad564dbbc9">getHorizontalAngle</a> ()</td></tr>
+<tr class="memdesc:a55ca9f25fed3fe726def02ad564dbbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Y and Z rotations of a vector.  <br /></td></tr>
+<tr class="separator:a55ca9f25fed3fe726def02ad564dbbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4faac673e7e09c8d094b48b0a0e20f" id="r_aff4faac673e7e09c8d094b48b0a0e20f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4faac673e7e09c8d094b48b0a0e20f">getAs4Values</a> (T *array)</td></tr>
+<tr class="memdesc:aff4faac673e7e09c8d094b48b0a0e20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills an array of 4 values with the vector data (usually floats).  <br /></td></tr>
+<tr class="separator:aff4faac673e7e09c8d094b48b0a0e20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac3c930788d6718a78cf93b6022124648" id="r_ac3c930788d6718a78cf93b6022124648"><td class="memItemLeft" align="right" valign="top"><a id="ac3c930788d6718a78cf93b6022124648" name="ac3c930788d6718a78cf93b6022124648"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>X</b></td></tr>
+<tr class="separator:ac3c930788d6718a78cf93b6022124648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa70e7ee18d11b83fe02829cebbc10ae" id="r_afa70e7ee18d11b83fe02829cebbc10ae"><td class="memItemLeft" align="right" valign="top"><a id="afa70e7ee18d11b83fe02829cebbc10ae" name="afa70e7ee18d11b83fe02829cebbc10ae"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>Y</b></td></tr>
+<tr class="separator:afa70e7ee18d11b83fe02829cebbc10ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d41296edcd4c6739847351b9e107fc3" id="r_a8d41296edcd4c6739847351b9e107fc3"><td class="memItemLeft" align="right" valign="top"><a id="a8d41296edcd4c6739847351b9e107fc3" name="a8d41296edcd4c6739847351b9e107fc3"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>Z</b></td></tr>
+<tr class="separator:a8d41296edcd4c6739847351b9e107fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class irrklang::vec3d&lt; T &gt;</div><p>a 3d vector template class for representing vectors and points in 3d </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a9f5c9411ad637d980a1cf320d0a1cf2e" name="a9f5c9411ad637d980a1cf320d0a1cf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5c9411ad637d980a1cf320d0a1cf2e">&#9670;&#160;</a></span>equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::equals </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>returns if this vector equalsfloat the other one, taking floating point rounding errors into account </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classirrklang_1_1vec3d_a9f5c9411ad637d980a1cf320d0a1cf2e_cgraph.png" border="0" usemap="#aclassirrklang_1_1vec3d_a9f5c9411ad637d980a1cf320d0a1cf2e_cgraph" alt=""/></div>
+<map name="aclassirrklang_1_1vec3d_a9f5c9411ad637d980a1cf320d0a1cf2e_cgraph" id="aclassirrklang_1_1vec3d_a9f5c9411ad637d980a1cf320d0a1cf2e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="namespaceirrklang.html#a6ce1a12052cdee7b6d81a053a73a4f86" title=" " alt="" coords="204,5,337,32"/>
+<area shape="poly" title=" " alt="" coords="156,16,188,16,188,21,156,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff4faac673e7e09c8d094b48b0a0e20f" name="aff4faac673e7e09c8d094b48b0a0e20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4faac673e7e09c8d094b48b0a0e20f">&#9670;&#160;</a></span>getAs4Values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::getAs4Values </td>
+          <td>(</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fills an array of 4 values with the vector data (usually floats). </p>
+<p>Useful for setting in shader constants for example. The fourth value will always be 0. </p>
+
+</div>
+</div>
+<a id="add73b933fd9344ff48574ee7c0eb4ec9" name="add73b933fd9344ff48574ee7c0eb4ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add73b933fd9344ff48574ee7c0eb4ec9">&#9670;&#160;</a></span>getDistanceFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a> <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::getDistanceFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns distance from an other point. </p>
+<p>Here, the vector is interpreted as point in 3 dimensional space. </p>
+
+</div>
+</div>
+<a id="a5482ca722c7eb325489bf6608ddb60be" name="a5482ca722c7eb325489bf6608ddb60be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5482ca722c7eb325489bf6608ddb60be">&#9670;&#160;</a></span>getDistanceFromSQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceirrklang.html#a6fa5a4dd85b476308461136072ef4e0f">ik_f32</a> <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::getDistanceFromSQ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns squared distance from an other point. </p>
+<p>Here, the vector is interpreted as point in 3 dimensional space. </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classirrklang_1_1vec3d_a5482ca722c7eb325489bf6608ddb60be_icgraph.png" border="0" usemap="#aclassirrklang_1_1vec3d_a5482ca722c7eb325489bf6608ddb60be_icgraph" alt=""/></div>
+<map name="aclassirrklang_1_1vec3d_a5482ca722c7eb325489bf6608ddb60be_icgraph" id="aclassirrklang_1_1vec3d_a5482ca722c7eb325489bf6608ddb60be_icgraph">
+<area shape="rect" title="Returns squared distance from an other point." alt="" coords="226,5,407,48"/>
+<area shape="rect" href="classirrklang_1_1vec3d.html#acc883b8e86aa80e57788ebd822c87510" title=" " alt="" coords="5,5,178,48"/>
+<area shape="poly" title=" " alt="" coords="210,29,178,29,178,24,210,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55ca9f25fed3fe726def02ad564dbbc9" name="a55ca9f25fed3fe726def02ad564dbbc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ca9f25fed3fe726def02ad564dbbc9">&#9670;&#160;</a></span>getHorizontalAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::getHorizontalAngle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the Y and Z rotations of a vector. </p>
+<p>Thanks to Arras on the Irrlicht forums to</p>
+<p>this method. </p><dl class="section return"><dt>返回</dt><dd>A vector representing the rotation in degrees of this vector. The Z component of the vector will always be 0. </dd></dl>
+
+</div>
+</div>
+<a id="a85c164656ee6a32d2c86db32f9acd06b" name="a85c164656ee6a32d2c86db32f9acd06b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c164656ee6a32d2c86db32f9acd06b">&#9670;&#160;</a></span>getInterpolated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::getInterpolated </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceirrklang.html#a6fa5a4dd85b476308461136072ef4e0f">ik_f32</a></td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns interpolated vector. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other vector to interpolate between </td></tr>
+    <tr><td class="paramname">d</td><td>value between 0.0f and 1.0f. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a078a898eadc23dcc4491603fd837c3f3" name="a078a898eadc23dcc4491603fd837c3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078a898eadc23dcc4491603fd837c3f3">&#9670;&#160;</a></span>getLengthSQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a> <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::getLengthSQ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns squared length of the vector. </p>
+<p>This is useful because it is much faster then <a class="el" href="#a27314f6d2e86989860436a5ac057b8f1" title="Returns length of the vector.">getLength()</a>. </p>
+
+</div>
+</div>
+<a id="acc883b8e86aa80e57788ebd822c87510" name="acc883b8e86aa80e57788ebd822c87510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc883b8e86aa80e57788ebd822c87510">&#9670;&#160;</a></span>isBetweenPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::isBetweenPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns if this vector interpreted as a point is on a line between two other points. It is assumed that the point is on the line. </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classirrklang_1_1vec3d_acc883b8e86aa80e57788ebd822c87510_cgraph.png" border="0" usemap="#aclassirrklang_1_1vec3d_acc883b8e86aa80e57788ebd822c87510_cgraph" alt=""/></div>
+<map name="aclassirrklang_1_1vec3d_acc883b8e86aa80e57788ebd822c87510_cgraph" id="aclassirrklang_1_1vec3d_acc883b8e86aa80e57788ebd822c87510_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,178,48"/>
+<area shape="rect" href="classirrklang_1_1vec3d.html#a5482ca722c7eb325489bf6608ddb60be" title="Returns squared distance from an other point." alt="" coords="226,5,407,48"/>
+<area shape="poly" title=" " alt="" coords="178,24,210,24,210,29,178,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73e958aac6482aea6d4947d2737b3681" name="a73e958aac6482aea6d4947d2737b3681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e958aac6482aea6d4947d2737b3681">&#9670;&#160;</a></span>rotateXYBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::rotateXYBy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a></td>          <td class="paramname"><span class="paramname"><em>degrees</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the vector by a specified number of degrees around the Z axis and the specified center. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>Number of degrees to rotate around the Z axis. </td></tr>
+    <tr><td class="paramname">center</td><td>The center of the rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c0df42f68cbbec6506091756d518c18" name="a3c0df42f68cbbec6506091756d518c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0df42f68cbbec6506091756d518c18">&#9670;&#160;</a></span>rotateXZBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::rotateXZBy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a></td>          <td class="paramname"><span class="paramname"><em>degrees</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the vector by a specified number of degrees around the Y axis and the specified center. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>Number of degrees to rotate around the Y axis. </td></tr>
+    <tr><td class="paramname">center</td><td>The center of the rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa619d2ed5f8e992f5ec60d7b262a0108" name="aa619d2ed5f8e992f5ec60d7b262a0108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa619d2ed5f8e992f5ec60d7b262a0108">&#9670;&#160;</a></span>rotateYZBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classirrklang_1_1vec3d.html">irrklang::vec3d</a>&lt; T &gt;::rotateYZBy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceirrklang.html#a1c98510aa3989b1780723e2fb15f7c3d">ik_f64</a></td>          <td class="paramname"><span class="paramname"><em>degrees</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classirrklang_1_1vec3d.html">vec3d</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rotates the vector by a specified number of degrees around the X axis and the specified center. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>Number of degrees to rotate around the X axis. </td></tr>
+    <tr><td class="paramname">center</td><td>The center of the rotation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="ik__vec3d_8h_source.html">ik_vec3d.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
