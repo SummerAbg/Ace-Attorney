@@ -10,6 +10,7 @@
  */
 #pragma once
 
+#include "agl_AbstractImage.h"
 #include "agl_Basic.h"
 
 using AsciiTools::AsciiBasicString;
@@ -114,13 +115,13 @@ public:
    *  @brief  获取画布长度
    *  @retval  - 返回画布长度
    */
-  int getLength() const { return length; }
+  int getLength() const { return datas.getLength(); }
 
   /**
    *  @brief  获取画布宽度
    *  @retval  - 返回画布宽度
    */
-  int getWidth() const { return width; }
+  int getWidth() const { return datas.getWidth(); }
 
   /**
    *  @brief  获取块长度
@@ -188,8 +189,8 @@ private:
   void loadSerializeStr(const std::string &str);
 
 private:
-  int length;      // 画布长度
-  int width;       // 画布宽度
+  // int length;      // 画布长度
+  // int width;       // 画布宽度
   int blockLength; // 块长度(基本长度单元)
 
   AsciiBasicString defaultFill; // 画布默认填充字符串

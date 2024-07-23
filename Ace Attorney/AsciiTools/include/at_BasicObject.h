@@ -1,6 +1,7 @@
 #pragma once
 
 #include "at_Basic.h"
+#include "at_Exception.h"
 
 namespace AsciiTools {
 // 基本对象抽象类

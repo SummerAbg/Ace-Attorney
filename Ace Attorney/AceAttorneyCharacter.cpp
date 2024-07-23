@@ -21,7 +21,7 @@ void AceAttorney::AceAttorneyCharacter::chatBox(const AsciiBasicString &text,
   int chatBoxLength = 0;
   int chatBoxWidth = 0;
   {
-    std::unique_lock<std::shared_mutex> lock(*game->getSharedMutex());
+    std::shared_lock<std::shared_mutex> lock(*game->getSharedMutex());
     screen = game->getScreen();
     audioEngine = game->getISoundEngine();
 
@@ -52,7 +52,7 @@ void AceAttorney::AceAttorneyCharacter::chatBox(const AsciiBasicString &text,
   const int chatbox_x = 0;
   int chatbox_y = 0;
   {
-    std::unique_lock<std::shared_mutex> lock(*game->getSharedMutex());
+    std::shared_lock<std::shared_mutex> lock(*game->getSharedMutex());
     chatbox_y = (double)game->getWidth() * goldenRatio;
   }
   Coord2d coord_chatbox(chatbox_x, chatbox_y);

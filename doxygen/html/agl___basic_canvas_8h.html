@@ -99,60 +99,80 @@ $(function(){ initResizable(false); });
 
 <p>包括基本字符串画布类的实现  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="agl___basic_8h_source.html">agl_Basic.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="agl___abstract_image_8h_source.html">agl_AbstractImage.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="agl___basic_8h_source.html">agl_Basic.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 agl_BasicCanvas.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="agl___basic_canvas_8h__incl.png" border="0" usemap="#aagl___basic_canvas_8h" alt=""/></div>
 <map name="aagl___basic_canvas_8h" id="aagl___basic_canvas_8h">
-<area shape="rect" title="包括基本字符串画布类的实现" alt="" coords="745,5,876,32"/>
-<area shape="rect" href="agl___basic_8h.html" title="包括基本函数的全部声明和部分实现" alt="" coords="766,80,855,107"/>
-<area shape="poly" title=" " alt="" coords="813,33,813,64,808,64,808,33"/>
-<area shape="rect" href="at___tools_8h_source.html" title=" " alt="" coords="480,155,562,181"/>
-<area shape="poly" title=" " alt="" coords="766,109,577,155,576,150,764,103"/>
-<area shape="rect" title=" " alt="" coords="549,603,602,629"/>
-<area shape="poly" title=" " alt="" coords="808,108,788,165,779,203,776,241,776,468,771,496,759,521,741,542,718,560,667,589,618,606,616,601,665,584,715,556,737,538,755,518,766,494,770,468,770,241,774,202,783,164,802,106"/>
-<area shape="rect" title=" " alt="" coords="810,155,885,181"/>
-<area shape="poly" title=" " alt="" coords="819,106,837,140,832,142,814,108"/>
-<area shape="rect" title=" " alt="" coords="909,155,973,181"/>
-<area shape="poly" title=" " alt="" coords="834,105,906,144,903,149,832,110"/>
-<area shape="rect" href="at___basic_string_8h_source.html" title=" " alt="" coords="378,304,496,331"/>
-<area shape="poly" title=" " alt="" coords="516,183,454,292,449,289,512,181"/>
-<area shape="rect" href="at___debug_8h_source.html" title=" " alt="" coords="517,229,605,256"/>
-<area shape="poly" title=" " alt="" coords="530,181,549,214,544,217,526,183"/>
-<area shape="rect" href="at___matrix2d_8h_source.html" title=" " alt="" coords="108,528,208,555"/>
-<area shape="poly" title=" " alt="" coords="480,174,406,183,364,193,323,206,286,225,255,249,235,279,230,296,228,316,228,394,223,429,211,462,180,517,175,514,206,460,218,427,222,393,222,316,224,295,230,277,251,245,283,220,321,201,363,188,405,178,480,169"/>
-<area shape="rect" href="at___basic_char_8h_source.html" title=" " alt="" coords="363,379,474,405"/>
-<area shape="poly" title=" " alt="" coords="436,332,428,364,423,363,431,331"/>
-<area shape="rect" href="at___basic_object_8h_source.html" title=" " alt="" coords="284,453,406,480"/>
-<area shape="poly" title=" " alt="" coords="407,408,370,444,367,440,404,404"/>
-<area shape="rect" href="at___basic_8h_source.html" title=" " alt="" coords="266,528,349,555"/>
-<area shape="poly" title=" " alt="" coords="341,482,323,516,319,513,336,479"/>
-<area shape="rect" href="at___coordinate2d_8h_source.html" title=" " alt="" coords="84,603,211,629"/>
-<area shape="poly" title=" " alt="" coords="281,558,190,598,188,593,279,553"/>
-<area shape="rect" href="at___exception_8h_source.html" title=" " alt="" coords="235,603,343,629"/>
-<area shape="poly" title=" " alt="" coords="300,556,290,588,285,587,295,554"/>
-<area shape="rect" title=" " alt="" coords="391,677,462,704"/>
-<area shape="poly" title=" " alt="" coords="320,553,409,664,405,667,316,557"/>
-<area shape="rect" href="at___text_color_8h_source.html" title=" " alt="" coords="419,603,524,629"/>
-<area shape="poly" title=" " alt="" coords="337,553,430,593,428,598,335,558"/>
-<area shape="poly" title=" " alt="" coords="350,551,535,600,533,605,349,556"/>
-<area shape="rect" title=" " alt="" coords="5,603,61,629"/>
-<area shape="poly" title=" " alt="" coords="266,555,76,605,75,600,265,550"/>
-<area shape="rect" title=" " alt="" coords="106,677,189,704"/>
-<area shape="poly" title=" " alt="" coords="150,630,150,662,145,662,145,630"/>
-<area shape="poly" title=" " alt="" coords="297,601,307,569,312,571,302,603"/>
-<area shape="poly" title=" " alt="" coords="314,628,390,667,388,672,312,632"/>
-<area shape="poly" title=" " alt="" coords="466,631,445,665,440,663,462,628"/>
-<area shape="poly" title=" " alt="" coords="541,259,473,298,470,294,538,254"/>
-<area shape="poly" title=" " alt="" coords="577,255,597,276,615,303,636,345,642,390,642,543,640,591,632,611,616,631,585,655,549,672,512,683,478,689,477,683,511,677,547,667,582,651,612,627,628,608,635,590,637,543,637,391,631,346,611,305,592,279,573,258"/>
-<area shape="rect" title=" " alt="" coords="678,304,735,331"/>
-<area shape="poly" title=" " alt="" coords="587,254,669,294,666,299,585,259"/>
-<area shape="rect" title=" " alt="" coords="520,304,602,331"/>
-<area shape="poly" title=" " alt="" coords="564,257,564,288,558,288,558,257"/>
-<area shape="poly" title=" " alt="" coords="159,556,154,588,149,587,154,555"/>
-<area shape="poly" title=" " alt="" coords="182,553,254,592,251,597,180,558"/>
-<area shape="poly" title=" " alt="" coords="138,558,69,597,66,592,135,553"/>
+<area shape="rect" title="包括基本字符串画布类的实现" alt="" coords="516,5,647,32"/>
+<area shape="rect" href="agl___abstract_image_8h.html" title="包括图像抽象类的声明" alt="" coords="591,229,732,256"/>
+<area shape="poly" title=" " alt="" coords="590,31,613,84,640,154,657,214,652,215,635,156,608,86,585,33"/>
+<area shape="rect" href="agl___basic_8h.html" title="包括基本函数的全部声明和部分实现" alt="" coords="455,80,545,107"/>
+<area shape="poly" title=" " alt="" coords="569,35,527,72,523,68,565,31"/>
+<area shape="rect" href="at___basic_string_8h_source.html" title=" " alt="" coords="489,304,607,331"/>
+<area shape="poly" title=" " alt="" coords="643,259,582,298,579,293,640,254"/>
+<area shape="rect" href="at___matrix2d_8h_source.html" title=" " alt="" coords="631,304,732,331"/>
+<area shape="poly" title=" " alt="" coords="667,256,676,288,671,290,662,257"/>
+<area shape="rect" href="at___basic_char_8h_source.html" title=" " alt="" coords="274,379,384,405"/>
+<area shape="poly" title=" " alt="" coords="511,334,383,376,381,371,509,329"/>
+<area shape="rect" href="at___basic_8h_source.html" title=" " alt="" coords="505,603,588,629"/>
+<area shape="poly" title=" " alt="" coords="344,404,526,590,522,594,340,408"/>
+<area shape="rect" href="at___basic_object_8h_source.html" title=" " alt="" coords="227,528,349,555"/>
+<area shape="poly" title=" " alt="" coords="328,407,298,514,293,512,323,405"/>
+<area shape="rect" href="at___text_color_8h_source.html" title=" " alt="" coords="94,453,199,480"/>
+<area shape="poly" title=" " alt="" coords="298,408,194,450,192,445,297,403"/>
+<area shape="rect" title=" " alt="" coords="567,677,638,704"/>
+<area shape="poly" title=" " alt="" coords="559,628,586,663,582,667,554,632"/>
+<area shape="rect" title=" " alt="" coords="263,677,316,704"/>
+<area shape="poly" title=" " alt="" coords="505,632,332,680,330,675,504,626"/>
+<area shape="rect" title=" " alt="" coords="794,677,849,704"/>
+<area shape="poly" title=" " alt="" coords="590,626,780,676,778,681,588,631"/>
+<area shape="poly" title=" " alt="" coords="334,553,491,596,489,601,332,558"/>
+<area shape="poly" title=" " alt="" coords="156,479,180,515,198,535,218,553,259,579,303,601,395,638,482,663,552,678,551,684,480,668,393,643,301,606,256,583,214,557,194,539,176,519,151,482"/>
+<area shape="poly" title=" " alt="" coords="172,478,251,518,249,523,170,483"/>
+<area shape="poly" title=" " alt="" coords="704,329,732,350,759,377,782,412,798,450,811,490,819,531,826,605,826,662,821,662,821,605,813,531,805,492,793,452,777,415,755,380,729,354,701,333"/>
+<area shape="poly" title=" " alt="" coords="631,331,529,354,481,367,448,381,404,412,365,449,307,517,303,514,361,445,401,408,445,376,479,362,527,349,630,326"/>
+<area shape="rect" href="at___coordinate2d_8h_source.html" title=" " alt="" coords="458,379,584,405"/>
+<area shape="poly" title=" " alt="" coords="655,334,564,374,562,369,652,329"/>
+<area shape="rect" href="at___exception_8h_source.html" title=" " alt="" coords="639,528,748,555"/>
+<area shape="poly" title=" " alt="" coords="695,329,735,380,756,415,772,453,775,467,772,481,755,504,734,521,731,517,751,500,767,479,770,467,767,454,752,417,731,383,691,333"/>
+<area shape="rect" href="at___type_convert_8h_source.html" title=" " alt="" coords="635,453,757,480"/>
+<area shape="poly" title=" " alt="" coords="685,331,696,438,691,438,680,331"/>
+<area shape="poly" title=" " alt="" coords="525,406,546,587,541,588,520,406"/>
+<area shape="poly" title=" " alt="" coords="538,404,669,516,665,520,534,408"/>
+<area shape="poly" title=" " alt="" coords="553,403,652,444,650,449,551,408"/>
+<area shape="rect" title=" " alt="" coords="427,453,509,480"/>
+<area shape="poly" title=" " alt="" coords="514,407,488,442,484,439,510,404"/>
+<area shape="poly" title=" " alt="" coords="669,558,587,598,585,593,667,553"/>
+<area shape="poly" title=" " alt="" coords="688,557,621,665,616,663,683,554"/>
+<area shape="poly" title=" " alt="" coords="682,482,629,530,569,593,565,590,625,526,679,478"/>
+<area shape="poly" title=" " alt="" coords="698,481,697,512,692,512,693,480"/>
+<area shape="poly" title=" " alt="" coords="455,101,333,115,185,142,116,161,60,184,38,197,22,211,11,226,8,242,8,542,15,578,34,608,62,631,98,650,137,663,176,673,247,684,247,689,175,679,135,669,95,655,59,636,30,611,10,580,3,543,3,241,7,223,18,207,35,192,57,179,114,156,184,136,333,110,454,96"/>
+<area shape="rect" href="at___tools_8h_source.html" title=" " alt="" coords="358,155,439,181"/>
+<area shape="poly" title=" " alt="" coords="484,109,430,147,427,143,481,105"/>
+<area shape="rect" title=" " alt="" coords="463,155,537,181"/>
+<area shape="poly" title=" " alt="" coords="503,107,503,139,497,139,497,107"/>
+<area shape="rect" title=" " alt="" coords="561,155,626,181"/>
+<area shape="poly" title=" " alt="" coords="518,105,567,143,564,147,515,109"/>
+<area shape="poly" title=" " alt="" coords="416,180,473,227,530,290,526,294,469,231,413,184"/>
+<area shape="poly" title=" " alt="" coords="397,183,340,365,335,363,392,181"/>
+<area shape="poly" title=" " alt="" coords="358,171,272,177,223,184,174,197,129,215,92,240,78,256,68,274,61,294,59,316,59,468,62,483,71,497,107,524,160,546,225,565,367,592,489,607,489,612,366,597,223,570,158,551,104,528,67,501,57,485,53,468,53,316,56,292,63,271,74,253,89,236,126,210,172,191,222,179,272,171,358,166"/>
+<area shape="poly" title=" " alt="" coords="367,184,327,204,285,233,267,250,253,270,243,292,240,316,240,393,243,426,252,459,276,513,271,515,247,461,238,427,235,393,235,316,238,291,248,268,263,247,282,229,324,200,364,180"/>
+<area shape="poly" title=" " alt="" coords="358,175,325,181,288,191,252,207,221,231,202,255,186,281,165,338,154,394,150,439,145,438,149,393,160,337,181,279,197,252,217,227,249,203,286,186,323,176,357,170"/>
+<area shape="poly" title=" " alt="" coords="424,179,645,294,643,299,422,184"/>
+<area shape="poly" title=" " alt="" coords="401,182,406,249,417,290,436,329,456,351,481,369,478,373,453,355,431,332,412,292,401,250,396,182"/>
+<area shape="poly" title=" " alt="" coords="440,176,451,179,517,185,604,190,688,202,722,212,746,227,761,248,775,277,795,350,802,425,800,457,792,481,771,506,745,523,742,519,768,502,787,479,794,456,797,425,790,351,770,279,756,251,742,231,719,217,687,207,604,196,517,190,450,184,439,182"/>
+<area shape="poly" title=" " alt="" coords="406,181,439,260,460,301,479,329,508,348,535,355,564,362,597,376,641,408,676,441,672,445,637,412,595,381,562,367,533,361,505,353,475,333,455,304,434,262,401,183"/>
+<area shape="rect" href="at___debug_8h_source.html" title=" " alt="" coords="807,229,894,256"/>
+<area shape="poly" title=" " alt="" coords="440,176,451,179,546,194,619,204,788,227,792,227,792,233,788,232,619,209,545,200,450,184,439,182"/>
+<area shape="poly" title=" " alt="" coords="807,257,617,302,615,297,806,252"/>
+<area shape="poly" title=" " alt="" coords="896,251,931,262,964,278,976,289,985,301,988,316,985,332,954,393,913,449,867,501,817,547,719,623,641,672,638,667,716,618,814,543,863,497,909,446,949,390,980,330,983,316,980,304,972,293,961,283,929,267,894,256"/>
+<area shape="rect" title=" " alt="" coords="807,304,865,331"/>
+<area shape="poly" title=" " alt="" coords="851,257,844,289,839,288,845,256"/>
+<area shape="rect" title=" " alt="" coords="889,304,970,331"/>
+<area shape="poly" title=" " alt="" coords="866,255,906,291,903,295,863,259"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -161,11 +181,11 @@ agl_BasicCanvas.h 的引用(Include)关系图:</div>
 <div class="center"><img src="agl___basic_canvas_8h__dep__incl.png" border="0" usemap="#aagl___basic_canvas_8hdep" alt=""/></div>
 <map name="aagl___basic_canvas_8hdep" id="aagl___basic_canvas_8hdep">
 <area shape="rect" title="包括基本字符串画布类的实现" alt="" coords="20,5,151,32"/>
-<area shape="rect" href="agl___basic_layer_8h.html" title="包括基本字符串图层的实现" alt="" coords="25,80,146,107"/>
+<area shape="rect" href="agl___basic_layer_8h.html" title="包括基本字符串图层类的实现" alt="" coords="25,80,146,107"/>
 <area shape="poly" title=" " alt="" coords="88,48,88,80,83,80,83,48"/>
 <area shape="rect" href="agl___basic_layer_mngr_8h.html" title="包括基本字符串图层管理器类的实现" alt="" coords="10,155,161,181"/>
 <area shape="poly" title=" " alt="" coords="88,122,88,154,83,154,83,122"/>
-<area shape="rect" href="graphics_8h.html" title="包括基本字符串的图像操作函数" alt="" coords="45,229,126,256"/>
+<area shape="rect" href="graphics_8h.html" title="包括基本字符串图像操作函数的声明" alt="" coords="45,229,126,256"/>
 <area shape="poly" title=" " alt="" coords="88,197,88,229,83,229,83,197"/>
 <area shape="rect" href="_ace_attorney_basic_8h_source.html" title=" " alt="" coords="17,304,154,331"/>
 <area shape="poly" title=" " alt="" coords="88,272,88,304,83,304,83,272"/>

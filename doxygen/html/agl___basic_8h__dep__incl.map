@@ -2,11 +2,11 @@
 <area shape="rect" id="Node000001" title="包括基本函数的全部声明和部分实现" alt="" coords="41,5,130,32"/>
 <area shape="rect" id="Node000002" href="$agl___basic_canvas_8h.html" title="包括基本字符串画布类的实现" alt="" coords="20,80,151,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,48,88,80,83,80,83,48"/>
-<area shape="rect" id="Node000003" href="$agl___basic_layer_8h.html" title="包括基本字符串图层的实现" alt="" coords="25,155,146,181"/>
+<area shape="rect" id="Node000003" href="$agl___basic_layer_8h.html" title="包括基本字符串图层类的实现" alt="" coords="25,155,146,181"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,122,88,154,83,154,83,122"/>
 <area shape="rect" id="Node000004" href="$agl___basic_layer_mngr_8h.html" title="包括基本字符串图层管理器类的实现" alt="" coords="10,229,161,256"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,197,88,229,83,229,83,197"/>
-<area shape="rect" id="Node000005" href="$graphics_8h.html" title="包括基本字符串的图像操作函数" alt="" coords="45,304,126,331"/>
+<area shape="rect" id="Node000005" href="$graphics_8h.html" title="包括基本字符串图像操作函数的声明" alt="" coords="45,304,126,331"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="88,272,88,304,83,304,83,272"/>
 <area shape="rect" id="Node000006" href="$_ace_attorney_basic_8h_source.html" title=" " alt="" coords="17,379,154,405"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="88,346,88,378,83,378,83,346"/>

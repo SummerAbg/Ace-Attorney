@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['save_0',['save',['../class_ascii_g_l_1_1_ascii_basic_canvas.html#afd174dbea0b4c208ed932a06ad4cbb66',1,'AsciiGL::AsciiBasicCanvas']]],
+  ['save_0',['save',['../class_ascii_g_l_1_1_abstract_image.html#a16862f9955841a54cd656a65232031fc',1,'AsciiGL::AbstractImage::save()'],['../class_ascii_g_l_1_1_ascii_basic_canvas.html#afd174dbea0b4c208ed932a06ad4cbb66',1,'AsciiGL::AsciiBasicCanvas::save()']]],
   ['seek_1',['seek',['../classirrklang_1_1_i_file_reader.html#a1c98718116049833e2de77a67a07faaa',1,'irrklang::IFileReader']]],
   ['setallsoundspaused_2',['setAllSoundsPaused',['../classirrklang_1_1_i_sound_engine.html#a92f1a34edd5bfdde3eaae13212eb4147',1,'irrklang::ISoundEngine']]],
   ['setborder_3',['setBorder',['../namespace_ascii_g_l.html#a6dc7a6d92e1a36d81138c350f859d73c',1,'AsciiGL']]],

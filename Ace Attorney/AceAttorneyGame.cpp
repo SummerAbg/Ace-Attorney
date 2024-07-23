@@ -100,20 +100,14 @@ void AceAttorneyGame::update() {
       setText(*screen, Vec2d(0, 0), str_fps, "layer_fps");
       setText(*screen, Vec2d(0, 1), str_deltaTime, "layer_deltaTime");
     }
-    /* for (int i = 0; i < screen->size(); i++) {
-      std::string str_name = "layer_name" + std::to_string(i);
-
-      std::unique_lock<std::shared_mutex> lock(s_mtx);
-      setText(*screen, Vec2d(10, i), screen->getLayer(i).getName(), str_name);
-    }*/
   }
 }
 
 void AceAttorneyGame::display() {
   while (1) {
     std::unique_lock<std::shared_mutex> lock(s_mtx);
-    TimeMeasurer measurer(&deltaTime);
 
+    TimeMeasurer measurer(&deltaTime);
     WinAPIDraw(*screen);
   }
 }

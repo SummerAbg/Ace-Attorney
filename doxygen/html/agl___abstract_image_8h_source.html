@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ace Attorney: agl_AbstractImage.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ace_attoryney_api_loge.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Ace Attorney<span id="projectnumber">&#160;beta 0.0.1</span>
+   </div>
+   <div id="projectbrief">一个逆转裁判API文档说明</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ab278a5b4652c3f3ba7dbf2c05ab2ba8.html">Ace Attorney</a></li><li class="navelem"><a class="el" href="dir_67ab33cf501127eff0577214bc245c93.html">AsciiGL</a></li><li class="navelem"><a class="el" href="dir_f3681dd7d1f4e13f33a4b57ca8069e04.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">agl_AbstractImage.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="agl___abstract_image_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;at_BasicString.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;at_Matrix2d.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span>AsciiTools;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_ascii_g_l.html">   18</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_ascii_g_l.html">AsciiGL</a> {</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_abstract_image.html">   28</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataType&gt; <span class="keyword">class </span><a class="code hl_class" href="class_ascii_g_l_1_1_abstract_image.html">AbstractImage</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_ascii_tools_1_1_matrix2d.html">Matrix2d</a>&lt;DataType&gt; {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_abstract_image.html#a16862f9955841a54cd656a65232031fc">   34</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_abstract_image.html#a16862f9955841a54cd656a65232031fc">save</a>(<span class="keyword">const</span> std::string &amp;path) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_ascii_g_l_1_1_abstract_image.html#a70fe75a4d22631b1e343e63f2a487f09">   40</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_ascii_g_l_1_1_abstract_image.html#a70fe75a4d22631b1e343e63f2a487f09">load</a>(<span class="keyword">const</span> std::string &amp;path) = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace AsciiGL</span></div>
+</div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_abstract_image_html"><div class="ttname"><a href="class_ascii_g_l_1_1_abstract_image.html">AsciiGL::AbstractImage</a></div><div class="ttdoc">图像抽象类</div><div class="ttdef"><b>定义</b> agl_AbstractImage.h:28</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_abstract_image_html_a16862f9955841a54cd656a65232031fc"><div class="ttname"><a href="class_ascii_g_l_1_1_abstract_image.html#a16862f9955841a54cd656a65232031fc">AsciiGL::AbstractImage::save</a></div><div class="ttdeci">virtual void save(const std::string &amp;path) const =0</div><div class="ttdoc">存储图像文件至指定文件路径</div></div>
+<div class="ttc" id="aclass_ascii_g_l_1_1_abstract_image_html_a70fe75a4d22631b1e343e63f2a487f09"><div class="ttname"><a href="class_ascii_g_l_1_1_abstract_image.html#a70fe75a4d22631b1e343e63f2a487f09">AsciiGL::AbstractImage::load</a></div><div class="ttdeci">virtual void load(const std::string &amp;path)=0</div><div class="ttdoc">加载指定路径的图像文件</div></div>
+<div class="ttc" id="aclass_ascii_tools_1_1_matrix2d_html"><div class="ttname"><a href="class_ascii_tools_1_1_matrix2d.html">AsciiTools::Matrix2d</a></div><div class="ttdef"><b>定义</b> at_Matrix2d.h:12</div></div>
+<div class="ttc" id="anamespace_ascii_g_l_html"><div class="ttname"><a href="namespace_ascii_g_l.html">AsciiGL</a></div><div class="ttdoc">AsciiGL命名空间，包括AsciiGL的基本声明和实现</div><div class="ttdef"><b>定义</b> agl_AbstractImage.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

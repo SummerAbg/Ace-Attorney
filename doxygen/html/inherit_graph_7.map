@@ -1,11 +1,25 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$class_ascii_tools_1_1_ascii_basic_object.html" title=" " alt="" coords="5,56,195,83"/>
-<area shape="rect" id="Node000001" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类" alt="" coords="246,5,425,32"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="180,50,269,30,271,35,181,55"/>
-<area shape="rect" id="Node000003" href="$class_ascii_tools_1_1_ascii_basic_char.html" title=" " alt="" coords="246,56,424,83"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="210,67,246,67,246,72,210,72"/>
-<area shape="rect" id="Node000004" href="$class_ascii_tools_1_1_ascii_basic_string.html" title=" " alt="" coords="243,107,428,133"/>
-<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="181,84,271,103,269,109,180,89"/>
-<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层" alt="" coords="476,5,645,32"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="441,16,475,16,475,21,441,21"/>
+<area shape="rect" id="Node000000" href="$class_ascii_tools_1_1_ascii_basic_object.html" title=" " alt="" coords="5,240,195,267"/>
+<area shape="rect" id="Node000001" href="$class_ascii_tools_1_1_matrix2d.html" title=" " alt="" coords="266,5,405,48"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="112,225,133,188,162,143,198,98,241,58,264,44,267,49,244,62,202,101,166,146,137,190,117,227"/>
+<area shape="rect" id="Node000003" href="$class_ascii_tools_1_1_matrix2d.html" title=" " alt="" coords="265,72,406,115"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="122,227,173,176,206,148,241,124,264,113,267,118,244,129,209,153,177,180,125,230"/>
+<area shape="rect" id="Node000004" href="$class_ascii_g_l_1_1_ascii_basic_canvas.html" title="基本字符串画布类" alt="" coords="246,139,425,165"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="135,229,185,201,242,175,275,163,277,168,244,180,187,206,138,234"/>
+<area shape="rect" id="Node000006" href="$class_ascii_tools_1_1_ascii_basic_char.html" title=" " alt="" coords="246,189,424,216"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="180,234,269,214,271,219,181,239"/>
+<area shape="rect" id="Node000007" href="$class_ascii_tools_1_1_ascii_basic_string.html" title=" " alt="" coords="243,240,428,267"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="210,251,242,251,242,256,210,256"/>
+<area shape="rect" id="Node000008" href="$struct_ascii_tools_1_1_ascii_color.html" title=" " alt="" coords="261,291,410,317"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="181,268,271,287,269,293,180,273"/>
+<area shape="rect" id="Node000009" href="$struct_ascii_tools_1_1_ascii_text_color.html" title=" " alt="" coords="249,341,422,368"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="138,273,187,300,244,327,277,338,275,343,242,332,185,305,135,277"/>
+<area shape="rect" id="Node000010" href="$struct_ascii_tools_1_1_coordinate2d.html" title=" " alt="" coords="253,392,418,435"/>
+<area shape="poly" id="edge10_Node000000_Node000010" title=" " alt="" coords="125,276,177,327,209,354,244,378,267,389,264,394,241,382,206,358,173,331,122,280"/>
+<area shape="rect" id="Node000011" href="$class_ascii_tools_1_1_matrix2d.html" title=" " alt="" coords="266,459,405,501"/>
+<area shape="poly" id="edge11_Node000000_Node000011" title=" " alt="" coords="117,279,137,316,166,361,202,405,244,445,267,458,264,462,241,449,198,409,162,364,133,319,112,282"/>
+<area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_abstract_image.html" title="图像抽象类" alt="" coords="481,5,640,48"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="420,24,480,24,480,29,420,29"/>
+<area shape="rect" id="Node000005" href="$class_ascii_g_l_1_1_ascii_basic_layer.html" title="基本字符串图层" alt="" coords="476,139,645,165"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="441,149,475,149,475,155,441,155"/>
 </map>

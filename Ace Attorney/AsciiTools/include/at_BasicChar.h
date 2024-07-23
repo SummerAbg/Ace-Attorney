@@ -1,6 +1,8 @@
 #pragma once
 
+#include "at_Basic.h"
 #include "at_BasicObject.h"
+#include "at_TextColor.h"
 
 namespace AsciiTools {
 // »ù±¾×Ö·ûÀà

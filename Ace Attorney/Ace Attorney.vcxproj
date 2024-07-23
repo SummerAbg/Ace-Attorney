@@ -145,6 +145,7 @@
     <ClCompile Include="AnalyzeCommand.cpp" />
     <ClCompile Include="AsciiGL\src\agl_Basic.cpp" />
     <ClCompile Include="AsciiGL\src\agl_BasicCanvas.cpp" />
+    <ClCompile Include="AsciiTools\src\at_TypeConvert.cpp" />
     <ClCompile Include="AsciiTools\src\at_Basic.cpp" />
     <ClCompile Include="AsciiTools\src\at_BasicChar.cpp" />
     <ClCompile Include="AsciiTools\src\at_TextColor.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="AceAttorneyCharacter.h" />
     <ClInclude Include="AceAttorneyGame.h" />
     <ClInclude Include="AnalyzeCommand.h" />
+    <ClInclude Include="AsciiGL\include\agl_AbstractImage.h" />
     <ClInclude Include="AsciiGL\include\agl_Basic.h" />
     <ClInclude Include="AsciiGL\include\agl_BasicCanvas.h" />
     <ClInclude Include="AsciiTools\include\at_BasicChar.h" />
@@ -174,6 +176,8 @@
     <ClInclude Include="AsciiGL\include\agl_BasicLayerMngr.h" />
     <ClInclude Include="AsciiTools\include\at_BasicObject.h" />
     <ClInclude Include="AsciiTools\include\at_BasicString.h" />
+    <ClInclude Include="AsciiTools\include\at_Deserialization.h" />
+    <ClInclude Include="AsciiTools\include\at_Serialization.h" />
     <ClInclude Include="AsciiTools\include\at_Tools.h" />
     <ClInclude Include="AsciiTools\include\at_TextColor.h" />
     <ClInclude Include="AsciiTools\include\at_Debug.h" />
@@ -181,6 +185,7 @@
     <ClInclude Include="AsciiTools\include\at_Coordinate2d.h" />
     <ClInclude Include="AsciiTools\include\at_Exception.h" />
     <ClInclude Include="AsciiTools\include\at_Matrix2d.h" />
+    <ClInclude Include="AsciiTools\include\at_TypeConvert.h" />
     <ClInclude Include="irrKlang\include\ik_ESoundEngineOptions.h" />
     <ClInclude Include="irrKlang\include\ik_ESoundOutputDrivers.h" />
     <ClInclude Include="irrKlang\include\ik_EStreamModes.h" />

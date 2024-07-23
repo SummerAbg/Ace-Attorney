@@ -1,7 +1,5 @@
 <map id="AsciiGL::AsciiBasicLayerMngr::isExistLayer" name="AsciiGL::AsciiBasicLayerMngr::isExistLayer">
-<area shape="rect" id="Node000001" title="判断是否存在指定名称的图层" alt="" coords="223,35,392,77"/>
+<area shape="rect" id="Node000001" title="判断是否存在指定名称的图层" alt="" coords="223,5,392,48"/>
 <area shape="rect" id="Node000002" href="$class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4520cd582144d3671d70e864ffac5927" title="删除指定图层 (失败时抛出异常)" alt="" coords="5,5,175,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,45,175,41,175,35,208,40"/>
-<area shape="rect" id="Node000003" href="$namespace_ascii_g_l.html#a36de7186d9d2601ff30313c6915ec001" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="31,72,149,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,72,150,80,149,75,207,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
 </map>

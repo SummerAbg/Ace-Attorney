@@ -1,4 +1,5 @@
 #include "at_BasicObject.h"
+#include "at_Exception.h"
 
 namespace AsciiTools {
 std::string serialize(const AsciiBasicObject *obj) {

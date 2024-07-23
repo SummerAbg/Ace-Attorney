@@ -9,16 +9,10 @@ AsciiColor::AsciiColor(int r, int g, int b, double a) {
 }
 
 AsciiColor::AsciiColor(const std::string &str) {
-  const auto tokens = split(str, ',');
-  if (tokens.size() == paramCount_asciicolor) {
-    r = stringToInt(tokens[0]);
-    g = stringToInt(tokens[1]);
-    b = stringToInt(tokens[2]);
-    a = stringToDouble(tokens[3]);
-  } else {
-    throw AsciiBasicException(__FUNC__,
-                              "str->rgba时发现字符串读取错误(tokens.size()!=" +
-                                  std::to_string(paramCount_asciicolor) + ")");
+  try {
+    loadSerializeStr(str);
+  } catch (const AsciiBasicException &error) {
+    throw AsciiBasicException(__FUNC__, error.what());
   }
 }
 
@@ -33,31 +27,48 @@ bool AsciiColor::operator!=(AsciiColor color) const {
   return !(*this == color);
 }
 
+void AsciiColor::info() const {
+  std::cout << "AsciiColor对象" << std::endl;
+  std::cout << this->toString() << std::endl;
+}
+
 std::string AsciiColor::toString() const {
   return spliceString(",", r, g, b, a);
 }
+
+std::string AsciiColor::getSerializeStr() const {
+  return serializeType(r, g, b, a);
+}
+
+void AsciiColor::loadSerializeStr(const std::string &str) {
+  const auto tokens = bracketMatch(str);
+
+  if (tokens.size() != paramCount_asciicolor) {
+    throw AsciiBasicException(__FUNC__,
+                              "str->rgba时发现字符串读取错误(tokens.size()!=" +
+                                  std::to_string(paramCount_asciicolor) + ")");
+  }
+
+  deserializeType(r, tokens[0]);
+  deserializeType(g, tokens[1]);
+  deserializeType(b, tokens[2]);
+  deserializeType(a, tokens[3]);
+}
+
 AsciiTextColor::AsciiTextColor(AsciiColor color_text,
                                AsciiColor color_background) {
   this->color_text = color_text;
   this->color_background = color_background;
 }
+
 AsciiTextColor::AsciiTextColor(const std::string &str) {
-  const auto tokens = split(str, ',');
-  if (tokens.size() == paramCount_asciitextcolor) {
-    color_text.r = stringToInt(tokens[0]);
-    color_text.g = stringToInt(tokens[1]);
-    color_text.b = stringToInt(tokens[2]);
-    color_text.a = stringToDouble(tokens[3]);
-    color_background.r = stringToInt(tokens[4]);
-    color_background.g = stringToInt(tokens[5]);
-    color_background.b = stringToInt(tokens[6]);
-    color_background.a = stringToDouble(tokens[7]);
-  } else {
-    throw AsciiBasicException(
-        __FUNC__, "str->rgb时发现字符串读取错误(tokens.size()!=" +
-                      std::to_string(paramCount_asciitextcolor) + ")");
+  try {
+    loadSerializeStr(str);
+  } catch (const AsciiBasicException &error) {
+    throw AsciiBasicException(__FUNC__, error.what());
   }
 }
+
 bool AsciiTextColor::operator==(AsciiTextColor color) const {
   return (this->color_text == color.color_text &&
           this->color_background == color.color_background)
@@ -67,12 +78,32 @@ bool AsciiTextColor::operator==(AsciiTextColor color) const {
 bool AsciiTextColor::operator!=(AsciiTextColor color) const {
   return !((*this) == color);
 }
+void AsciiTextColor::info() const {
+  std::cout << "AsciiTextColor对象" << std::endl;
+  std::cout << this->toString() << std::endl;
+}
+
 std::string AsciiTextColor::toString() const {
-  std::string str_text_color = color_text.toString();
-  std::string str_background_color = color_background.toString();
-  std::string ret = str_text_color + "," + str_background_color + ";";
+  std::string ret = spliceString(",", color_text, color_background);
 
   return ret;
+}
+
+std::string AsciiTextColor::getSerializeStr() const {
+  return serializeType(color_text, color_background);
+}
+
+void AsciiTextColor::loadSerializeStr(const std::string &str) {
+  const auto tokens = bracketMatch(str);
+
+  if (tokens.size() == paramCount_asciitextcolor) {
+    deserializeType(color_text, tokens[0]);
+    deserializeType(color_background, tokens[1]);
+  } else {
+    throw AsciiBasicException(
+        __FUNC__, "str->rgb时发现字符串读取错误(tokens.size()!=" +
+                      std::to_string(paramCount_asciitextcolor) + ")");
+  }
 }
 
 std::ostream &operator<<(std::ostream &output, AsciiColor color) {

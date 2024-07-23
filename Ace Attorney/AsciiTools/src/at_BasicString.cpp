@@ -38,6 +38,7 @@ AsciiBasicString::AsciiBasicString(const AsciiBasicChar &chr) {
 }
 
 void AsciiBasicString::info() const {
+  std::cout << "AsciiBasicString¶ÔÏó" << std::endl;
   std::cout << "Size:" << text.size() << std::endl;
   std::cout << "trprData:";
   for (const auto &index : text) {
@@ -146,19 +147,17 @@ AsciiTextColorData AsciiBasicString::getTextColorData() const {
 std::string AsciiBasicString::getSerializeStr() const {
   std::string ret;
   for (const auto &index : text) {
-    ret += serialize(&index) + ";";
+    ret += serializeType(index);
   }
   return ret;
 }
 
 void AsciiBasicString::loadSerializeStr(const std::string &str) {
-  const auto tokens = split(str, ';');
+  const auto tokens = bracketMatch(str);
 
-  for (int i = 0; i < tokens.size(); i += 3) {
+  for (const auto &index : tokens) {
     AsciiBasicChar chr;
-    const std::string chr_data =
-        tokens[i] + ";" + tokens[i + 1] + ";" + tokens[i + 2];
-    deserialize(&chr, chr_data);
+    deserializeType(chr, index);
     this->text.emplace_back(chr);
   }
 }

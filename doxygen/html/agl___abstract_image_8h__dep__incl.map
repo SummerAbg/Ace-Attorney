@@ -1,0 +1,21 @@
+<map id="agl_AbstractImage.h" name="agl_AbstractImage.h">
+<area shape="rect" id="Node000001" title="包括图像抽象类的声明" alt="" coords="15,5,156,32"/>
+<area shape="rect" id="Node000002" href="$agl___basic_canvas_8h.html" title="包括基本字符串画布类的实现" alt="" coords="20,80,151,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,48,88,80,83,80,83,48"/>
+<area shape="rect" id="Node000003" href="$agl___basic_layer_8h.html" title="包括基本字符串图层类的实现" alt="" coords="25,155,146,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,122,88,154,83,154,83,122"/>
+<area shape="rect" id="Node000004" href="$agl___basic_layer_mngr_8h.html" title="包括基本字符串图层管理器类的实现" alt="" coords="10,229,161,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="88,197,88,229,83,229,83,197"/>
+<area shape="rect" id="Node000005" href="$graphics_8h.html" title="包括基本字符串图像操作函数的声明" alt="" coords="45,304,126,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="88,272,88,304,83,304,83,272"/>
+<area shape="rect" id="Node000006" href="$_ace_attorney_basic_8h_source.html" title=" " alt="" coords="17,379,154,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="88,346,88,378,83,378,83,346"/>
+<area shape="rect" id="Node000007" href="$_resources_8h_source.html" title=" " alt="" coords="38,453,133,480"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="88,421,88,453,83,453,83,421"/>
+<area shape="rect" id="Node000008" href="$_analyze_command_8h_source.html" title=" " alt="" coords="16,528,155,555"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="88,496,88,528,83,528,83,496"/>
+<area shape="rect" id="Node000009" href="$_ace_attorney_character_8h_source.html" title=" " alt="" coords="5,603,166,629"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="88,570,88,602,83,602,83,570"/>
+<area shape="rect" id="Node000010" href="$_ace_attorney_game_8h_source.html" title=" " alt="" coords="16,677,155,704"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="88,645,88,677,83,677,83,645"/>
+</map>

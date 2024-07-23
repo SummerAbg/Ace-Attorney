@@ -40,7 +40,7 @@ private:
   void cmd_text(const Option &options);
 
 private:
-  int deltaTime;
+  std::atomic_int deltaTime;
   int length;
   int width;
   AsciiBasicLayerMngr *screen;

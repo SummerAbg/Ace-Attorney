@@ -1,5 +1,5 @@
 <map id="graphics.h" name="graphics.h">
-<area shape="rect" id="Node000001" title="包括基本字符串的图像操作函数" alt="" coords="45,5,126,32"/>
+<area shape="rect" id="Node000001" title="包括基本字符串图像操作函数的声明" alt="" coords="45,5,126,32"/>
 <area shape="rect" id="Node000002" href="$_ace_attorney_basic_8h_source.html" title=" " alt="" coords="17,80,154,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,48,88,80,83,80,83,48"/>
 <area shape="rect" id="Node000003" href="$_resources_8h_source.html" title=" " alt="" coords="38,155,133,181"/>

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "at_BasicObject.h"
 #include <iostream>
 
 namespace AsciiTools {
@@ -7,10 +8,10 @@ namespace AsciiTools {
 const int paramCount_asciicolor = 4;
 
 // AsciiTextColor参数个数
-const int paramCount_asciitextcolor = paramCount_asciicolor * 2;
+const int paramCount_asciitextcolor = 2;
 
 // RGBA颜色
-struct AsciiColor {
+struct AsciiColor : public AsciiBasicObject {
   int r;
   int g;
   int b;
@@ -26,11 +27,16 @@ struct AsciiColor {
   friend std::ostream &operator<<(std::ostream &output, AsciiColor color);
   friend std::istream &operator>>(std::istream &input, AsciiColor color);
 
+  void info() const;
   std::string toString() const;
+
+private:
+  std::string getSerializeStr() const;
+  void loadSerializeStr(const std::string &str);
 };
 
 // 文本颜色
-struct AsciiTextColor {
+struct AsciiTextColor : public AsciiBasicObject {
   AsciiColor color_text;
   AsciiColor color_background;
 
@@ -44,7 +50,12 @@ struct AsciiTextColor {
   friend std::ostream &operator<<(std::ostream &output, AsciiTextColor color);
   friend std::istream &operator>>(std::istream &input, AsciiTextColor color);
 
+  void info() const;
   std::string toString() const;
+
+private:
+  std::string getSerializeStr() const;
+  void loadSerializeStr(const std::string &str);
 };
 
 const AsciiColor ASCII_COLOR_RED = {255, 0, 0};

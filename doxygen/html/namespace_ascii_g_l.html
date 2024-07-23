@@ -98,6 +98,9 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_abstract_image.html">AbstractImage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">图像抽象类  <a href="class_ascii_g_l_1_1_abstract_image.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ascii_g_l_1_1_ascii_basic_canvas.html">AsciiBasicCanvas</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">基本字符串画布类  <a href="class_ascii_g_l_1_1_ascii_basic_canvas.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -712,9 +715,9 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>倒映画布 （指的是将指定画布切割至最小单位宽度的长条后，将从最上方的部分自下往上排列），如： </p>
-<p>##A##=&gt;B###A</p>
-<p>#A#A#=&gt;#A#A#</p>
-<p>B###A=&gt;##A## </p><dl class="params"><dt>参数</dt><dd>
+<p>##A##~~&gt;B###A</p>
+<p>#A#A#~~&gt;#A#A#</p>
+<p>B###A~~&gt;##A## </p><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">canvas</td><td>- </td></tr>
   </table>
@@ -1029,22 +1032,16 @@ template&lt;typename T &gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="namespace_ascii_g_l_a36de7186d9d2601ff30313c6915ec001_cgraph.png" border="0" usemap="#anamespace_ascii_g_l_a36de7186d9d2601ff30313c6915ec001_cgraph" alt=""/></div>
 <map name="anamespace_ascii_g_l_a36de7186d9d2601ff30313c6915ec001_cgraph" id="anamespace_ascii_g_l_a36de7186d9d2601ff30313c6915ec001_cgraph">
-<area shape="rect" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="5,113,124,140"/>
-<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a0c4138d06e55c59ffa5f03d04f35f912" title="添加指定图层" alt="" coords="172,5,341,48"/>
-<area shape="poly" title=" " alt="" coords="84,111,123,85,170,58,181,52,183,57,173,62,126,89,87,115"/>
-<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a4a0d2ba105cee81947aa48b1d7a5f742" title="判断是否存在指定名称的图层" alt="" coords="172,72,341,115"/>
-<area shape="poly" title=" " alt="" coords="124,114,156,108,157,113,125,119"/>
-<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_layer_mngr.html#a8e6acbf1adeb5a27908d33b78d34a60f" title="设置指定名称的图层 （失败时抛出异常）" alt="" coords="172,139,341,181"/>
-<area shape="poly" title=" " alt="" coords="125,134,157,140,156,145,124,140"/>
-<area shape="rect" href="namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c" title="在指定画布下的指定坐标设置文本 （不添加图层,在原有画布进行修改）" alt="" coords="197,205,316,232"/>
-<area shape="poly" title=" " alt="" coords="86,138,125,165,173,191,188,197,186,202,171,196,122,169,83,143"/>
-<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="616,201,796,244"/>
-<area shape="poly" title=" " alt="" coords="300,202,343,191,389,183,479,175,569,183,625,194,624,199,568,188,479,180,389,188,344,196,302,207"/>
-<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a4314185737544fc3187150738edcff47" title="获取块长度" alt="" coords="389,197,568,240"/>
-<area shape="poly" title=" " alt="" coords="316,216,374,216,374,221,316,221"/>
-<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="389,264,568,307"/>
-<area shape="poly" title=" " alt="" coords="304,230,391,256,390,262,303,235"/>
-<area shape="poly" title=" " alt="" coords="558,261,611,246,612,251,559,266"/>
+<area shape="rect" title="在指定图层管理器下的指定坐标设置文本 （添加图层）" alt="" coords="5,34,124,61"/>
+<area shape="rect" href="namespace_ascii_g_l.html#a6b0854af1bf637f3ffd3f65e4927244c" title="在指定画布下的指定坐标设置文本 （不添加图层,在原有画布进行修改）" alt="" coords="172,34,290,61"/>
+<area shape="poly" title=" " alt="" coords="124,45,156,45,156,50,124,50"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a6a6a3316d31a03c29a99ba52ae63692e" title="判断指定坐标是否合法" alt="" coords="565,30,745,73"/>
+<area shape="poly" title=" " alt="" coords="266,31,300,20,338,11,428,3,518,11,574,23,573,28,517,17,428,8,338,17,302,25,268,36"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#a4314185737544fc3187150738edcff47" title="获取块长度" alt="" coords="338,26,517,69"/>
+<area shape="poly" title=" " alt="" coords="290,45,323,45,323,50,290,50"/>
+<area shape="rect" href="class_ascii_g_l_1_1_ascii_basic_canvas.html#ad598c9941c415fa2dd1a26fab581ee29" title="设置画布中指定坐标的数据" alt="" coords="338,93,517,135"/>
+<area shape="poly" title=" " alt="" coords="274,59,349,85,347,90,272,64"/>
+<area shape="poly" title=" " alt="" coords="507,90,560,75,561,80,508,95"/>
 </map>
 </div>
 

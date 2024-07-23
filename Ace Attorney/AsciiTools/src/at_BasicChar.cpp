@@ -1,3 +1,4 @@
+#include "at_BasicChar.h"
 #include "at_Tools.h"
 
 namespace AsciiTools {
@@ -32,6 +33,7 @@ std::istream &operator>>(std::istream &input, AsciiBasicChar &chr) {
 }
 
 void AsciiBasicChar::info() const {
+  std::cout << "AsciiBasicChar¶ÔÏó" << std::endl;
   std::cout << "character:" << character << std::endl
             << "trprState:" << trprState << std::endl;
 }
@@ -60,25 +62,18 @@ void AsciiBasicChar::setDefaultColor(AsciiTextColor clr) { default_clr = clr; }
 AsciiTextColor AsciiBasicChar::getDefaultColor() { return default_clr; }
 
 std::string AsciiBasicChar::getSerializeStr() const {
-  std::string ret;
-  ret += std::string(1, character) + ";";
-  ret += std::to_string(trprState) + ";";
-  ret += color.toString() + ";";
-  /* ret = spliceString(";", {std::string(1, character),
-                                std::to_string(trprState),
-                        color.toString()});*/
-  return ret;
+  return serializeType(character, trprState, color);
 }
 
 void AsciiBasicChar::loadSerializeStr(const std::string &str) {
-  auto tokens = split(str, ';');
+  const auto tokens = bracketMatch(str);
 
   if (tokens.size() != 3) {
     throw AsciiBasicException(__FUNC__, FileFormatError);
   }
 
-  this->character = str[0];
-  this->trprState = stringToBool(tokens[1]);
-  color = AsciiTextColor(tokens[2]);
+  deserializeType(character, tokens[0]);
+  deserializeType(trprState, tokens[1]);
+  deserializeType(color, tokens[2]);
 }
 } // namespace AsciiTools

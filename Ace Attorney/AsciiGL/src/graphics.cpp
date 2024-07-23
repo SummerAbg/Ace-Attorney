@@ -126,12 +126,7 @@ void setText(AsciiBasicLayerMngr &mngr, Coord2d coord,
   AsciiBasicLayer textLayer(layerName);
   setText(textLayer, coord, text);
 
-  // mngr[layerName] = textLayer;
-  if (mngr.isExistLayer(layerName)) {
-    mngr.setLayer(textLayer, layerName);
-  } else {
-    mngr.appendLayer(textLayer);
-  }
+  mngr[layerName] = textLayer;
 }
 
 void setBorder(AsciiBasicCanvas &canvas, const AsciiBasicString &str) {
@@ -143,31 +138,6 @@ void setBorder(AsciiBasicCanvas &canvas, const AsciiBasicString &str) {
   setLine(canvas, Vec2d(0, 0), Vec2d(0, cWidth - 1), str);
   setLine(canvas, Vec2d(cLength - 1, 0), Vec2d(cLength - 1, cWidth - 1), str);
 }
-
-/* std::vector<Point2D> compareCanvas(const AsciiBasicCanvas &target,
-                                   const AsciiBasicCanvas &canvas) {
-  std::vector<Point2D> ret;
-
-  for (int i = 0; i < target.getWidth(); i++) {
-    for (int j = 0; j < target.getLength(); j++) {
-      AsciiBasicString canvas_data;
-      AsciiBasicString target_data;
-      Coord2d coord = Vec2d(j, i);
-
-      if (target.checkCoordinate(coord) && canvas.checkCoordinate(coord)) {
-        canvas_data = canvas.getCanvasData(coord);
-        target_data = target.getCanvasData(coord);
-      } else {
-        ret.emplace_back(coord);
-      }
-      if (canvas_data != target_data) {
-        ret.emplace_back(coord);
-      }
-    }
-  }
-
-  return ret;
-}*/
 
 std::vector<Point2D> compareCanvas(const AsciiBasicCanvas &target,
                                    const AsciiBasicCanvas &canvas,

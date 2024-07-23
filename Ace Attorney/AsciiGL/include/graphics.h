@@ -100,9 +100,9 @@ void setLine(AsciiBasicCanvas &canvas, Coord2d coordA, Coord2d coordB,
 /**
  *  @brief 倒映画布
  * （指的是将指定画布切割至最小单位宽度的长条后，将从最上方的部分自下往上排列），如：
- *  @brief       ##A##=>B###A
- *  @brief       #A#A#=>#A#A#
- *  @brief       B###A=>##A##
+ *  @brief       ##A##~~>B###A
+ *  @brief       #A#A#~~>#A#A#
+ *  @brief       B###A~~>##A##
  *  @param canvas -
  */
 void reflect(AsciiBasicCanvas &canvas);

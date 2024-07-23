@@ -8,7 +8,6 @@
 #include <conio.h>
 #include <functional>
 #include <shared_mutex>
-#include <type_traits>
 
 using namespace AsciiGL;
 using namespace irrklang;
@@ -54,7 +53,7 @@ class TimeMeasurer {
 public:
   typedef std::chrono::steady_clock::time_point Time_point;
 
-  TimeMeasurer(int *ret) {
+  TimeMeasurer(std::atomic_int *ret) {
     if (ret != NULL) {
       this->ret = ret;
       startTime = std::chrono::high_resolution_clock().now();
@@ -65,15 +64,15 @@ public:
   }
   ~TimeMeasurer() {
     endTime = std::chrono::high_resolution_clock().now();
-    *ret = (int)std::chrono::duration_cast<std::chrono::milliseconds>(endTime -
-                                                                      startTime)
-               .count();
+    (*ret).store((int)std::chrono::duration_cast<std::chrono::milliseconds>(
+                     endTime - startTime)
+                     .count());
   }
 
 private:
   Time_point startTime;
   Time_point endTime;
-  int *ret;
+  std::atomic_int *ret;
 };
 
 class Task {

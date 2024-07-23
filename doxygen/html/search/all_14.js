@@ -3,7 +3,7 @@ var searchData=
   ['sampleformat_0',['SampleFormat',['../structirrklang_1_1_s_audio_stream_format.html#a6a3c4b7a3ac829555b0bcc7312e12c8f',1,'irrklang::SAudioStreamFormat']]],
   ['samplerate_1',['SampleRate',['../structirrklang_1_1_s_audio_stream_format.html#adffd0aaf1d5e09b2832f6ad9b2589756',1,'irrklang::SAudioStreamFormat']]],
   ['saudiostreamformat_2',['SAudioStreamFormat',['../structirrklang_1_1_s_audio_stream_format.html',1,'irrklang']]],
-  ['save_3',['save',['../class_ascii_g_l_1_1_ascii_basic_canvas.html#afd174dbea0b4c208ed932a06ad4cbb66',1,'AsciiGL::AsciiBasicCanvas']]],
+  ['save_3',['save',['../class_ascii_g_l_1_1_abstract_image.html#a16862f9955841a54cd656a65232031fc',1,'AsciiGL::AbstractImage::save()'],['../class_ascii_g_l_1_1_ascii_basic_canvas.html#afd174dbea0b4c208ed932a06ad4cbb66',1,'AsciiGL::AsciiBasicCanvas::save()']]],
   ['seek_4',['seek',['../classirrklang_1_1_i_file_reader.html#a1c98718116049833e2de77a67a07faaa',1,'irrklang::IFileReader']]],
   ['setallsoundspaused_5',['setAllSoundsPaused',['../classirrklang_1_1_i_sound_engine.html#a92f1a34edd5bfdde3eaae13212eb4147',1,'irrklang::ISoundEngine']]],
   ['setborder_6',['setBorder',['../namespace_ascii_g_l.html#a6dc7a6d92e1a36d81138c350f859d73c',1,'AsciiGL']]],

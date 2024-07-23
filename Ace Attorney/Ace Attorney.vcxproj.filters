@@ -78,6 +78,9 @@
     <ClCompile Include="AsciiTools\src\at_Basic.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AsciiTools\src\at_TypeConvert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsciiGL\include\agl_Basic.h">
@@ -207,6 +210,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AsciiTools\include\at_Matrix2d.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiGL\include\agl_AbstractImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_TypeConvert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Serialization.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsciiTools\include\at_Deserialization.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,8 +4,6 @@
 namespace AsciiGL {
 AsciiBasicCanvas::AsciiBasicCanvas(int length, int width,
                                    const AsciiBasicString &str) {
-  this->length = length;
-  this->width = width;
   defaultFill = str;
   blockLength = defaultFill.size();
   datas = CanvasData(length, width, str);
@@ -14,16 +12,14 @@ AsciiBasicCanvas::AsciiBasicCanvas(int length, int width,
 AsciiBasicCanvas::AsciiBasicCanvas(const std::string &path) { load(path); }
 
 AsciiBasicCanvas::AsciiBasicCanvas(const AsciiBasicCanvas &canvas) {
-  this->length = canvas.getLength();
-  this->width = canvas.getWidth();
   this->defaultFill = canvas.getFill();
   this->blockLength = canvas.getBlockLength();
   this->datas = canvas.getCanvasData();
 }
 
 void AsciiBasicCanvas::info() const {
-  std::cout << "Length:" << length << std::endl
-            << "Width:" << width << std::endl
+  std::cout << "Length:" << datas.getLength() << std::endl
+            << "Width:" << datas.getWidth() << std::endl
             << "DefaultFill:" << defaultFill << std::endl
             << "BlockLength:" << blockLength << std::endl
             << "Size:" << datas.size() << std::endl;
@@ -86,11 +82,11 @@ AsciiBasicString AsciiBasicCanvas::getCanvasData(const Coord2d &coord) const {
 AsciiBasicString AsciiBasicCanvas::getAsciiBasicString() const {
   AsciiBasicString ret;
 
-  for (int i = 0; i < width; i++) {
-    for (int j = 0; j < length; j++) {
+  for (int i = 0; i < datas.getWidth(); i++) {
+    for (int j = 0; j < datas.getLength(); j++) {
       ret += datas(j, i);
     }
-    if (i < width - 1)
+    if (i < datas.getWidth() - 1)
       ret += "\n";
   }
   return ret;
@@ -100,7 +96,7 @@ void AsciiBasicCanvas::clear(bool flag) {
   if (flag) {
     *this = AsciiBasicCanvas();
   } else {
-    this->datas = CanvasData(length, width, defaultFill);
+    this->datas = CanvasData(datas.getLength(), datas.getWidth(), defaultFill);
   }
 }
 
@@ -117,17 +113,15 @@ void AsciiBasicCanvas::save(const std::string &path) const {
 }
 
 void AsciiBasicCanvas::load(const std::string &path) {
-  auto tokens = split(path, '.');
-  if (tokens.size() <= 1) {
-    throw AsciiBasicException(__FUNC__, "路径名非法!");
-  } else if (tokens[1] != "asc2") {
+  std::filesystem::path file_path(path);
+  if (file_path.extension().string() != ".asc2") {
     throw AsciiBasicException(__FUNC__, "该文件并非asc2文件!");
   }
 
   *this = AsciiBasicCanvas();
 
   std::string fileData = getFileData(path);
-  deserialize(this, fileData);
+  deserializeType(*this, fileData);
 }
 
 void AsciiBasicCanvas::show() const {
@@ -158,87 +152,19 @@ bool AsciiBasicCanvas::operator!=(const AsciiBasicCanvas &canvas) const {
 }
 
 std::string AsciiBasicCanvas::getSerializeStr() const {
-  std::string ret;
-  ret += spliceString("\n", length, width, blockLength);
-  ret += "\n";
-  ret += serialize(&defaultFill) + "\n";
-
-  ret += this->toString() + "\n";
-
-  for (int i = 0; i < width; i++) {
-    for (int j = 0; j < length; j++) {
-      const auto trprData = datas[Vec2d(j, i)].getTrprData();
-
-      for (const auto &index : trprData) {
-        ret += std::to_string(index);
-      }
-    }
-    ret += "\n";
-  }
-
-  for (int i = 0; i < width; i++) {
-    for (int j = 0; j < length; j++) {
-      const auto colorData = datas[Vec2d(j, i)].getTextColorData();
-
-      for (const auto &index : colorData) {
-        ret += index.toString();
-      }
-    }
-    ret += "\n";
-  }
+  std::string ret = serializeType(blockLength, defaultFill, datas);
   return ret;
 }
 
 void AsciiBasicCanvas::loadSerializeStr(const std::string &str) {
-  const auto tokens_row = split(str, '\n');
+  const auto tokens = bracketMatch(str);
 
-  if (tokens_row.size() < 4) {
+  if (tokens.size() < 3) {
     throw AsciiBasicException(__FUNC__, FileFormatError);
   }
 
-  this->length = stringToInt(tokens_row[0]);
-  this->width = stringToInt(tokens_row[1]);
-  this->blockLength = stringToInt(tokens_row[2]);
-  datas.setLength(length);
-  datas.setWidth(width);
-
-  deserialize(&defaultFill, tokens_row[3]);
-
-  // 是否有完整颜色数据
-  bool clr_flag = (tokens_row.size() == 4 + width * 3);
-
-  // 颜色块
-  std::vector<std::string> colorBlocks;
-
-  for (int fileLine = 4; fileLine < width + 4; fileLine++) {
-    if (clr_flag) {
-      colorBlocks = split(tokens_row[fileLine + width * 2], ';');
-    }
-
-    for (int i = 0; i < length; i++) {
-      std::string text;
-      AsciiTrprData trprData;
-      AsciiTextColorData color;
-
-      for (int j = 0; j < blockLength; j++) {
-        const int index = i * blockLength + j;
-
-        text += tokens_row[fileLine][index];
-        ////////////////////////////////////////////////text
-        bool isTrpr = (tokens_row.size() >= 4 + width * 2)
-                          ? charToBool(tokens_row[fileLine + width][index])
-                          : false;
-        trprData.emplace_back(isTrpr);
-        ////////////////////////////////////////////////trprData
-
-        AsciiTextColor clr = AsciiTextColor(colorBlocks[index]);
-
-        color.emplace_back(clr);
-        ////////////////////////////////////////////////color
-      }
-      AsciiBasicString data = {text, color, trprData};
-      datas.append(data);
-    }
-  }
+  deserializeType(blockLength, tokens[0]);
+  deserializeType(defaultFill, tokens[1]);
+  deserializeType(datas, tokens[2]);
 }
 } // namespace AsciiGL
