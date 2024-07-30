@@ -3,7 +3,7 @@
 Log *AceAttorney::gameLog = new Log(SimpleDisplay);
 
 void AceAttorney::initAsciiGL() {
-  AsciiBasicChar::setTrprChr('\\');
+  AsciiBasicChar::setTrprChr(' ');
   AsciiBasicChar::setDefaultColor({ASCII_COLOR_WHITE, ASCII_COLOR_BLACK});
 }
 
@@ -20,42 +20,17 @@ void AceAttorney::initWindowRGB() {
 }
 
 void AceAttorney::initWindow(int length, int width) {
-  const std::wstring title = windowTitle + L"(" + std::to_wstring(length) +
+  const std::wstring title = windowTitle + L" (" + std::to_wstring(length) +
                              L", " + std::to_wstring(width) + L")";
   setWindowSize(length * TRPRSTR.size(), width);
   setFont(30);
   SetConsoleTitle(title.c_str());
-  hideCursor();
+  AsciiGL::hideCursor();
 }
 
-/* double AceAttorney::getFPS() {
-  static double fps = 0.0;
-  static int frameCount = 0;
-  static auto lastTime = std::chrono::system_clock::now();
-  static auto curTime = std::chrono::system_clock::now();
-
-  curTime = std::chrono::system_clock::now();
-
-  auto duration =
-      std::chrono::duration_cast<std::chrono::microseconds>(curTime - lastTime);
-  double duration_s = double(duration.count()) *
-                      std::chrono::microseconds::period::num /
-                      std::chrono::microseconds::period::den;
-
-  if (duration_s > 2) // 2秒之后开始统计FPS
-  {
-    fps = frameCount / duration_s;
-    frameCount = 0;
-    lastTime = curTime;
-  }
-
-  ++frameCount;
-
-  return fps;
-}*/
 int AceAttorney::getFPS(int deltaTime) {
   static int fps = 0;
-  static int timeLeft = 100; // 取固定时间间隔为0.1秒
+  static int timeLeft = 1000; // 取固定时间间隔为1秒
   static int frameCount = 0;
 
   ++frameCount;
@@ -63,7 +38,7 @@ int AceAttorney::getFPS(int deltaTime) {
   if (timeLeft < 0) {
     fps = frameCount;
     frameCount = 0;
-    timeLeft = 100;
+    timeLeft = 1000;
   }
   return fps;
 }

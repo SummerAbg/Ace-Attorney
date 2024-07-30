@@ -133,7 +133,6 @@ std::ostream &operator<<(std::ostream &output, AsciiTextColor color) {
   auto color_default = AsciiBasicChar::getDefaultColor();
   setBackgroundColor(color_default.color_background);
   setWordColor(color_default.color_text);
-
   return output;
 }
 

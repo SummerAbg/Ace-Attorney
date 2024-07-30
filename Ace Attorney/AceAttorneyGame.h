@@ -7,6 +7,9 @@ namespace AceAttorney {
 // 游戏类
 class AceAttorneyGame {
 public:
+  using pScreen = std::shared_ptr<AsciiGL::AsciiBasicLayerMngr>;
+  using pCharaMngr = std::shared_ptr<AceAttorneyCharaMngr>;
+
   AceAttorneyGame() = default;
   AceAttorneyGame(int length, int width);
   ~AceAttorneyGame();
@@ -14,8 +17,8 @@ public:
   // 添加角色
   void addCharacter(AceAttorneyCharacter &chara);
 
-  AsciiBasicLayerMngr *getScreen();
-  ISoundEngine *getISoundEngine();
+  pScreen getScreen();
+  irrklang::ISoundEngine *getISoundEngine();
 
   // 获取游戏长度
   int getLength() const { return length; }
@@ -40,14 +43,23 @@ private:
   void cmd_text(const Option &options);
 
 private:
+  pScreen screen;
+  irrklang::ISoundEngine *audioEngine;
+  pCharaMngr charas;
+
+private:
   std::atomic_int deltaTime;
   int length;
   int width;
-  AsciiBasicLayerMngr *screen;
-  ISoundEngine *audioEngine;
-  AceAttorneyCharaMngr *charas;
-  // ThreadPool *threadPool;
   int fps;
   std::shared_mutex s_mtx;
 };
+
+// 获取聊天箱画布
+AsciiGL::AsciiBasicCanvas getChatBoxCanvas(AceAttorneyGame &game);
+
+// 添加聊天箱图层
+void appendChatBoxLayer(const AsciiGL::AsciiBasicCanvas &canvas,
+                        const std::string &name, AceAttorneyGame &game,
+                        AsciiGL::AsciiBasicLayerMngr &mngr);
 } // namespace AceAttorney

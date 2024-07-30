@@ -31,8 +31,7 @@ std::string makeName(const std::string &prefix) {
     numbers.emplace_back(0);
     numbers.emplace_back(0);
   }
-  // auto name = spliceString("_", prefix, numbers[index]);
-  std::string name = prefix + "_" + std::to_string(numbers[index]);
+  std::string name = spliceString("_", prefix, numbers[index]);
 
   nameLib.emplace_back(prefix);
   nameLib.emplace_back(name);

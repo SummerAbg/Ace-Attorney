@@ -7,9 +7,10 @@ namespace AsciiTools {
 class AsciiBasicString : public AsciiBasicObject {
 public:
   using Text = std::vector<AsciiBasicChar>;
+  using pText = std::shared_ptr<Text>;
 
   // 构造基本字符串
-  AsciiBasicString() = default;
+  AsciiBasicString();
   AsciiBasicString(
       const char *str, bool isTrpr = false,
       const AsciiTextColor clr = AsciiBasicChar::getDefaultColor());
@@ -21,6 +22,8 @@ public:
   AsciiBasicString(const std::string &str, const AsciiTextColorData &clr,
                    const AsciiTrprData &trpr);
   AsciiBasicString(const AsciiBasicChar &chr);
+  AsciiBasicString(const AsciiBasicString &str);
+  AsciiBasicString(AsciiBasicString &&str) noexcept;
 
   // 输出信息
   void info() const;
@@ -28,20 +31,29 @@ public:
   std::string toString() const;
 
   // 获取头尾地址的函数(为了能够使用c++11的新特性)
-  auto begin() const { return text.begin(); }
-  auto end() const { return text.end(); }
+  auto begin() const { return text->begin(); }
+  auto end() const { return text->end(); }
 
   // 基本运算符
   bool operator==(const AsciiBasicString &str) const;
-  bool operator!=(const AsciiBasicString &str) const;
+  bool operator==(AsciiBasicString &&str) const noexcept;
 
-  AsciiBasicString operator+=(const AsciiBasicString &str);
-  AsciiBasicString operator+=(const AsciiBasicChar &chr);
+  bool operator!=(const AsciiBasicString &str) const;
+  bool operator!=(AsciiBasicString &&str) const noexcept;
+
+  AsciiBasicString &operator+=(const AsciiBasicString &str);
+  AsciiBasicString &operator+=(AsciiBasicString &&str) noexcept;
+
+  AsciiBasicString &operator+=(const AsciiBasicChar &chr);
+
   AsciiBasicString operator+(const AsciiBasicString &str) const;
   AsciiBasicString operator+(const AsciiBasicChar &chr) const;
 
   AsciiBasicChar &operator[](int index);
   const AsciiBasicChar &operator[](int index) const;
+
+  AsciiBasicString &operator=(const AsciiBasicString &str);
+  AsciiBasicString &operator=(AsciiBasicString &&str) noexcept;
 
   /////////////////////////////////////////////////////////////
 
@@ -52,13 +64,17 @@ public:
   // 删除字符串指定位置的字符
   void del(int index);
   // 给字符串的末尾添加字符
-  void append(const AsciiBasicChar &chr) { text.emplace_back(chr); }
+  void append(const AsciiBasicChar &chr);
+  void append(AsciiBasicChar &&chr) noexcept;
+
   void append(const AsciiBasicString &str);
+  void append(AsciiBasicString &&str) noexcept;
+
   // 清空字符串
   void clear();
 
   // 获取字符串大小
-  int size() const { return static_cast<int>(text.size()); }
+  int size() const { return static_cast<int>(text->size()); }
 
   // 获取透明数据
   AsciiTrprData getTrprData() const;
@@ -76,7 +92,7 @@ private:
   void loadSerializeStr(const std::string &str);
 
 private:
-  Text text; // 字符容器
+  pText text; // 字符容器
 };
 
 const AsciiBasicString TRPRSTR = {

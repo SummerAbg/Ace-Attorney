@@ -18,11 +18,18 @@ bool intToBool(int number);
 double stringToDouble(const std::string &str);
 // string->short
 short stringToShort(const std::string &str);
+// vector->string
+template <typename T> std::string vectorToString(const std::vector<T> &vec);
+
+// 需要添加一个string->vector的功能函数
 
 // 类型装饰器
 template <typename TargetType, typename ConvertedType> class TypeDecorator {
 public:
+  TypeDecorator() = default;
   TypeDecorator(const ConvertedType &obj) : obj(obj) {}
+
+  void init(const ConvertedType &obj) { this->obj = obj; }
 
   TargetType toTargetType() const;
 
@@ -73,8 +80,12 @@ inline std::string TypeDecorator<TargetType, ConvertedType>::toString() const {
   } else if constexpr (std::is_same_v<ConvertedType,
                                       const char *>) { // const char*
     return std::string(obj);
+  } else if constexpr (std::is_same_v<ConvertedType,
+                                      std::vector<std::string>>) {
+    return vectorToString(obj);
   } else {
-    throw AsciiBasicException(__FUNC__, "不确定的类型!无法转换！");
+    throw AsciiBasicException(__FUNC__, std::string("不确定的类型!无法转换！") +
+                                            typeid(ConvertedType).name());
   }
 }
 
@@ -96,7 +107,16 @@ TypeDecorator<TargetType, ConvertedType>::toTargetType() const {
   } else if constexpr (std::is_same_v<TargetType, std::string>) {
     return str;
   } else {
-    throw AsciiBasicException(__FUNC__, "不确定的类型!无法转换！");
+    throw AsciiBasicException(__FUNC__, std::string("不确定的类型!无法转换！") +
+                                            typeid(ConvertedType).name());
   }
+}
+template <typename T> std::string vectorToString(const std::vector<T> &vec) {
+  std::string ret;
+  for (const auto &index : vec) {
+    TypeDecorator<std::string, T> decorator(index);
+    ret += decorator.toTargetType() += " ";
+  }
+  return ret;
 }
 } // namespace AsciiTools

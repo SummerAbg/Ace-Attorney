@@ -24,17 +24,20 @@ namespace AsciiGL {
 class AsciiBasicLayerMngr {
 public:
   using Layers = std::vector<AsciiBasicLayer>;
+  using pLayers = std::shared_ptr<Layers>;
 
   /**
    *  @brief AsciiBasicLayerMngr object constructor
    */
-  AsciiBasicLayerMngr() = default;
+  AsciiBasicLayerMngr();
 
   /**
    *  @brief AsciiBasicLayerMngr object constructor
    *  @param layers - 指定图层容器
    */
-  AsciiBasicLayerMngr(const Layers &layers) { this->layers = layers; }
+  AsciiBasicLayerMngr(const Layers &layers) {
+    this->layers = std::make_shared<Layers>(layers);
+  }
 
   /**
    *  @brief AsciiBasicLayerMngr object constructor
@@ -46,22 +49,36 @@ public:
                       const AsciiBasicString &str = TRPRSTR);
 
   /**
+   *  @brief AsciiBasicLayerMngr object constructor
+   *  @param mngr - 图层管理器
+   */
+  AsciiBasicLayerMngr(const AsciiBasicLayerMngr &mngr);
+
+  /**
+   *  @brief AsciiBasicLayerMngr object constructor
+   *  @param mngr - 图层管理器
+   */
+  AsciiBasicLayerMngr(AsciiBasicLayerMngr &&mngr) noexcept;
+
+  /**
    *  @brief  Return iterator to beginning
    *  @retval  - iterator to beginning
    */
-  auto begin() const { return layers.begin(); }
+  auto begin() const { return layers->begin(); }
 
   /**
    *  @brief  Return iterator to end
    *  @retval  - iterator to end
    */
-  auto end() const { return layers.end(); }
+  auto end() const { return layers->end(); }
 
   /**
    *  @brief 添加指定图层
    *  @param layer - 指定图层
    */
-  void appendLayer(const AsciiBasicLayer &layer) { layers.emplace_back(layer); }
+  void appendLayer(const AsciiBasicLayer &layer) {
+    layers->emplace_back(layer);
+  }
 
   /**
    *  @brief 添加指定图层
@@ -132,7 +149,13 @@ public:
   const AsciiBasicLayer &operator[](int index) const;
 
   bool operator==(const AsciiBasicLayerMngr &mngr) const;
+  bool operator==(AsciiBasicLayerMngr &&mngr) const noexcept;
+
   bool operator!=(const AsciiBasicLayerMngr &mngr) const;
+  bool operator!=(AsciiBasicLayerMngr &&mngr) const noexcept;
+
+  AsciiBasicLayerMngr &operator=(const AsciiBasicLayerMngr &mngr);
+  AsciiBasicLayerMngr &operator=(AsciiBasicLayerMngr &&mngr) noexcept;
 
   /**
    *  @brief  获取指定名称的图层 （失败时抛出异常）
@@ -146,7 +169,7 @@ public:
    *  @param  index - 指定编号
    *  @retval       - 指定编号的图层
    */
-  AsciiBasicLayer getLayer(int index) const { return layers[index]; }
+  AsciiBasicLayer getLayer(int index) const { return (*layers)[index]; }
 
   /**
    *  @brief 设置指定名称的图层 （失败时抛出异常）
@@ -166,13 +189,13 @@ public:
    *  @brief  获取管理器图层数
    *  @retval  - 图层数
    */
-  int size() const { return static_cast<int>(layers.size()); }
+  int size() const { return static_cast<int>(layers->size()); }
 
   /**
    *  @brief  获取管理器图层容器
    *  @retval  - 包括着所有图层的图层容器
    */
-  Layers getLayers() const { return layers; }
+  Layers getLayers() const { return *layers; }
 
   /**
    *  @brief  判断是否存在指定名称的图层
@@ -189,6 +212,6 @@ public:
   int getLayerCount(const std::string &name) const;
 
 private:
-  Layers layers;
+  pLayers layers;
 };
 } // namespace AsciiGL

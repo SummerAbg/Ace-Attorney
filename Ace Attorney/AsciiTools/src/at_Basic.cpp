@@ -34,12 +34,12 @@ void setBackgroundColor(AsciiColor color) {
 AsciiColor mixAsciiColor(AsciiColor color1, AsciiColor color2) {
   AsciiColor ret;
   ret.a = (1.0 - ((1.0 - color1.a) * (1.0 - color2.a)));
-  ret.r =
-      (color1.r * color1.a + color2.r * color2.a * (1.0 - color1.a)) / ret.a;
-  ret.g =
-      (color1.g * color1.a + color2.g * color2.a * (1.0 - color1.a)) / ret.a;
-  ret.b =
-      (color1.b * color1.a + color2.b * color2.a * (1.0 - color1.a)) / ret.a;
+  ret.r = static_cast<int>(
+      (color1.r * color1.a + color2.r * color2.a * (1.0 - color1.a)) / ret.a);
+  ret.g = static_cast<int>(
+      (color1.g * color1.a + color2.g * color2.a * (1.0 - color1.a)) / ret.a);
+  ret.b = static_cast<int>(
+      (color1.b * color1.a + color2.b * color2.a * (1.0 - color1.a)) / ret.a);
 
   return ret;
 }
@@ -116,6 +116,14 @@ std::vector<std::string> bracketMatch(const std::string &str, int layerCount,
       positions_right.pop();
     }
   }
+
+  return ret;
+}
+
+Coord2d getCoord(int length, int width, double px, double py) {
+  Coord2d ret;
+  ret.x = static_cast<int>(length * px);
+  ret.y = static_cast<int>(width * py);
 
   return ret;
 }

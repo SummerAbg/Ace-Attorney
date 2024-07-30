@@ -28,11 +28,12 @@ namespace AsciiGL {
 class AsciiBasicCanvas : public AsciiBasicObject {
 public:
   using CanvasData = Matrix2d<AsciiBasicString>;
+  using pCanvasData = std::shared_ptr<CanvasData>;
 
   /**
    *  @brief AsciiBasicCanvas object constructor
    */
-  AsciiBasicCanvas() = default;
+  AsciiBasicCanvas();
 
   /**
    *  @brief AsciiBasicCanvas object constructor
@@ -56,16 +57,22 @@ public:
   AsciiBasicCanvas(const AsciiBasicCanvas &canvas);
 
   /**
+   *  @brief AsciiBasicCanvas object constructor
+   *  @param canvas - 画布
+   */
+  AsciiBasicCanvas(AsciiBasicCanvas &&canvas) noexcept;
+
+  /**
    *  @brief  Return iterator to beginning
    *  @retval  - iterator to beginning
    */
-  auto begin() const { return datas.begin(); }
+  auto begin() const { return datas->begin(); }
 
   /**
    *  @brief  Return iterator to end
    *  @retval  - iterator to end
    */
-  auto end() const { return datas.end(); }
+  auto end() const { return datas->end(); }
 
   /**
    *  @brief 输出画布信息
@@ -97,7 +104,7 @@ public:
    *  @brief  获取整个画布数据
    *  @retval  - 画布数据（画布字符串集合）
    */
-  CanvasData getCanvasData() const { return datas; }
+  CanvasData getCanvasData() const { return *datas; }
 
   /**
    *  @brief  获取画布组成的字符串
@@ -115,13 +122,13 @@ public:
    *  @brief  获取画布长度
    *  @retval  - 返回画布长度
    */
-  int getLength() const { return datas.getLength(); }
+  int getLength() const { return datas->getLength(); }
 
   /**
    *  @brief  获取画布宽度
    *  @retval  - 返回画布宽度
    */
-  int getWidth() const { return datas.getWidth(); }
+  int getWidth() const { return datas->getWidth(); }
 
   /**
    *  @brief  获取块长度
@@ -130,10 +137,12 @@ public:
   int getBlockLength() const { return blockLength; }
 
   /**
-   *  @brief  获取默认填充字符串
-   *  @retval  - 返回默认填充字符串
+   *  @brief  获取背景字符串
+   *  @retval  - 返回背景字符串
    */
-  AsciiBasicString getFill() const { return defaultFill; }
+  AsciiBasicString getBackgroundStr() const {
+    return datas->getBackgroundElement();
+  }
 
   /**
    *  @brief 以文件的形式（.asc2）保存画布
@@ -172,8 +181,14 @@ public:
    */
   COORD toConsoleCoord(const Coord2d &coord) const;
 
-  virtual bool operator==(const AsciiBasicCanvas &canvas) const;
-  virtual bool operator!=(const AsciiBasicCanvas &canvas) const;
+  bool operator==(const AsciiBasicCanvas &canvas) const;
+  bool operator==(AsciiBasicCanvas &&canvas) const noexcept;
+
+  bool operator!=(const AsciiBasicCanvas &canvas) const;
+  bool operator!=(AsciiBasicCanvas &&canvas) const noexcept;
+
+  AsciiBasicCanvas &operator=(const AsciiBasicCanvas &canvas);
+  AsciiBasicCanvas &operator=(AsciiBasicCanvas &&canvas) noexcept;
 
 private:
   /**
@@ -188,13 +203,9 @@ private:
    */
   void loadSerializeStr(const std::string &str);
 
-private:
-  // int length;      // 画布长度
-  // int width;       // 画布宽度
+protected:
   int blockLength; // 块长度(基本长度单元)
 
-  AsciiBasicString defaultFill; // 画布默认填充字符串
-
-  CanvasData datas; // 画布块数据
+  pCanvasData datas; // 画布块数据
 };
 } // namespace AsciiGL

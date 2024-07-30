@@ -34,6 +34,7 @@ class AsciiBasicObject;
 void setWordColor(AsciiColor color);
 // 设置背景颜色
 void setBackgroundColor(AsciiColor color);
+
 // 混合两个颜色(color1占主导地位)
 AsciiColor mixAsciiColor(AsciiColor color1, AsciiColor color2);
 AsciiTextColor mixAsciiTextColor(AsciiTextColor color1, AsciiTextColor color2);
@@ -51,4 +52,33 @@ std::vector<std::string> bracketMatch(const std::string &str,
                                       int layerCount = 1,
                                       char leftBracket = '[',
                                       char rightBracket = ']');
+
+// 按比例根据长宽获取新坐标
+Coord2d getCoord(int length, int width, double px, double py);
+
+// 平均分配容器中的元素至若干个新容器中
+template <typename T>
+std::vector<std::vector<T>> equalDivision(int count,
+                                          const std::vector<T> &vec) {
+  std::vector<std::vector<T>> ret;
+
+  const int numElement = vec.size() / count;
+  bool isPerfectDivision = (vec.size() % count == 0);
+
+  for (int i = 0; i < count; i++) {
+    std::vector<T> temp;
+    int size = 0;
+    if (i < count - 1 || isPerfectDivision) {
+      size = numElement;
+    } else {
+      size = vec.size() - numElement * (count - 1);
+    }
+
+    for (int j = 0; j < size; j++) {
+      temp.emplace_back(vec[i * numElement + j]);
+    }
+    ret.emplace_back(temp);
+  }
+  return ret;
+}
 } // namespace AsciiTools

@@ -12,9 +12,9 @@ AsciiBasicCanvas getCanvas(const AsciiBasicCanvas &canvas, Coord2d coordA,
 
   const int length = abs(coordA.x - coordB.x) + 1;
   const int width = abs(coordA.y - coordB.y) + 1;
-  const auto fill = canvas.getFill();
+  const auto str = canvas.getBackgroundStr();
 
-  AsciiBasicCanvas ret(length, width, fill);
+  AsciiBasicCanvas ret(length, width, str);
 
   // 介于两点坐标为顶点的矩形，以矩形左上方的顶点为起点遍历坐标
   const Coord2d coord((coordA.x < coordB.x ? coordA.x : coordB.x),
@@ -222,13 +222,36 @@ void WinAPIDraw(const AsciiBasicCanvas &canvas, bool isClean) {
   }
 
   const auto coords = compareCanvas(canvasBuffer, canvas);
-
+  if (coords.size() == 0) {
+    return;
+  }
   for (const auto &coord : coords) {
     if (canvas.checkCoordinate(coord)) {
       SetConsoleCursorPosition(hndl, canvas.toConsoleCoord(coord));
       std::cout << canvas.getCanvasData(coord);
     }
   }
+  /* std::mutex mtx;
+  auto work = [&](const std::vector<Coord2d> &coords) {
+    for (const auto &index_coord : coords) {
+      std::unique_lock<std::mutex> lock(mtx);
+
+      if (canvas.checkCoordinate(index_coord)) {
+        SetConsoleCursorPosition(hndl, canvas.toConsoleCoord(index_coord));
+        std::cout << canvas.getCanvasData(index_coord);
+      }
+    }
+  };
+
+  const auto groups = equalDivision(1, coords);
+  for (const auto &index_group : groups) {
+    //  std::cout << index_group.size() << std::endl;
+    std::thread thr_work(work, index_group);
+    thr_work.detach();
+    // thr_work.join();
+    //  std::this_thread::sleep_for(std::chrono::milliseconds(10));
+  }*/
+
   canvasBuffer = canvas;
 }
 

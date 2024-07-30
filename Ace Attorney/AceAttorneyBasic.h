@@ -9,9 +9,6 @@
 #include <functional>
 #include <shared_mutex>
 
-using namespace AsciiGL;
-using namespace irrklang;
-
 namespace AceAttorney {
 const double goldenRatio = 0.618;
 

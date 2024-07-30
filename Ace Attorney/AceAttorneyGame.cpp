@@ -5,20 +5,19 @@ AceAttorneyGame::AceAttorneyGame(int length, int width) {
   this->length = length;
   this->width = width;
 
-  screen = new AsciiBasicLayerMngr(length, width);
-  audioEngine = createIrrKlangDevice();
-  charas = new AceAttorneyCharaMngr();
-  // threadPool = new ThreadPool(4);
+  screen = std::make_shared<AsciiGL::AsciiBasicLayerMngr>(length, width);
+  audioEngine = irrklang::createIrrKlangDevice();
+  charas = std::make_shared<AceAttorneyCharaMngr>();
+
   fps = 0;
   deltaTime = 0;
+  screen->appendLayer(
+      {AsciiGL::AsciiBasicLayer({length, width, str_Background}, Vec2d(0, 0))});
 }
 
 AceAttorneyGame::~AceAttorneyGame() {
   audioEngine->drop();
-
-  delete screen;
-  delete charas;
-  // delete threadPool;
+  delete audioEngine;
 }
 
 void AceAttorneyGame::addCharacter(AceAttorneyCharacter &chara) {
@@ -26,9 +25,11 @@ void AceAttorneyGame::addCharacter(AceAttorneyCharacter &chara) {
   charas->emplace_back(chara);
 }
 
-AsciiBasicLayerMngr *AceAttorneyGame::getScreen() { return screen; }
+AceAttorneyGame::pScreen AceAttorneyGame::getScreen() { return screen; }
 
-ISoundEngine *AceAttorneyGame::getISoundEngine() { return audioEngine; }
+irrklang::ISoundEngine *AceAttorneyGame::getISoundEngine() {
+  return audioEngine;
+}
 
 void AceAttorneyGame::executeCommands(
     const std::vector<std::string> &commands) {
@@ -75,18 +76,13 @@ void AceAttorneyGame::run(const std::function<void()> &callback) {
   std::thread thread_update([&]() { update(); });
   std::thread thread_display([&]() { display(); });
   std::thread thread_callback(callback);
-  // std::thread thread_control([&]() { control(); });
+  //  std::thread thread_control([&]() { control(); });
 
   thread_update.join();
   thread_display.join();
-  // thread_control.join();
+  //  thread_control.join();
 
   thread_callback.join();
-
-  // threadPool->addTask(callback);
-  // threadPool->addTask([&]() { display(); });
-  // threadPool->addTask([&]() { control(); });
-  // threadPool->addTask([&]() { update(); });
 }
 
 void AceAttorneyGame::update() {
@@ -105,9 +101,9 @@ void AceAttorneyGame::update() {
 
 void AceAttorneyGame::display() {
   while (1) {
+    TimeMeasurer measurer(&deltaTime);
     std::unique_lock<std::shared_mutex> lock(s_mtx);
 
-    TimeMeasurer measurer(&deltaTime);
     WinAPIDraw(*screen);
   }
 }
@@ -136,5 +132,59 @@ void AceAttorneyGame::cmd_text(const Option &options) {
   setText(*screen, coord, text);
 
   getchar();
+}
+
+AsciiGL::AsciiBasicCanvas AceAttorney::getChatBoxCanvas(AceAttorneyGame &game) {
+  int chatBoxLength = 0;
+  int chatBoxWidth = 0;
+  {
+    std::shared_lock<std::shared_mutex> lock(*game.getSharedMutex());
+    chatBoxLength = game.getLength();
+    chatBoxWidth = (double)game.getWidth() * (1.0 - goldenRatio);
+  }
+
+  AsciiGL::AsciiBasicCanvas canvas_chatbox(chatBoxLength, chatBoxWidth,
+                                           str_ChatBox);
+  setLine(canvas_chatbox, Vec2d(0, 0), Vec2d(chatBoxLength - 1, 0), TRPRSTR);
+
+  return canvas_chatbox;
+}
+
+void appendChatBoxLayer(const AsciiGL::AsciiBasicCanvas &canvas,
+                        const std::string &name, AceAttorneyGame &game,
+                        AsciiGL::AsciiBasicLayerMngr &mngr) {
+  AsciiBasicString str_name = {name, false, clr_ChatBox_Name};
+
+  std::shared_mutex *s_mtx = nullptr;
+  {
+    std::shared_lock<std::shared_mutex> lock(*game.getSharedMutex());
+    s_mtx = game.getSharedMutex();
+  }
+  const int chatbox_x = 0;
+  int chatbox_y = 0;
+  {
+    std::shared_lock<std::shared_mutex> lock(*s_mtx);
+    chatbox_y = (double)game.getWidth() * goldenRatio;
+  }
+
+  Coord2d coord_chatbox(chatbox_x, chatbox_y);
+  AsciiGL::AsciiBasicLayer layer_chatbox(canvas, coord_chatbox,
+                                         "layer_chatbox");
+
+  bool isExist = false;
+  {
+    std::shared_lock<std::shared_mutex> lock(*s_mtx);
+    isExist = mngr.isExistLayer("layer_chatbox");
+  }
+
+  if (!isExist) {
+    std::unique_lock<std::shared_mutex> lock(*s_mtx);
+    mngr.appendLayer(layer_chatbox);
+  } else {
+    std::unique_lock<std::shared_mutex> lock(*s_mtx);
+    mngr.setLayer(layer_chatbox, "layer_chatbox");
+  }
+  std::unique_lock<std::shared_mutex> lock(*s_mtx);
+  setText(mngr, coord_chatbox, str_name, "layer_chatbox_name");
 }
 } // namespace AceAttorney

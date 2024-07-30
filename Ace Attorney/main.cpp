@@ -5,7 +5,7 @@
 using namespace AceAttorney;
 
 void convert(const std::string &path) {
-  auto data = getFileData(path);
+  auto data = AsciiGL::getFileData(path);
   auto tokens_line = split(data, '\n');
 
   int length;
@@ -31,7 +31,7 @@ void convert(const std::string &path) {
       defaultFill += chr_ascii;
     }
 
-    AsciiBasicCanvas canvas(length, width, defaultFill);
+    AsciiGL::AsciiBasicCanvas canvas(length, width, defaultFill);
 
     for (int i = 0; i < width; i++) {
       auto str_line = tokens_line[4 + i];
@@ -118,7 +118,7 @@ void batchshow(const std::string &file_path) {
     if (index.path().extension().string() == ".asc2") {
       std::cout << index.path().string() << std::endl;
 
-      AsciiBasicCanvas canvas(index.path().string());
+      AsciiGL::AsciiBasicCanvas canvas(index.path().string());
       canvas.info();
       canvas.show();
 
@@ -132,14 +132,16 @@ int main() {
   try {
     AceAttorneyCharacter chara_1("成步堂龙一", 21);
     AceAttorneyCharacter chara_2("御剑怜侍", 24);
-    AceAttorneyGame game(23, 15);
+    // AceAttorneyGame game(23, 15);
+    AceAttorneyGame game(40, 25);
 
     game.addCharacter(chara_1);
     game.addCharacter(chara_2);
     game.run([&]() {
       while (1) {
-        chara_1.chatBox("你好，你是御剑怜侍吗？", 10);
-        chara_2.chatBox("是的......怎么?", 10);
+        chara_1.chatBox("没有讲解但过程非常清晰，不是那种嚼碎了喂饭，能让自己有"
+                        "充分的思考过程",
+                        10);
         chara_1.objection();
       }
     });
@@ -152,19 +154,22 @@ int main() {
   for (int i = 0; i < str.size(); i++) {
     std::wcout << i << "\t" << str[i] << std::endl;
   }*/
-  /* const int count = 999;
+  /* const int count = 55555;
   {
     EfficiencyDebug ef;
     std::string str;
-    for (int i = 0; i < count; i++)
-      str += "Hello";
+    for (int i = 0; i < count; i++) {
+      str += "HelloWorld";
+    }
   }
   {
     EfficiencyDebug ef;
     AsciiBasicString str;
-    for (int i = 0; i < count; i++)
-      str += "Hello";
+    for (int i = 0; i < count; i++) {
+      str += "HelloWorld";
+    }
   }*/
+
   /* AsciiBasicLayerMngr mngr;
   {
     while (1) {

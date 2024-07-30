@@ -59,6 +59,12 @@ public:
   AsciiBasicLayer(const AsciiBasicLayer &layer);
 
   /**
+   *  @brief AsciiBasicLayer object constructor
+   *  @param layer - 图层
+   */
+  AsciiBasicLayer(AsciiBasicLayer &&layer) noexcept;
+
+  /**
    *  @brief 设置图层中画布的坐标
    *  @param coord - 指定坐标
    */
@@ -106,8 +112,14 @@ public:
    */
   bool isDisplay() const { return displayState; }
 
-  virtual bool operator==(const AsciiBasicLayer &layer) const;
-  virtual bool operator!=(const AsciiBasicLayer &layer) const;
+  bool operator==(const AsciiBasicLayer &layer) const;
+  bool operator==(AsciiBasicLayer &&layer) const noexcept;
+
+  bool operator!=(const AsciiBasicLayer &layer) const;
+  bool operator!=(AsciiBasicLayer &&layer) const noexcept;
+
+  AsciiBasicLayer &operator=(const AsciiBasicLayer &layer);
+  AsciiBasicLayer &operator=(AsciiBasicLayer &&layer) noexcept;
 
 private:
   Coord2d coord;    // 坐标

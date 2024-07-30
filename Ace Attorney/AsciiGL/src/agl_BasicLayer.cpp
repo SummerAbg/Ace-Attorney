@@ -35,10 +35,18 @@ AsciiBasicLayer::AsciiBasicLayer(const std::string &name) : AsciiBasicCanvas() {
 
 AsciiBasicLayer::AsciiBasicLayer(const AsciiBasicLayer &layer)
     : AsciiBasicCanvas(layer) {
-  this->coord = layer.getCoordinate();
-  this->name = layer.getName();
-  this->centerCoord = layer.getCenterCoordinate();
-  this->displayState = layer.isDisplay();
+  this->coord = layer.coord;
+  this->name = layer.name;
+  this->centerCoord = layer.centerCoord;
+  this->displayState = layer.displayState;
+}
+
+AsciiBasicLayer::AsciiBasicLayer(AsciiBasicLayer &&layer) noexcept
+    : AsciiBasicCanvas(std::move(layer)) {
+  this->coord = layer.coord;
+  this->name = layer.name;
+  this->centerCoord = layer.centerCoord;
+  this->displayState = layer.displayState;
 }
 
 void AsciiBasicLayer::setCenterCoordinate(Coord2d coord) {
@@ -46,13 +54,50 @@ void AsciiBasicLayer::setCenterCoordinate(Coord2d coord) {
 }
 
 bool AsciiBasicLayer::operator==(const AsciiBasicLayer &layer) const {
-  return ((AsciiBasicCanvas)(*this) == (AsciiBasicCanvas)layer &&
-          this->coord == layer.getCoordinate() && this->name == layer.getName())
+  return (AsciiBasicCanvas::operator==(layer) && this->coord == layer.coord &&
+          this->name == layer.name && this->centerCoord == layer.centerCoord &&
+          this->displayState == layer.displayState)
              ? true
              : false;
 }
 
+bool AsciiBasicLayer::operator==(AsciiBasicLayer &&layer) const noexcept {
+  bool ret =
+      (AsciiBasicCanvas::operator==(layer) && this->coord == layer.coord &&
+       this->name == layer.name && this->centerCoord == layer.centerCoord &&
+       this->displayState == layer.displayState)
+          ? true
+          : false;
+  layer.datas = nullptr;
+
+  return ret;
+}
+
 bool AsciiBasicLayer::operator!=(const AsciiBasicLayer &layer) const {
   return !(*this == layer);
+}
+
+bool AsciiBasicLayer::operator!=(AsciiBasicLayer &&layer) const noexcept {
+  return !(*this == std::move(layer));
+}
+
+AsciiBasicLayer &AsciiBasicLayer::operator=(const AsciiBasicLayer &layer) {
+  AsciiBasicCanvas::operator=(layer);
+  this->coord = layer.coord;
+  this->name = layer.name;
+  this->displayState = layer.displayState;
+  this->centerCoord = layer.centerCoord;
+
+  return *this;
+}
+
+AsciiBasicLayer &AsciiBasicLayer::operator=(AsciiBasicLayer &&layer) noexcept {
+  AsciiBasicCanvas::operator=(std::move(layer));
+  this->coord = layer.coord;
+  this->name = layer.name;
+  this->displayState = layer.displayState;
+  this->centerCoord = layer.centerCoord;
+
+  return *this;
 }
 } // namespace AsciiGL

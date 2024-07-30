@@ -2,43 +2,47 @@
 #include "graphics.h"
 
 namespace AsciiGL {
+AsciiBasicCanvas::AsciiBasicCanvas() {
+  blockLength = 0;
+  datas = std::make_shared<CanvasData>();
+}
+
 AsciiBasicCanvas::AsciiBasicCanvas(int length, int width,
                                    const AsciiBasicString &str) {
-  defaultFill = str;
-  blockLength = defaultFill.size();
-  datas = CanvasData(length, width, str);
+  blockLength = str.size();
+  datas = std::make_shared<CanvasData>(length, width, str);
 }
 
 AsciiBasicCanvas::AsciiBasicCanvas(const std::string &path) { load(path); }
 
 AsciiBasicCanvas::AsciiBasicCanvas(const AsciiBasicCanvas &canvas) {
-  this->defaultFill = canvas.getFill();
-  this->blockLength = canvas.getBlockLength();
-  this->datas = canvas.getCanvasData();
+  this->blockLength = canvas.blockLength;
+  this->datas = std::make_shared<CanvasData>(*canvas.datas);
+}
+
+AsciiBasicCanvas::AsciiBasicCanvas(AsciiBasicCanvas &&canvas) noexcept {
+  this->blockLength = canvas.blockLength;
+  this->datas = canvas.datas;
+  canvas.datas = nullptr;
 }
 
 void AsciiBasicCanvas::info() const {
-  std::cout << "Length:" << datas.getLength() << std::endl
-            << "Width:" << datas.getWidth() << std::endl
-            << "DefaultFill:" << defaultFill << std::endl
-            << "BlockLength:" << blockLength << std::endl
-            << "Size:" << datas.size() << std::endl;
+  std::cout << "length:" << datas->getLength() << std::endl
+            << "width:" << datas->getWidth() << std::endl
+            << "blockLength:" << blockLength << std::endl
+            << "size:" << datas->size() << std::endl;
+  show();
 }
 
 std::string AsciiBasicCanvas::toString() const {
-  std::string ret;
-
-  AsciiBasicString buffer = this->getAsciiBasicString();
-  ret = buffer.toString();
-
-  return ret;
+  return this->getAsciiBasicString().toString();
 }
 
 AsciiBasicString &AsciiBasicCanvas::operator[](const Coord2d &coord) {
   if (!checkCoordinate(coord)) {
     throw AsciiBasicException(__FUNC__, "coord非法!");
   }
-  return datas[coord];
+  return (*datas)[coord];
 }
 
 const AsciiBasicString &
@@ -46,14 +50,14 @@ AsciiBasicCanvas::operator[](const Coord2d &coord) const {
   if (!checkCoordinate(coord)) {
     throw AsciiBasicException(__FUNC__, "coord非法!");
   }
-  return datas[coord];
+  return (*datas)[coord];
 }
 
 const AsciiBasicString &AsciiBasicCanvas::operator()(int x, int y) const {
   if (!checkCoordinate(Vec2d(x, y))) {
     throw AsciiBasicException(__FUNC__, "coord非法!");
   }
-  return datas(x, y);
+  return (*datas)(x, y);
 }
 
 void AsciiBasicCanvas::setCanvasData(const Coord2d &coord,
@@ -63,12 +67,12 @@ void AsciiBasicCanvas::setCanvasData(const Coord2d &coord,
   }
 
   if (fill.size() >= blockLength) {
-    datas[coord] = cutString(fill, blockLength - 1);
+    (*datas)[coord] = cutString(fill, blockLength - 1);
     return;
   }
 
   if (fill.size() < blockLength) {
-    datas[coord] = overlapString(datas[coord], fill, 0, true);
+    (*datas)[coord] = overlapString((*datas)[coord], fill, 0, true);
   }
 }
 
@@ -76,18 +80,24 @@ AsciiBasicString AsciiBasicCanvas::getCanvasData(const Coord2d &coord) const {
   if (!checkCoordinate(coord)) {
     throw AsciiBasicException(__FUNC__, "coord非法!");
   }
-  return datas[coord];
+  return (*datas)[coord];
 }
 
 AsciiBasicString AsciiBasicCanvas::getAsciiBasicString() const {
   AsciiBasicString ret;
+  for (int i = 0; i < datas->getWidth(); i++) {
+    for (int j = 0; j < datas->getLength(); j++) {
+      AsciiBasicString buffer;
 
-  for (int i = 0; i < datas.getWidth(); i++) {
-    for (int j = 0; j < datas.getLength(); j++) {
-      ret += datas(j, i);
+      bool isElement = datas->isElementCoord(Vec2d(j, i));
+      if (isElement) {
+        buffer = datas->getElement(j, i);
+      } else {
+        buffer = datas->getBackgroundElement();
+      }
+      ret += buffer;
     }
-    if (i < datas.getWidth() - 1)
-      ret += "\n";
+    ret += "\n";
   }
   return ret;
 }
@@ -96,7 +106,7 @@ void AsciiBasicCanvas::clear(bool flag) {
   if (flag) {
     *this = AsciiBasicCanvas();
   } else {
-    this->datas = CanvasData(datas.getLength(), datas.getWidth(), defaultFill);
+    this->datas = std::make_shared<CanvasData>();
   }
 }
 
@@ -129,7 +139,7 @@ void AsciiBasicCanvas::show() const {
 }
 
 bool AsciiBasicCanvas::checkCoordinate(const Coord2d &coord) const {
-  return datas.checkCoordinate(coord);
+  return datas->checkCoordinate(coord);
 }
 
 COORD AsciiBasicCanvas::toConsoleCoord(const Coord2d &coord) const {
@@ -140,31 +150,57 @@ COORD AsciiBasicCanvas::toConsoleCoord(const Coord2d &coord) const {
 }
 
 bool AsciiBasicCanvas::operator==(const AsciiBasicCanvas &canvas) const {
-  return (this->datas == canvas.getCanvasData() &&
-          this->blockLength == canvas.getBlockLength() &&
-          this->getFill() == canvas.getFill())
+  return (*this->datas == *canvas.datas &&
+          this->blockLength == canvas.blockLength)
              ? true
              : false;
+}
+
+bool AsciiBasicCanvas::operator==(AsciiBasicCanvas &&canvas) const noexcept {
+  bool ret =
+      (*this->datas == *canvas.datas && this->blockLength == canvas.blockLength)
+          ? true
+          : false;
+  canvas.datas = nullptr;
+
+  return ret;
 }
 
 bool AsciiBasicCanvas::operator!=(const AsciiBasicCanvas &canvas) const {
   return !(*this == canvas);
 }
 
+bool AsciiBasicCanvas::operator!=(AsciiBasicCanvas &&canvas) const noexcept {
+  return !(*this == std::move(canvas));
+}
+
+AsciiBasicCanvas &AsciiBasicCanvas::operator=(const AsciiBasicCanvas &canvas) {
+  this->blockLength = canvas.blockLength;
+  *this->datas = *canvas.datas;
+
+  return *this;
+}
+
+AsciiBasicCanvas &
+AsciiBasicCanvas::operator=(AsciiBasicCanvas &&canvas) noexcept {
+  this->blockLength = canvas.blockLength;
+  this->datas = canvas.datas;
+  canvas.datas = nullptr;
+
+  return *this;
+}
+
 std::string AsciiBasicCanvas::getSerializeStr() const {
-  std::string ret = serializeType(blockLength, defaultFill, datas);
-  return ret;
+  return serializeType(blockLength, *datas);
 }
 
 void AsciiBasicCanvas::loadSerializeStr(const std::string &str) {
   const auto tokens = bracketMatch(str);
-
-  if (tokens.size() < 3) {
+  if (tokens.size() < 2) {
     throw AsciiBasicException(__FUNC__, FileFormatError);
   }
 
   deserializeType(blockLength, tokens[0]);
-  deserializeType(defaultFill, tokens[1]);
-  deserializeType(datas, tokens[2]);
+  deserializeType(*datas, tokens[1]);
 }
 } // namespace AsciiGL

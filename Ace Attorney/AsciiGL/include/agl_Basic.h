@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <filesystem>
 #include <fstream>
+#include <shared_mutex>
 #include <string>
 
 #if defined(_WIN64) || defined(_WIN32)
