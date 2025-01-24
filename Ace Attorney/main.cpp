@@ -131,6 +131,50 @@ void batchshow(const std::string &file_path) {
 
 #endif
 
+AsciiGL::AsciiBasicCanvas conv(const std::string &path) {
+  HANDLE hFile = CreateFileA(path.c_str(), GENERIC_READ, 0, NULL, OPEN_EXISTING,
+                             FILE_ATTRIBUTE_NORMAL, NULL);
+  if (hFile == INVALID_HANDLE_VALUE) {
+    throw AsciiTools::AsciiBasicException(__FUNC__, "无法打开文件");
+  }
+
+  // 读取位图文件头
+  BITMAPFILEHEADER fileHeader;
+  ReadFile(hFile, &fileHeader, sizeof(fileHeader), NULL, NULL);
+
+  // 读取位图信息头
+  BITMAPINFOHEADER infoHeader;
+  ReadFile(hFile, &infoHeader, sizeof(infoHeader), NULL, NULL);
+
+  // 获取图像宽度和高度
+  int width = infoHeader.biWidth;
+  int height = infoHeader.biHeight;
+
+  // 定位到像素数据
+  SetFilePointer(hFile, fileHeader.bfOffBits, NULL, FILE_BEGIN);
+
+  AsciiGL::AsciiBasicCanvas canvas(width, height);
+
+  // 遍历每一行
+  for (int y = height - 1; y >= 0; --y) {
+    // 遍历每一列
+    for (int x = 0; x < width; ++x) {
+      BYTE rgb[3];
+      // 读取像素的 RGB 值
+      ReadFile(hFile, rgb, 3, NULL, NULL);
+      const int r = static_cast<int>(rgb[2]);
+      const int g = static_cast<int>(rgb[1]);
+      const int b = static_cast<int>(rgb[0]);
+      canvas.setCanvasData(Vec2d(x, y), {"  ", false, {{0, 0, 0}, {r, g, b}}});
+    }
+  }
+
+  // 关闭文件句柄
+  CloseHandle(hFile);
+
+  return canvas;
+}
+
 int main() {
   try {
     AceAttorneyCharacter chara_1("0x2ed_(AsciiGLの创世主)", 21);
@@ -173,6 +217,18 @@ int main() {
   } catch (const AsciiBasicException &e) {
     std::cout << e.what() << std::endl;
   }
+
+  /* initAsciiGL();
+  initWindowRGB();
+  initWindow(40, 25);
+
+  auto canvas = conv("test.bmp");
+  getchar();
+  canvas.show();
+  getchar();
+  canvas.save("法庭背景.asc2");
+
+  getchar();*/
 
   /* std::locale lc_zh("zh_CN");
   std::wcout.imbue(lc_zh);

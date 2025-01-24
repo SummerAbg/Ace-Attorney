@@ -40,8 +40,14 @@ AceAttorneyGame::AceAttorneyGame(int length, int width) {
   // 此处screen的背景图层添加和chatbox的初始化顺序不能调换！
   // 因为一旦顺序颠倒，会导致chatbox的图像会被作为背景图层，
   // 而screen即将添加的真正的背景图层会被当做普通图层，违反常识
+
+  // screen->appendLayer(
+  //    {AsciiGL::AsciiBasicLayer({length, width, str_Background}, Vec2d(0,
+  //    0))});
+
   screen->appendLayer(
-      {AsciiGL::AsciiBasicLayer({length, width, str_Background}, Vec2d(0, 0))});
+      {AsciiGL::AsciiBasicCanvas("法庭背景.asc2"), Vec2d(0, 0)});
+
   // game中唯一的chatbox对象，该对象负责处理所有角色的对话
   this->chatbox->initChatBox(10, "ChatBox");
 }
