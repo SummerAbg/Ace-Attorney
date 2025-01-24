@@ -17,7 +17,7 @@ struct AsciiColor : public AsciiBasicObject {
   int b;
   double a;
 
-  AsciiColor() = default;
+  AsciiColor();
   AsciiColor(int r, int g, int b, double a = 1.0);
   AsciiColor(const std::string &str);
 
@@ -27,12 +27,12 @@ struct AsciiColor : public AsciiBasicObject {
   friend std::ostream &operator<<(std::ostream &output, AsciiColor color);
   friend std::istream &operator>>(std::istream &input, AsciiColor color);
 
-  void info() const;
-  std::string toString() const;
+  void info() const override;
+  std::string toString() const override;
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 };
 
 // ÎÄ±¾ÑÕÉ«
@@ -50,12 +50,12 @@ struct AsciiTextColor : public AsciiBasicObject {
   friend std::ostream &operator<<(std::ostream &output, AsciiTextColor color);
   friend std::istream &operator>>(std::istream &input, AsciiTextColor color);
 
-  void info() const;
-  std::string toString() const;
+  void info() const override;
+  std::string toString() const override;
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 };
 
 const AsciiColor ASCII_COLOR_RED = {255, 0, 0};

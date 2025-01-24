@@ -1,6 +1,6 @@
 #include "AceAttorneyBasic.h"
 
-Log *AceAttorney::gameLog = new Log(SimpleDisplay);
+Log *AceAttorney::gameLog = new Log(SpecificDisplay);
 
 void AceAttorney::initAsciiGL() {
   AsciiBasicChar::setTrprChr(' ');
@@ -66,7 +66,7 @@ std::string AceAttorney::readFile(const std::string &path) {
   std::string fileData;
 
   if (!reader.is_open()) {
-    gameLog->log("无法正常打开文件!");
+    gameLog->log("无法正常打开文件!", __LINE__, __FILE__);
     exit(-1);
   }
 

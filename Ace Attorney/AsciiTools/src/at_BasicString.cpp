@@ -16,6 +16,7 @@ AsciiBasicString::AsciiBasicString(const char *str, bool trprState,
 AsciiBasicString::AsciiBasicString(const std::string &str, bool trprState,
                                    const AsciiTextColor clr) {
   text = std::make_shared<Text>();
+
   *this = AsciiBasicString(str.c_str(), trprState, clr);
 }
 
@@ -26,30 +27,30 @@ AsciiBasicString::AsciiBasicString(const char *str,
   const std::string text = str;
 
   for (int i = 0; i < text.size(); i++) {
-    const AsciiBasicChar chr = {text[i], clr[i], trpr[i]};
-
-    this->text->emplace_back(chr);
+    this->text->emplace_back(text[i], clr[i], trpr[i]);
   }
 }
 
 AsciiBasicString::AsciiBasicString(const std::string &str,
                                    const AsciiTextColorData &clr,
                                    const AsciiTrprData &trpr) {
-  text = std::make_shared<Text>();
+  this->text = std::make_shared<Text>();
+
   *this = AsciiBasicString(str.c_str(), clr, trpr);
 }
 
 AsciiBasicString::AsciiBasicString(const AsciiBasicChar &chr) {
   this->text = std::make_shared<Text>();
-  text->emplace_back(chr);
+
+  this->text->emplace_back(chr);
 }
 
 AsciiBasicString::AsciiBasicString(const AsciiBasicString &str) {
-  text = std::make_shared<Text>(*str.text);
+  this->text = std::make_shared<Text>(*str.text);
 }
 
 AsciiBasicString::AsciiBasicString(AsciiBasicString &&str) noexcept {
-  text = str.text;
+  this->text = str.text;
   str.text = nullptr;
 }
 
@@ -158,9 +159,7 @@ void AsciiBasicString::del(int index) {
 }
 
 void AsciiBasicString::append(const AsciiBasicString &str) {
-  for (const auto &index : str) {
-    text->emplace_back(index);
-  }
+  this->text->insert(this->text->end(), str.text->begin(), str.text->end());
 }
 
 void AsciiBasicString::append(const AsciiBasicChar &chr) {
@@ -172,9 +171,8 @@ void AsciiBasicString::append(AsciiBasicChar &&chr) noexcept {
 }
 
 void AsciiBasicString::append(AsciiBasicString &&str) noexcept {
-  for (auto &&index : str) {
-    text->emplace_back(index);
-  }
+  this->text->insert(this->text->end(), str.text->begin(), str.text->end());
+
   str.text = nullptr;
 }
 
@@ -254,6 +252,7 @@ AsciiBasicString cutString(const AsciiBasicString &str, int index) {
   }
   return ret;
 }
+
 AsciiBasicString overlapString(const AsciiBasicString &strA,
                                const AsciiBasicString &strB, int position,
                                bool isLimit) {

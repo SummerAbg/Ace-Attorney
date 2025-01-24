@@ -26,9 +26,9 @@ public:
   AsciiBasicString(AsciiBasicString &&str) noexcept;
 
   // 输出信息
-  void info() const;
+  void info() const override;
   // AsciiBasicString转换为std::string
-  std::string toString() const;
+  std::string toString() const override;
 
   // 获取头尾地址的函数(为了能够使用c++11的新特性)
   auto begin() const { return text->begin(); }
@@ -88,8 +88,8 @@ public:
   friend std::istream &operator>>(std::istream &input, AsciiBasicString &str);
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 
 private:
   pText text; // 字符容器

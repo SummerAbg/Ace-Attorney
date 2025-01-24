@@ -55,7 +55,7 @@ public:
       this->ret = ret;
       startTime = std::chrono::high_resolution_clock().now();
     } else {
-      gameLog->log("ø’÷∏’Î!");
+      gameLog->log("ø’÷∏’Î!", __LINE__, __FILE__);
       exit(-1);
     }
   }

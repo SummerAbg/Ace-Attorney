@@ -53,9 +53,7 @@ AsciiBasicCanvas overlapCanvas(const AsciiBasicCanvas &canvas,
         auto &index_chr_canvas = str[i];
         auto index_chr_target = str_target[i];
         //  对透明数据的处理
-        bool trprState = index_chr_canvas.isTrpr();
-
-        if (trprState) {
+        if (index_chr_canvas.isTrpr()) {
           index_chr_canvas = index_chr_target;
         }
         // 对RGBA数据的处理
@@ -123,6 +121,10 @@ void setText(AsciiBasicLayer &layer, Coord2d coord,
 
 void setText(AsciiBasicLayerMngr &mngr, Coord2d coord,
              const AsciiBasicString &text, const std::string &layerName) {
+  // 目前正在考虑是否重构这段代码，因为这涉及到稳定性的问题
+  // setText()的目的是为了在原有的图层的基础上进行文本的叠加，
+  // 然而此段代码却采用将原图层替换的方法实现文本叠加，
+  // 这可能会导致一些意想不到的问题，如图层的显示状态被重置
   AsciiBasicLayer textLayer(layerName);
   setText(textLayer, coord, text);
 

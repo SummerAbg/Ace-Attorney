@@ -27,12 +27,12 @@ public:
   bool operator!=(const Matrix2dElement<ElementType> &element) const;
   bool operator!=(Matrix2dElement<ElementType> &&element) const noexcept;
 
-  void info() const;
-  std::string toString() const;
+  void info() const override;
+  std::string toString() const override;
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 };
 
 template <typename ElementType> class Matrix2d : public AsciiBasicObject {
@@ -87,12 +87,12 @@ public:
 
   void show() const;
 
-  void info() const;
-  std::string toString() const;
+  void info() const override;
+  std::string toString() const override;
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 
 protected:
   int length;
@@ -179,9 +179,7 @@ Matrix2d<ElementType>::getElement(const Coord2d &coord) const {
       return index.element;
     }
   }
-  elements->emplace_back(
-      Matrix2dElement<ElementType>({coord, background_element}));
-  return (*elements)[elements->size() - 1].element;
+  return this->background_element;
 }
 
 template <typename ElementType>
@@ -189,7 +187,7 @@ inline ElementType Matrix2d<ElementType>::getElement(int x, int y) const {
   if (!checkCoordinate(Vec2d(x, y))) {
     throw AsciiBasicException(__FUNC__, "coord·Ç·¨!");
   }
-  return getElement(Vec2d(x, y));
+  return this->getElement(Vec2d(x, y));
 }
 
 template <typename ElementType>
@@ -226,7 +224,7 @@ inline bool
 Matrix2d<ElementType>::operator==(const Matrix2d<ElementType> &matrix) const {
   return (this->length == matrix.length && this->width == matrix.width &&
           this->background_element == matrix.background_element &&
-          *this->elements == Elements(matrix.begin(), matrix.end()))
+          *this->elements == *matrix.elements)
              ? true
              : false;
 }
@@ -236,7 +234,7 @@ inline bool Matrix2d<ElementType>::operator==(
     Matrix2d<ElementType> &&matrix) const noexcept {
   bool ret = (this->length == matrix.length && this->width == matrix.width &&
               this->background_element == matrix.background_element &&
-              *this->elements == Elements(matrix.begin(), matrix.end()))
+              *this->elements == *matrix.elements)
                  ? true
                  : false;
   matrix.elements = nullptr;

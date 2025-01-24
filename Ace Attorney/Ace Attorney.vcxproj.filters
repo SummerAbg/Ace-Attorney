@@ -81,6 +81,12 @@
     <ClCompile Include="AsciiTools\src\at_TypeConvert.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AceAttorneyObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AceAttorneyChatbox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AsciiGL\include\agl_Basic.h">
@@ -222,6 +228,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AsciiTools\include\at_Deserialization.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AceAttorneyChatbox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AceAttorneyObject.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

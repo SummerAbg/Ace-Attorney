@@ -9,9 +9,12 @@ class AceAttorneyGame {
 public:
   using pScreen = std::shared_ptr<AsciiGL::AsciiBasicLayerMngr>;
   using pCharaMngr = std::shared_ptr<AceAttorneyCharaMngr>;
+  using pSharedMutex = std::shared_ptr<std::shared_mutex>;
+  using pChatBox = std::shared_ptr<AceAttorneyChatbox>;
 
-  AceAttorneyGame() = default;
-  AceAttorneyGame(int length, int width);
+  AceAttorneyGame();
+  explicit AceAttorneyGame(int length, int width);
+  explicit AceAttorneyGame(const AceAttorneyGame &game);
   ~AceAttorneyGame();
 
   // 添加角色
@@ -32,7 +35,8 @@ public:
   void run(const std::string &path);
   void run(const std::function<void()> &callback);
 
-  std::shared_mutex *getSharedMutex() { return &s_mtx; }
+  pSharedMutex getSharedMutex() { return s_mtx; }
+  pChatBox getChatBox() { return chatbox; }
 
 private:
   void update();
@@ -46,13 +50,14 @@ private:
   pScreen screen;
   irrklang::ISoundEngine *audioEngine;
   pCharaMngr charas;
+  pChatBox chatbox;
 
 private:
   std::atomic_int deltaTime;
+  std::atomic_int fps;
   int length;
   int width;
-  int fps;
-  std::shared_mutex s_mtx;
+  pSharedMutex s_mtx;
 };
 
 // 获取聊天箱画布

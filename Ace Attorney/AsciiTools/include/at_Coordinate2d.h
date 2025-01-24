@@ -8,17 +8,16 @@
 
 namespace AsciiTools {
 // 2D坐标
-template <typename Type> struct Coordinate2d : public AsciiBasicObject {
+template <typename Type> struct Coordinate2d : AsciiBasicObject {
 public:
-  static_assert(std::is_same<Type, int>::value ||
-                    std::is_same<Type, double>::value ||
-                    std::is_same<Type, short>::value,
-                "Type一定是int,double或short");
+  static_assert(std::is_same_v<Type, int> || std::is_same_v<Type, double> ||
+                    std::is_same_v<Type, short>,
+                "Type必须是int,double或short类型");
 
   Type x;
   Type y;
 
-  Coordinate2d() = default;
+  Coordinate2d();
   explicit Coordinate2d(Type x, Type y);
 
   bool operator==(const Coordinate2d &coord) const;
@@ -36,15 +35,18 @@ public:
 
   Coordinate2d<Type> operator()(Type deltaX, Type deltaY) const;
 
-  Coordinate2d<Type> &operator=(const Coordinate2d &coord);
-
-  void info() const;
-  std::string toString() const;
+  void info() const override;
+  std::string toString() const override;
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 };
+
+template <typename Type> inline Coordinate2d<Type>::Coordinate2d() {
+  this->x = 0;
+  this->y = 0;
+}
 
 template <typename Type> Coordinate2d<Type>::Coordinate2d(Type x, Type y) {
   this->x = x;
@@ -133,13 +135,6 @@ Coordinate2d<Type> Coordinate2d<Type>::operator()(Type deltaX,
   coord.y += deltaY;
 
   return coord;
-}
-template <typename Type>
-inline Coordinate2d<Type> &
-Coordinate2d<Type>::operator=(const Coordinate2d &coord) {
-  this->x = coord.x;
-  this->y = coord.y;
-  return *this;
 }
 
 template <typename Type> inline void Coordinate2d<Type>::info() const {

@@ -4,6 +4,8 @@
 
 using namespace AceAttorney;
 
+#if false
+
 void convert(const std::string &path) {
   auto data = AsciiGL::getFileData(path);
   auto tokens_line = split(data, '\n');
@@ -120,7 +122,6 @@ void batchshow(const std::string &file_path) {
 
       AsciiGL::AsciiBasicCanvas canvas(index.path().string());
       canvas.info();
-      canvas.show();
 
       std::cout << std::endl;
       std::cout << "=====================================" << std::endl;
@@ -128,33 +129,58 @@ void batchshow(const std::string &file_path) {
   }
 }
 
+#endif
+
 int main() {
   try {
-    AceAttorneyCharacter chara_1("成步堂龙一", 21);
-    AceAttorneyCharacter chara_2("御剑怜侍", 24);
+    AceAttorneyCharacter chara_1("0x2ed_(AsciiGLの创世主)", 21);
+    AceAttorneyCharacter chara_2("成步堂龙一", 21);
+    AceAttorneyCharacter chara_3("审判长", 21);
+    AceAttorneyCharacter sys("旁白", 21);
     // AceAttorneyGame game(23, 15);
     AceAttorneyGame game(40, 25);
 
     game.addCharacter(chara_1);
     game.addCharacter(chara_2);
+    game.addCharacter(chara_3);
+    game.addCharacter(sys);
     game.run([&]() {
-      while (1) {
-        chara_1.chatBox("没有讲解但过程非常清晰，不是那种嚼碎了喂饭，能让自己有"
-                        "充分的思考过程",
-                        10);
+      game.getISoundEngine()->play2D("bgm2.ogg", true);
+
+      while (true) {
         chara_1.objection();
+        chara_1.chatBox("哈哈哈哈哈，没想到吧，我终于还是重置了逆转裁判！");
+        chara_1.chatBox("虽然说优化不怎么样，帧率不稳定，逐字显示不流畅，但是我"
+                        "真的重置了！",
+                        100);
+        chara_2.chatBox("？？？你是......谁......？？？");
+        chara_2.chatBox("你怎么出现在法庭上？？？");
+        chara_1.objection();
+        chara_1.chatBox("那是因为我就是这个程序の主宰!!!", 10);
+        chara_1.chatBox(
+            "哈哈哈哈哈哈哈......哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！！！！", 5);
+        chara_1.chatBox("哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
+                        "哈哈哈！！！！",
+                        1);
+        chara_3.chatBox("来人啊！把这位突然闯入的听证者踢出法庭！！！", 10);
+        chara_1.chatBox("不......不要啊！！！我要见证这个程序的成功运行！！！",
+                        10);
+        sys.chatBox("0x2ed_被法警以强制的手段拖出了法庭......", 20);
+
+        chara_2.chatBox("呼......真奇怪的听证者呢......");
       }
     });
   } catch (const AsciiBasicException &e) {
     std::cout << e.what() << std::endl;
   }
+
   /* std::locale lc_zh("zh_CN");
   std::wcout.imbue(lc_zh);
   std::wstring str = L"你好helloみさか みこと";
   for (int i = 0; i < str.size(); i++) {
     std::wcout << i << "\t" << str[i] << std::endl;
   }*/
-  /* const int count = 55555;
+  /* const int count = 999999;
   {
     EfficiencyDebug ef;
     std::string str;
@@ -168,16 +194,17 @@ int main() {
     for (int i = 0; i < count; i++) {
       str += "HelloWorld";
     }
-  }*/
+  }
 
-  /* AsciiBasicLayerMngr mngr;
+  AsciiGL::AsciiBasicLayerMngr mngr;
   {
     while (1) {
       EfficiencyDebug ef;
-      for (int i = 0; i < 6666; i++) {
-        setText(mngr, Vec2d(0, 0), "Hello world!", "A");
+      for (int i = 0; i < count; i++) {
+        AsciiGL::setText(mngr[i], Vec2d(0, 0), "Hello world!");
       }
     }
   }*/
+
   return 0;
 }

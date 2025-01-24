@@ -23,10 +23,20 @@ AsciiBasicLayerMngr::AsciiBasicLayerMngr(AsciiBasicLayerMngr &&mngr) noexcept {
   *this = std::move(mngr);
 }
 
+void AsciiBasicLayerMngr::appendLayer(const AsciiBasicLayer &layer) {
+  layers->emplace_back(layer);
+}
+
+void AsciiBasicLayerMngr::appendLayer(AsciiBasicLayer &&layer) noexcept {
+  layers->emplace_back(std::move(layer));
+}
+
 void AsciiBasicLayerMngr::appendLayer(const Layers &layers) {
-  for (const auto &index : layers) {
-    this->layers->emplace_back(index);
-  }
+  this->layers->insert(this->layers->end(), layers.begin(), layers.end());
+}
+
+void AsciiBasicLayerMngr::appendLayer(Layers &&layers) noexcept {
+  this->layers->insert(this->layers->end(), layers.begin(), layers.end());
 }
 
 void AsciiBasicLayerMngr::deleteLayer(const std::string &name) {
@@ -49,34 +59,44 @@ void AsciiBasicLayerMngr::insertLayer(int layerCnt, const Layers &layers) {
   if (layerCnt <= 0 || layerCnt > this->layers->size()) {
     throw AsciiBasicException(__FUNC__, "layerCnt不合法!");
   }
-  for (int i = 0; i < layers.size(); i++) {
+  /* for (int i = 0; i < layers.size(); i++) {
     const auto position = this->layers->begin() + layerCnt - 1 + i;
     this->layers->insert(position, layers[i]);
-  }
+  }*/
+  auto iter = this->layers->begin() + layerCnt - 1;
+  this->layers->insert(iter, layers.begin(), layers.end());
 }
 
 AsciiBasicCanvas AsciiBasicLayerMngr::getCanvas() const {
-  static AsciiBasicLayerMngr bffrMngr;
-  static AsciiBasicCanvas bffrCnvs;
+  static AsciiBasicLayerMngr bffManager;
+  static AsciiBasicCanvas bffCanvas;
 
   if (layers->size() <= 0) {
     throw AsciiBasicException(__FUNC__, "layers的数量<=0!");
-  } else if (*this == bffrMngr) {
-    return bffrCnvs;
+  } else if (*this == bffManager) {
+    return bffCanvas;
   }
 
   AsciiBasicCanvas ret = (*layers)[0];
   for (const auto &index : *layers) {
+    static AsciiBasicCanvas tempCanvas;
+
     if (!index.isDisplay()) {
       continue;
+    } else if (tempCanvas == (AsciiBasicCanvas)index) {
+      continue;
+    } else {
+      Coord2d coord = index.getCoordinate();
+
+      coord -= index.getCenterCoordinate();
+      ret = overlapCanvas(index, ret, coord);
+
+      tempCanvas = index;
     }
-    Coord2d coord = index.getCoordinate();
-    coord -= index.getCenterCoordinate();
-    ret = overlapCanvas(index, ret, coord);
   }
 
-  bffrMngr = *this;
-  bffrCnvs = ret;
+  bffManager = *this;
+  bffCanvas = ret;
 
   return ret;
 }

@@ -121,6 +121,11 @@ public:
   AsciiBasicLayer &operator=(const AsciiBasicLayer &layer);
   AsciiBasicLayer &operator=(AsciiBasicLayer &&layer) noexcept;
 
+  /**
+   *  @brief 输出图层信息
+   */
+  void info() const;
+
 private:
   Coord2d coord;    // 坐标
   std::string name; // 名称

@@ -2,12 +2,12 @@
 
 AceAttorney::AnalyzeCommand::AnalyzeCommand(const std::string &str) {
   if (str.size() <= 0) {
-    gameLog->log("str太短!");
+    gameLog->log("str太短!", __LINE__, __FILE__);
     exit(-1);
   }
   auto tokens = split(str, ' ');
   if (tokens.size() < 1) {
-    gameLog->log("token太少!");
+    gameLog->log("token太少!", __LINE__, __FILE__);
     exit(-1);
   }
   command = tokens[0];
@@ -28,7 +28,7 @@ AceAttorney::Option AceAttorney::AnalyzeCommand::getOptions(int begin,
                                                             int end) const {
   if (begin <= 0 || begin > options.size() || end <= 0 ||
       end > options.size() || begin >= end) {
-    gameLog->log("begin或end的值非法!");
+    gameLog->log("begin或end的值非法!", __LINE__, __FILE__);
   }
   Option ret;
   for (int i = begin - 1; i <= end; i++) {
@@ -39,7 +39,7 @@ AceAttorney::Option AceAttorney::AnalyzeCommand::getOptions(int begin,
 
 std::string AceAttorney::AnalyzeCommand::operator[](int index) const {
   if (index < 0 || index > options.size()) {
-    gameLog->log("index非法!");
+    gameLog->log("index非法!", __LINE__, __FILE__);
     exit(-1);
   }
   return options[index];
@@ -47,7 +47,7 @@ std::string AceAttorney::AnalyzeCommand::operator[](int index) const {
 
 std::string AceAttorney::AnalyzeCommand::getOption(int index) const {
   if (index < 0 || index >= options.size()) {
-    gameLog->log("index非法!");
+    gameLog->log("index非法!", __LINE__, __FILE__);
     exit(-1);
   }
   return options[index];

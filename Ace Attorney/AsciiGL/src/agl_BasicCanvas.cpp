@@ -27,9 +27,12 @@ AsciiBasicCanvas::AsciiBasicCanvas(AsciiBasicCanvas &&canvas) noexcept {
 }
 
 void AsciiBasicCanvas::info() const {
+  std::cout << "AsciiBasicCanvas对象" << std::endl;
   std::cout << "length:" << datas->getLength() << std::endl
             << "width:" << datas->getWidth() << std::endl
             << "blockLength:" << blockLength << std::endl
+            << "background_element:" << datas->getBackgroundElement()
+            << std::endl
             << "size:" << datas->size() << std::endl;
   show();
 }
@@ -66,6 +69,10 @@ void AsciiBasicCanvas::setCanvasData(const Coord2d &coord,
     throw AsciiBasicException(__FUNC__, "coord非法!");
   }
 
+  if (fill == datas->getElement(coord)) {
+    return;
+  }
+
   if (fill.size() >= blockLength) {
     (*datas)[coord] = cutString(fill, blockLength - 1);
     return;
@@ -80,7 +87,7 @@ AsciiBasicString AsciiBasicCanvas::getCanvasData(const Coord2d &coord) const {
   if (!checkCoordinate(coord)) {
     throw AsciiBasicException(__FUNC__, "coord非法!");
   }
-  return (*datas)[coord];
+  return this->datas->getElement(coord);
 }
 
 AsciiBasicString AsciiBasicCanvas::getAsciiBasicString() const {
@@ -161,6 +168,7 @@ bool AsciiBasicCanvas::operator==(AsciiBasicCanvas &&canvas) const noexcept {
       (*this->datas == *canvas.datas && this->blockLength == canvas.blockLength)
           ? true
           : false;
+
   canvas.datas = nullptr;
 
   return ret;
@@ -177,6 +185,8 @@ bool AsciiBasicCanvas::operator!=(AsciiBasicCanvas &&canvas) const noexcept {
 AsciiBasicCanvas &AsciiBasicCanvas::operator=(const AsciiBasicCanvas &canvas) {
   this->blockLength = canvas.blockLength;
   *this->datas = *canvas.datas;
+  // printf("Canvas拷贝%d\t%d\n", this->datas->size(), canvas.datas->size());
+  // getchar();
 
   return *this;
 }

@@ -9,16 +9,16 @@ namespace AsciiTools {
 class AsciiBasicChar : public AsciiBasicObject {
 public:
   // 构造基本字符
-  AsciiBasicChar() = default;
+  AsciiBasicChar();
   AsciiBasicChar(char chr, bool trprState = false)
       : character(chr), color(getDefaultColor()), trprState(trprState) {}
   AsciiBasicChar(char chr, AsciiTextColor clr, bool trprState = false)
       : character(chr), color(clr), trprState(trprState) {}
 
   // 输出信息
-  void info() const;
+  void info() const override;
   // AsciiBasicChar转换为std::string
-  std::string toString() const;
+  std::string toString() const override;
 
   bool operator==(const AsciiBasicChar &chr) const;
   bool operator!=(const AsciiBasicChar &chr) const;
@@ -51,8 +51,8 @@ public:
   void setColor(AsciiTextColor clr) { color = clr; }
 
 private:
-  std::string getSerializeStr() const;
-  void loadSerializeStr(const std::string &str);
+  std::string getSerializeStr() const override;
+  void loadSerializeStr(const std::string &str) override;
 
 private:
   char character;       // 字符

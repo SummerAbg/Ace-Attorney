@@ -1,6 +1,13 @@
 #include "at_Tools.h"
 
 namespace AsciiTools {
+AsciiColor::AsciiColor() {
+  r = 0;
+  g = 0;
+  b = 0;
+  a = 0.0;
+}
+
 AsciiColor::AsciiColor(int r, int g, int b, double a) {
   this->r = r;
   this->g = g;

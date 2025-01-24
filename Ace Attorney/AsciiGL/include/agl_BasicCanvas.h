@@ -77,7 +77,7 @@ public:
   /**
    *  @brief 输出画布信息
    */
-  void info() const;
+  virtual void info() const;
 
   AsciiBasicString &operator[](const Coord2d &coord);
   const AsciiBasicString &operator[](const Coord2d &coord) const;

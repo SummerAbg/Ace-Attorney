@@ -14,8 +14,7 @@ public:
   Log(LogMode mode, const std::string &path = "");
   ~Log();
 
-  void log(const std::string &str, int line = __LINE__,
-           const std::string &path = __FILE__);
+  void log(const std::string &str, int line, const std::string &path);
   void list() const;
 
 private:

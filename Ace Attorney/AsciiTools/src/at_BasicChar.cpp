@@ -32,6 +32,12 @@ std::istream &operator>>(std::istream &input, AsciiBasicChar &chr) {
   return input;
 }
 
+AsciiBasicChar::AsciiBasicChar() {
+  character = '\0';
+  trprState = false;
+  color = {ASCII_COLOR_WHITE, ASCII_COLOR_BLACK};
+}
+
 void AsciiBasicChar::info() const {
   std::cout << "AsciiBasicChar¶ÔÏó" << std::endl;
   std::cout << "character:" << character << std::endl

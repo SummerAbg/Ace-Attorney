@@ -1,7 +1,7 @@
 #include "Resources.h"
 
 namespace AceAttorney {
-AsciiColor clr_Background = ASCII_COLOR_INDIGO;
+AsciiColor clr_Background = ASCII_COLOR_GREY;
 
 AsciiColor clr_ChatBox = {0, 0, 0, 0.5};
 

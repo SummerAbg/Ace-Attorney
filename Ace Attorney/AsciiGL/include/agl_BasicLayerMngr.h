@@ -76,15 +76,25 @@ public:
    *  @brief 添加指定图层
    *  @param layer - 指定图层
    */
-  void appendLayer(const AsciiBasicLayer &layer) {
-    layers->emplace_back(layer);
-  }
+  void appendLayer(const AsciiBasicLayer &layer);
 
   /**
    *  @brief 添加指定图层
-   *  @param layers - 图层容器
+   *  @param layer - 指定图层
+   */
+  void appendLayer(AsciiBasicLayer &&layer) noexcept;
+
+  /**
+   *  @brief 添加指定图层组
+   *  @param layers - 图层组
    */
   void appendLayer(const Layers &layers);
+
+  /**
+   *  @brief 添加指定图层组
+   *  @param layers - 图层组
+   */
+  void appendLayer(Layers &&layers) noexcept;
 
   /**
    *  @brief 删除指定图层 (失败时抛出异常)

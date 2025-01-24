@@ -100,4 +100,17 @@ AsciiBasicLayer &AsciiBasicLayer::operator=(AsciiBasicLayer &&layer) noexcept {
 
   return *this;
 }
+void AsciiBasicLayer::info() const {
+  std::cout << "AsciiBasicLayer¶ÔÏó" << std::endl;
+  std::cout << "length:" << datas->getLength() << std::endl
+            << "width:" << datas->getWidth() << std::endl
+            << "blockLength:" << blockLength << std::endl
+            << "background_element:" << datas->getBackgroundElement()
+            << std::endl
+            << "size:" << datas->size() << std::endl
+            << "coord:" << coord.toString() << std::endl
+            << "centerCoord:" << centerCoord.toString() << std::endl
+            << "name:" << name << std::endl
+            << "displayState:" << spliceString(displayState) << std::endl;
+}
 } // namespace AsciiGL
